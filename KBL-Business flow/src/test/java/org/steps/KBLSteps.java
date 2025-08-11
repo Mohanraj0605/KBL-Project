@@ -60,7 +60,7 @@ public void observe_the_footer_section_links() {
 @Then("Observe the header & Footer section links redirections")
 public void observe_the_header_footer_section_links_redirections() {
 
-	System.out.println("Footer  also verified");
+	System.out.println("Footer  are  verified in stage env");
 
 }
 	
