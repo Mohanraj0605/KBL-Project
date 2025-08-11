@@ -1,0 +1,109 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2025-08-11T13:18:58.790Z",
+        "before": [
+          {
+            "result": {
+              "duration": 9856000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "org.steps.KBLHooks.Start()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "To  Valiadte the Guser user Flow in home page",
+        "description": "",
+        "id": "to-be-verify-the-e2e-functionality-in-kbl-website;to--valiadte-the-guser-user-flow-in-home-page",
+        "after": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "org.steps.KBLHooks.End(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 12000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User open the Home page",
+            "match": {
+              "location": "org.steps.KBLSteps.user_open_the_Home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "When user opening the home page \u003e To verify the hedaer section Title \u0026 Elements",
+            "match": {
+              "location": "org.steps.KBLSteps.when_user_opening_the_home_page_to_verify_the_hedaer_section_title_elements()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Observe the Footer section links",
+            "match": {
+              "location": "org.steps.KBLSteps.observe_the_footer_section_links()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Observe the header \u0026 Footer section links redirections",
+            "match": {
+              "location": "org.steps.KBLSteps.observe_the_header_footer_section_links_redirections()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@E2E"
+          },
+          {
+            "name": "@Case1"
+          }
+        ]
+      }
+    ],
+    "name": "To be Verify the E2E Functionality in KBL website",
+    "description": "",
+    "id": "to-be-verify-the-e2e-functionality-in-kbl-website",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/E2E.feature",
+    "tags": [
+      {
+        "name": "@E2E",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
