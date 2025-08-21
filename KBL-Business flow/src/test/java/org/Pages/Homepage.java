@@ -1,0 +1,146 @@
+package org.Pages;
+
+import org.base.Ultilityclass;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class Homepage extends Ultilityclass {
+	
+
+	public Homepage() {
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(xpath="(//a[@class='menu-link'])[1]")
+    private WebElement Categeory1; 
+
+	@FindBy(xpath="(//a[@class='menu-link'])[12]")
+   	private WebElement Categeory2;
+		
+	
+    @FindBy(xpath="(//a[@class='menu-link'])[13]")
+	private WebElement Categeory3;
+
+
+	public WebElement getCategeory2() {
+		return Categeory2;
+	}
+
+	public WebElement getCategeory3() {
+		return Categeory3;
+	}
+
+	public WebElement getCategeory1() {
+		return Categeory1;
+	}
+
+	@FindBy(xpath="//a[@class='header-user']")
+    private WebElement LoginImageIcon; 
+	
+	public WebElement getLoginImageIcon() {
+		return LoginImageIcon;
+	}
+
+	@FindBy(xpath="//img[@class='main-logo']")
+    private WebElement KBLLogo;
+
+	public WebElement getKBLLogo() {
+		return KBLLogo;
+	} 
+
+	@FindBy(id="authorization-trigger")
+    private WebElement LoginIcon;
+	
+     @FindBy(xpath="//a[@class='action showcart']")
+    private WebElement CartIcon;
+
+	public WebElement getCartIcon() {
+		return CartIcon;
+	}
+
+	@FindBy(xpath="(//span[@class='text'])[1]")
+    private WebElement CartIconclclickable;
+
+	public WebElement getCartIconclclickable() {
+		return CartIconclclickable;
+	}
+
+	@FindBy(xpath="(//p[@class='b-title h2'])[1]")
+    private WebElement Residentialsection;
+
+	public WebElement getResidentialsection() {
+		return Residentialsection;
+	}
+
+	@FindBy(xpath="(//p[@class='b-title h2'])[2]")
+    private WebElement Commercialsection;
+
+	public WebElement getCommercialsection() {
+		return Commercialsection;
+	}
+
+	@FindBy(xpath="(//p[@class='b-title h2'])[3]")
+    private WebElement Industrialsection;
+
+	public WebElement getIndustrialsection() {
+		return Industrialsection;
+	}
+
+    @FindBy(xpath="//div[@class='testimonial-content container']")
+    private WebElement Testimonialsection;
+
+	public WebElement getTestimonialsection() {
+		return Testimonialsection;
+	}
+
+	@FindBy(xpath="(//p[@class='b-title h2'])[4]")
+    private WebElement Agriculturesection;
+
+	public WebElement getAgriculturesection() {
+		return Agriculturesection;
+	}
+
+	@FindBy(xpath="//input[@name='q']")
+    private WebElement SearchBox;
+
+	public WebElement getSearchBox() {
+		return SearchBox;
+	}
+
+	@FindBy(xpath="//div[@class='link wishlist']")
+    private WebElement WishlistLink;
+
+	public WebElement getWishlistLink() {
+		return WishlistLink;
+	}
+
+	@FindBy(xpath="(//a[@class='action create primary'])[1]")
+    private WebElement Login;
+	
+	public WebElement getLogin() {
+		return Login;
+	}
+
+	public WebElement getLoginIcon() {
+		return LoginIcon;
+	}
+	@FindBy(xpath="//span[normalize-space()='Request for Quote']")
+    private WebElement  RequestQuote;
+
+	public WebElement getRequestQuote() {
+		return RequestQuote;
+	}
+
+	@FindBy(xpath="(//div[@class='owl-next'])[1]")
+    private WebElement  HomepageSliderNext;
+
+	public WebElement getHomepageSliderNext() {
+		return HomepageSliderNext;
+	}
+
+	
+	
+
+	
+}

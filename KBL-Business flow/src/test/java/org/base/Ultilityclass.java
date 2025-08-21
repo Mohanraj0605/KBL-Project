@@ -7,6 +7,9 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Cell;
@@ -67,7 +70,7 @@ import junit.framework.Assert;
 public class Ultilityclass {
 	
 	
-	
+
 	public static Actions actions;
 	public static  WebDriver driver;
 	public static Navigation navigate;
@@ -75,7 +78,8 @@ public class Ultilityclass {
 	public static Alert alert;
 	public static Select select;
 	public static JavascriptExecutor js;
-	
+      public static Robot R;
+
 	/*
 	 * @author:MOHANRAJ K
 	 * @ Purpose:  Launch Any Browser
@@ -321,7 +325,14 @@ public  static void close() {
 		navigate = driver.navigate();
 		navigate.refresh();
 	}
-    
+
+       public static void KeyEnter() throws AWTException {
+		             R = new Robot();
+           R.keyPress(KeyEvent.VK_ENTER);
+           R.keyRelease(KeyEvent.VK_ENTER);
+	}
+      
+
     /*
      * @ Purpose:  Forward page Using navigation
      */
@@ -515,6 +526,7 @@ public  static void close() {
     	 
     	 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1000));
 	}
+
      
      /*
       * @ Purpose:  Click Using By JavascriptExecutor
@@ -545,7 +557,14 @@ public  static void close() {
      /*
       * @ Purpose:  Scrolldown  Using By JavascriptExecutor
       */
+      
      public static void Scrolldownjavascript (WebElement ele) {
+          
+           js =(JavascriptExecutor)driver;
+           js.executeScript("arguments[0].scrollIntoView(true)",ele);      
+     }
+
+     public static void Scrolldownjavascript2 (WebElement ele) {
 		
            js =(JavascriptExecutor)driver;
            js.executeScript("arguments[0].ScrollIntoview(true)",ele);      
@@ -554,6 +573,7 @@ public  static void close() {
      /*
       * @ Purpose:  Scrollup  Using By JavascriptExecutor
       */
+
      public static void Scrollupjavascript (WebElement ele) {
 		
            js =(JavascriptExecutor)driver;
@@ -608,6 +628,7 @@ public  static void close() {
     	 
     	Assert.assertTrue(commit, ele);
      }
+     
      /*
       * @ Purpose:  Verification Using By text
       */
@@ -615,8 +636,7 @@ public  static void close() {
      public static void checkequaltext(String commit,String expected,String Actual) {
     	 
     	 Assert.assertEquals(commit, expected, Actual);
-    	 
-     	
+    	
       }
      /*
       * @ Purpose:  Verification Using By text and webelement
@@ -637,15 +657,14 @@ public  static void close() {
     	 String value = "";
     	 
     	 try {
-     File f = new File ("E:\\MOHAN\\Bisina\\target\\Data\\Petit-stage data.xlsx"); 
+     File f = new File ("E:\\KBL-Project\\KBL-Business flow\\target\\Data\\KBL datas.xlsx"); 
      FileInputStream fin = new FileInputStream(f); 
      Workbook w = new XSSFWorkbook(fin);
-     Sheet sheet = w.getSheet("Address data");
+     Sheet sheet = w.getSheet("KBL datas");
+     
      Row rowdata = sheet.getRow(row);
      Cell cell = rowdata.getCell(col);
-    
      CellType type = cell.getCellType();
-     
      
      if (type == CellType.STRING) {
     	 
@@ -699,6 +718,8 @@ public  static void close() {
 			e.printStackTrace();
 		}
     	
+
+
     	 
      }    
      

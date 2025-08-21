@@ -3,11 +3,11 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2025-08-11T13:18:58.790Z",
+        "start_timestamp": "2025-08-21T16:43:17.756Z",
         "before": [
           {
             "result": {
-              "duration": 9856000000,
+              "duration": 2000000,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,13 @@
             }
           }
         ],
-        "line": 6,
-        "name": "To  Valiadte the Guser user Flow in home page",
+        "line": 51,
+        "name": "To  Valiadte the listing Buy now functionaity for Guest user",
         "description": "",
-        "id": "to-be-verify-the-e2e-functionality-in-kbl-website;to--valiadte-the-guser-user-flow-in-home-page",
+        "id": "to-be-verify-the-e2e-functionality-in-kbl-website;to--valiadte-the-listing-buy-now-functionaity-for-guest-user",
         "after": [
           {
             "result": {
-              "duration": 1000000,
               "status": "passed"
             },
             "match": {
@@ -35,10 +34,10 @@
         "steps": [
           {
             "result": {
-              "duration": 12000000,
+              "duration": 3000000,
               "status": "passed"
             },
-            "line": 8,
+            "line": 53,
             "name": "User open the Home page",
             "match": {
               "location": "org.steps.KBLSteps.user_open_the_Home_page()"
@@ -49,22 +48,21 @@
             "result": {
               "status": "passed"
             },
-            "line": 9,
-            "name": "When user opening the home page \u003e To verify the hedaer section Title \u0026 Elements",
+            "line": 54,
+            "name": "User go to the listing page",
             "match": {
-              "location": "org.steps.KBLSteps.when_user_opening_the_home_page_to_verify_the_hedaer_section_title_elements()"
+              "location": "org.steps.KBLSteps.user_go_to_the_listing_page()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 1000000,
               "status": "passed"
             },
-            "line": 10,
-            "name": "Observe the Footer section links",
+            "line": 55,
+            "name": "verify the Buy now  CTA functionality",
             "match": {
-              "location": "org.steps.KBLSteps.observe_the_footer_section_links()"
+              "location": "org.steps.KBLSteps.verify_the_buy_now_cta_functionality()"
             },
             "keyword": "And "
           },
@@ -72,11 +70,20 @@
             "result": {
               "status": "passed"
             },
-            "line": 11,
-            "name": "Observe the header \u0026 Footer section links redirections",
+            "line": 56,
+            "name": "verify the Compare now option in listing page",
             "match": {
-              "location": "org.steps.KBLSteps.observe_the_header_footer_section_links_redirections()"
+              "location": "org.steps.KBLSteps.verify_the_compare_now_option_in_listing_page()"
             },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 57,
+            "name": "verify the added compare products in comparision page",
+            "match": {},
             "keyword": "Then "
           }
         ],
@@ -85,7 +92,7 @@
             "name": "@E2E"
           },
           {
-            "name": "@Case1"
+            "name": "@case5"
           }
         ]
       }
