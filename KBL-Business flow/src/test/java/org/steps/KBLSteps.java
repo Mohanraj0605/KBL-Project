@@ -466,7 +466,7 @@ public void verify_the_added_compare_products_in_comparision_page() {
 	 String Url6 = driver.getCurrentUrl();
 	 System.out.println(Url6);
 	 checkpresentElement("To check user account  page",Url6.contains("product_compare"));
-	 LOGGER.info("Compare now button is clicked and redirection is verified");
+	 LOGGER.info("Compare now checkbox is clicked and redirection is verified");
 	 EndTimeprint();
 }
 
