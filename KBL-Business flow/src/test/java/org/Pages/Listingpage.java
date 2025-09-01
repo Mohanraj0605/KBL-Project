@@ -50,6 +50,13 @@ public class Listingpage extends Ultilityclass {
     @FindBy(xpath="(//span[text()='Buy Now'])[2]")
     private WebElement BuyNowButton2;
 
+
+    @FindBy(xpath="(//span[text()='Buy Now'])[1]")
+    private WebElement BuyNowButton1;
+    
+    public WebElement getBuyNowButton1() {
+        return BuyNowButton1;
+    }
     public WebElement getListingCategeory1() {
         return ListingCategeory1;
     }

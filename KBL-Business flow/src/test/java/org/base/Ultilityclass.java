@@ -79,6 +79,7 @@ public class Ultilityclass {
 	public static Select select;
 	public static JavascriptExecutor js;
       public static Robot R;
+       public static Alert A;
 
 	/*
 	 * @author:MOHANRAJ K
@@ -330,6 +331,13 @@ public  static void close() {
 		             R = new Robot();
            R.keyPress(KeyEvent.VK_ENTER);
            R.keyRelease(KeyEvent.VK_ENTER);
+	}
+
+       public static void KeyDOWN() throws AWTException {
+		             R = new Robot();
+
+           R.keyPress(KeyEvent.VK_DOWN);
+           R.keyRelease(KeyEvent.VK_DOWN);;
 	}
       
 
@@ -632,10 +640,10 @@ public  static void close() {
      /*
       * @ Purpose:  Verification Using By text
       */
-    
-     public static void checkequaltext(String commit,String expected,String Actual) {
-    	 
-    	 Assert.assertEquals(commit, expected, Actual);
+
+     public static void checkequaltext(String commit,String Expected ,String Actual) {
+
+    	 Assert.assertEquals(commit, Expected, Actual);
     	
       }
      /*
@@ -643,12 +651,31 @@ public  static void close() {
       * 
       */
      
-     public static void checkequalElement(String commit,WebElement Expected,WebElement Actual) {
+     public static void checkequalElement(String commit,String Expected ,String Actual) {
     	 
     	 Assert.assertEquals(commit, Expected, Actual);
     		
       }
-     
+
+      /*
+      * @ Purpose:  Alert accept and dismiss
+      * 
+      */
+
+      public static void Alertaccept () {
+    	 
+    	 A = driver.switchTo().alert();
+    	 A.accept();
+    		
+      }
+
+      public static void Alertdismiss () {
+
+    	 A = driver.switchTo().alert();
+    	 A.dismiss();
+
+      }
+
      /*
       * @ Purpose:  To read the Excel
       */

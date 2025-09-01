@@ -12,6 +12,20 @@ public class Homepage extends Ultilityclass {
 		PageFactory.initElements(driver, this);
 	}
 	
+
+
+
+	@FindBy(xpath="//a[text()='Privacy Policy for Platform']")
+    private WebElement Footerink1;
+
+
+	public WebElement getFooterink1() {
+		return Footerink1;
+	}
+
+
+
+
 	@FindBy(xpath="(//a[@class='menu-link'])[1]")
     private WebElement Categeory1; 
 
@@ -35,6 +49,36 @@ public class Homepage extends Ultilityclass {
 		return Categeory1;
 	}
 
+	@FindBy(xpath="(//a[@class='menu-link'])[58]")
+	private WebElement Categeory58;
+
+    @FindBy(xpath="(//a[@class='menu-link'])[54]")
+	private WebElement Categeory54;
+
+
+	 @FindBy(xpath="(//a[@class='menu-link'])[55]")
+	private WebElement Categeory55;
+
+	@FindBy(xpath="(//a[@class='menu-link'])[53]")
+	private WebElement Categeory53;
+
+
+	public WebElement getCategeory58() {
+		return Categeory58;
+	}
+
+	public WebElement getCategeory54() {
+		return Categeory54;
+	}
+
+	public WebElement getCategeory55() {
+		return Categeory55;
+	}
+
+	public WebElement getCategeory53() {
+		return Categeory53;
+	}
+
 	@FindBy(xpath="//a[@class='header-user']")
     private WebElement LoginImageIcon; 
 	
@@ -51,19 +95,12 @@ public class Homepage extends Ultilityclass {
 
 	@FindBy(id="authorization-trigger")
     private WebElement LoginIcon;
-	
-     @FindBy(xpath="//a[@class='action showcart']")
+
+     @FindBy(xpath="(//span[text()='My Cart'])[1]")
     private WebElement CartIcon;
 
 	public WebElement getCartIcon() {
 		return CartIcon;
-	}
-
-	@FindBy(xpath="(//span[@class='text'])[1]")
-    private WebElement CartIconclclickable;
-
-	public WebElement getCartIconclclickable() {
-		return CartIconclclickable;
 	}
 
 	@FindBy(xpath="(//p[@class='b-title h2'])[1]")
