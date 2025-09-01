@@ -20,9 +20,9 @@ public class KBLHooks extends Ultilityclass {
 
 		launchBrowser(1);
 
-		//launchurl("https://betaeshop.kirloskarpumps.com/");
+		launchurl("https://betaeshop.kirloskarpumps.com/");
 
-	    launchurl("https://betaeshopadm.kirloskarpumps.com/kbladmin");
+	    //launchurl("https://betaeshopadm.kirloskarpumps.com/kbladmin");
 
 		//launchurl("https://eshop.kirloskarpumps.com/");
 		pagemaximize();

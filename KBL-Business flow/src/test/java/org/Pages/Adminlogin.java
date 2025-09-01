@@ -1,4 +1,4 @@
-package org.Pages;
+package org.pages;
 
 import org.base.Ultilityclass;
 import org.openqa.selenium.WebElement;

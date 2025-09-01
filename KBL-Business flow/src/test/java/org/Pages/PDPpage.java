@@ -1,4 +1,4 @@
-package org.Pages;
+package org.pages;
 
 import org.base.Ultilityclass;
 import org.openqa.selenium.WebElement;
@@ -60,6 +60,15 @@ public class  PDPpage extends Ultilityclass {
 
    public WebElement getPDPprice() {
        return PDPprice;
+   }
+
+
+
+   @FindBy(xpath="//span[text()='₹10,679.00']")
+    private WebElement PDPprice2;
+
+   public WebElement getPDPprice2() {
+       return PDPprice2;
    }
 
     @FindBy(id="buy-now")

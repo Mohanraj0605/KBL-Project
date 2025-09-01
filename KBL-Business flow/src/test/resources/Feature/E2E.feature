@@ -39,9 +39,10 @@ And    Observe the Seeall navigation  page "<Product Name2>"
 And    Observe the navigation  page using Enter button "<Product Name3>"
 Then   Verify the Filter options in SLP page
 
+
 Examples:
-          |Product Name1| |Product Name2|  |Product Name3|  
-          |Borwell pump|  |Surface Pump|   |Submersible Pump| 
+          |Product Name1|    |Product Name2|  |Product Name3|  
+          |TL16010016A12211| |Surface pump|   |Submersible Pump| 
 
 
 # D11130060676   
@@ -79,7 +80,7 @@ And   selects a payment option and places the order
 Then  after successful payment, the user should see the Thank You page
 
 
-@Case7
+@Case8
 
 Scenario: To verify the Admin page
 

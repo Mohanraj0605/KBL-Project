@@ -6,7 +6,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
@@ -724,12 +728,46 @@ public  static void close() {
      return value;
      
      }
+
+     
+      public static List<Map<String, String>> getExcelData2(String path, String sheetName) {
+
+
+        List<Map<String, String>> dataList = new ArrayList<>();
+      try (FileInputStream fis = new FileInputStream("E:\\KBL-Project\\KBL-Business flow\\target\\Data\\Footerlinks.xlsx");
+           Workbook workbook = new XSSFWorkbook(fis)) {
+
+          Sheet sheet = workbook.getSheet("Footer");
+          Row headerRow = sheet.getRow(1);
+
+          for (int i = 1; i <= sheet.getLastRowNum(); i++) {
+            Row row = sheet.getRow(i);
+            Map<String, String> rowMap = new HashMap<>();
+
+            for (int j = 0; j < row.getLastCellNum(); j++) {
+                String key = headerRow.getCell(j).getStringCellValue().trim();
+                String value = row.getCell(j).getStringCellValue().trim();
+                rowMap.put(key, value);
+            }
+
+            dataList.add(rowMap);
+          }
+
+      } catch (Exception e) {
+          e.printStackTrace();
+      }
+        return dataList;
+    }
+
+
      
      /*
       * @ Purpose:  To create the Excel sheet
       * 
       */
      
+
+
      public static void createSheet (String filepath,int row,int col,String value) {
     	try {
     	 File f =new File (System.getProperty("user.dir")+filepath);
@@ -750,9 +788,40 @@ public  static void close() {
     	 
      }    
      
+
+
+    public static  List<Map<String, String>> Categeoryreader (String path, String sheetName) {
+
+        List<Map<String, String>> Categeorydatas = new ArrayList<>();
+
+        try (FileInputStream fis = new FileInputStream("E:\\KBL-Project\\KBL-Business flow\\target\\Data\\KBL datas.xlsx");
+             Workbook workbook = new XSSFWorkbook(fis)) {
+
+            Sheet sheet = workbook.getSheet("KBL datas");
+            Row headerRow = sheet.getRow(1);
+
+            for (int i = 1; i <= sheet.getLastRowNum(); i++) {
+                Row row = sheet.getRow(i);
+                Map<String, String> rowMap = new HashMap<>();
+
+                for (int j = 0; j < headerRow.getLastCellNum(); j++) {
+                    String key = headerRow.getCell(j).getStringCellValue();
+                    String value = row.getCell(j).getStringCellValue();
+                    rowMap.put(key, value);
+                }
+
+                Categeorydatas.add(rowMap);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return Categeorydatas;
+    }
 	
 	
-	
+
 	
 
 }
