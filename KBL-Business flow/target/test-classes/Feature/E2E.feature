@@ -64,7 +64,8 @@ Scenario: To Validate  the PDP page to Cart Page for Guest  user
 Given User open the Home page 
 When  User go to the listing page
 And   On click Buy now CTA or any product cards in listing page
-Then  verify the PDP page features and products prices & do the add to cart.Then,go to cart page
+And   Verify the  correct delivery message based on TAT functionality
+Then  verify the PDP page features and products prices & do the add to cart.
 
 @Case7
 

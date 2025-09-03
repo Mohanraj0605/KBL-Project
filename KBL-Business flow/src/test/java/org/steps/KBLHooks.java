@@ -20,9 +20,9 @@ public class KBLHooks extends Ultilityclass {
 
 		launchBrowser(1);
 
-		launchurl("https://betaeshop.kirloskarpumps.com/");
+		//launchurl("https://betaeshop.kirloskarpumps.com/");
 
-	    //launchurl("https://betaeshopadm.kirloskarpumps.com/kbladmin");
+	    launchurl("https://betaeshopadm.kirloskarpumps.com/kbladmin");
 
 		//launchurl("https://eshop.kirloskarpumps.com/");
 		pagemaximize();
@@ -34,6 +34,7 @@ public class KBLHooks extends Ultilityclass {
 		if (s.isFailed()) {
 			
 			TakesScreenshot tk =(TakesScreenshot)driver;
+
 			byte[] screenshotAs = tk.getScreenshotAs(OutputType.BYTES);
 		 
 			//s.embed(screenshotAs, "image/png");

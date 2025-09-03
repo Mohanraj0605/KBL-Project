@@ -5,13 +5,65 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+
 public class  Cartpage extends Ultilityclass {
 	
 	public Cartpage() {
 		PageFactory.initElements(driver, this);
 	}
+     
+
+       @FindBy(xpath="//a[@class='order-number']")
+      private WebElement SuccespageOrdernumber;
 
 
+     public WebElement getSuccespageOrdernumber() {
+          return SuccespageOrdernumber;
+     }
+
+
+     @FindBy(id="authorization-trigger")
+      private WebElement LoginIcon2;
+
+     public WebElement getLoginIcon2() {
+          return LoginIcon2;
+     }
+
+     
+     @FindBy(xpath="//a[@id='idR8YNIHUr']")
+      private WebElement Myaccountlink;
+
+
+     public WebElement getMyaccountlink() {
+          return Myaccountlink;
+     }
+
+      @FindBy(xpath="//li[@class='nav item myorder']")
+      private WebElement MyOrder1;
+
+      public WebElement getMyOrder1() {
+          return MyOrder1;
+     }
+
+       @FindBy(xpath="//tr//td[1]")
+      private WebElement Ordernumber;
+
+
+     public WebElement getOrdernumber() {
+          return Ordernumber;
+     }
+
+     
+
+
+      @FindBy(xpath="(//td[@class='col actions'])[1]")
+      private WebElement Vieworder;
+
+
+public WebElement getVieworder() {
+          return Vieworder;
+     }
+      
      @FindBy(xpath="(//div[@class='product-item-details'])[2]")
      private WebElement Cartname;
 
@@ -160,12 +212,15 @@ public class  Cartpage extends Ultilityclass {
          return Addresstype;
     }
 
-    @FindBy(xpath="(//input[@class='input-text'])[49]")
-   private WebElement Mobilenumber;
-
+    @FindBy(xpath="(//input[@class='input-text'])[50]")
+    private WebElement Mobilenumber;
+    
+    
     public WebElement getMobilenumber() {
-         return Mobilenumber;
-    }
+     return Mobilenumber;
+}
+
+
 
     @FindBy(xpath="//button[@class='action primary action-save-address']")
    private WebElement SaveAddressButton;
@@ -173,6 +228,8 @@ public class  Cartpage extends Ultilityclass {
     public WebElement getSaveAddressButton() {
          return SaveAddressButton;
     }
+
+
 
 
     @FindBy(xpath="(//input[@type='radio'])[4]")

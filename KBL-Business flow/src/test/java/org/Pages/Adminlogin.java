@@ -14,23 +14,42 @@ public class Adminlogin extends Ultilityclass {
      @FindBy(xpath="(//input[@class='admin__control-text'])[1]")
      private WebElement adminUsername;
 
-     public WebElement adminUsername() {
-          return adminUsername;
-     }
+     
 
      @FindBy(xpath="(//input[@class='admin__control-text'])[2]")
      private WebElement Adminpassword;
 
-     public WebElement getCartname() {
-          return Adminpassword;
-     }
-
+    
 
      @FindBy(xpath="//div[@class='actions']")
      private WebElement SignInButton;
 
-     public WebElement SignInButton() {
+
+     @FindBy(xpath="//div[@class='actions']")
+     private WebElement ConfirmButton;
+
+
+     public WebElement getConfirmButton() {
+          return ConfirmButton;
+     }
+
+
+     public WebElement getAdminUsername() {
+          return adminUsername;
+     }
+
+
+     public WebElement getAdminpassword() {
+          return Adminpassword;
+     }
+
+
+     public WebElement getSignInButton() {
           return SignInButton;
      }
+
+
+     
+     
 
 }

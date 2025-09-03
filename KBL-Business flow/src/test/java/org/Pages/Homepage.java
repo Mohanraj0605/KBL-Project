@@ -1,8 +1,10 @@
 package org.pages;
 
+
 import org.base.Ultilityclass;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 public class Homepage extends Ultilityclass {
@@ -14,8 +16,30 @@ public class Homepage extends Ultilityclass {
 	
 
 
+@FindBys({
+	@FindBy(xpath = "//header//div//ul[@class='groupmenu']//a")
+})
+private java.util.List<WebElement> groupMenuLinks1;
 
-	@FindBy(xpath="//a[text()='Privacy Policy for Platform']")
+public java.util.List<WebElement> getGroupMenuLinks1() {
+	return groupMenuLinks1;
+}
+
+
+
+	@FindBys({
+		@FindBy(xpath ="//header//div//ul[@class='groupmenu']//a")
+	})
+
+	private java.util.List<WebElement> groupMenuLinks;
+
+	public java.util.List<WebElement> getGroupMenuLinks() {
+		return groupMenuLinks;
+	}
+
+
+
+	@FindBy(xpath = "//a[text()='Privacy Policy for Platform']")
     private WebElement Footerink1;
 
 
@@ -23,8 +47,7 @@ public class Homepage extends Ultilityclass {
 		return Footerink1;
 	}
 
-
-
+	
 
 	@FindBy(xpath="(//a[@class='menu-link'])[1]")
     private WebElement Categeory1; 
