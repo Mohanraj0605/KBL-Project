@@ -3,11 +3,11 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2025-09-03T13:07:45.193Z",
+        "start_timestamp": "2025-09-04T21:23:56.137Z",
         "before": [
           {
             "result": {
-              "duration": 8979000000,
+              "duration": 11569000000,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 86,
-        "name": "To verify the Admin page",
+        "line": 24,
+        "name": "To  Valiadte the My account page options \u0026 redirection in dashboard",
         "description": "",
-        "id": "to-be-verify-the-e2e-functionality-in-kbl-website;to-verify-the-admin-page",
+        "id": "to-be-verify-the-e2e-functionality-in-kbl-website;to--valiadte-the-my-account-page-options-\u0026-redirection-in-dashboard",
         "after": [
           {
             "result": {
-              "duration": 2000000,
+              "duration": 3000000,
               "status": "passed"
             },
             "match": {
@@ -35,37 +35,37 @@
         "steps": [
           {
             "result": {
-              "duration": 22107000000,
+              "duration": 181000000,
               "status": "passed"
             },
-            "line": 88,
-            "name": "user opens the admin login page",
+            "line": 26,
+            "name": "User open the Home page",
             "match": {
-              "location": "org.steps.KBLSteps.user_opens_the_admin_login_page()"
+              "location": "org.steps.KBLSteps.user_open_the_Home_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2000000,
+              "duration": 18321000000,
               "status": "passed"
             },
-            "line": 89,
-            "name": "User enter the Login credential and Click on login credential",
+            "line": 27,
+            "name": "do  the login  and Observe the my account page options",
             "match": {
-              "location": "org.steps.KBLSteps.user_enter_the_login_credential_and_click_on_login_credential()"
+              "location": "org.steps.KBLSteps.do_the_login_and_observe_the_my_account_page_options()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 1000000,
+              "duration": 74496000000,
               "status": "passed"
             },
-            "line": 90,
-            "name": "Observe the  Admin dashboard page.",
+            "line": 28,
+            "name": "User click  the My account options in dashbord and Observe the redirection  page",
             "match": {
-              "location": "org.steps.KBLSteps.observe_the_admin_dashboard_page()"
+              "location": "org.steps.KBLSteps.user_click_the_my_account_options_in_dashbord_and_observe_the_redirection_page()"
             },
             "keyword": "Then "
           }
@@ -75,7 +75,7 @@
             "name": "@E2E"
           },
           {
-            "name": "@Case8"
+            "name": "@Case3"
           }
         ]
       }

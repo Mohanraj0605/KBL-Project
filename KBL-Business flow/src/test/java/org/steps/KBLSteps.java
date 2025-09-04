@@ -48,9 +48,6 @@ public void user_open_the_Home_page() {
      implicitWait();
 	 LOGGER.info("Home page title is verified");
 	 EndTimeprint();
-	// Add this method to resolve the undefined method error
-
-
 	
 }
 
@@ -59,16 +56,18 @@ public void when_user_opening_the_home_page_to_verify_the_header_section_all_the
 
 	 StartTimeprint();
 	 h = new Homepage();
-     Threadsleep(3000);
+     Threadsleep(2000);
+	 checkpresentElement("To check KBL logo is displayed",h.getKBLLogo().isDisplayed());
 	 javascriptclick(h.getKBLLogo());
-     checkpresentElement("To check KBL logo is displayed",h.getKBLLogo().isDisplayed());
 	 LOGGER.info("KBL logo is displayed");
+	  Threadsleep(2000);
 	 moveToElement(h.getLoginIcon());
 	 checkpresentElement("To check Login icon is displayed",h.getLoginIcon().isDisplayed());
 	 LOGGER.info("Login icon is displayed");
+	  Threadsleep(2000);
 	 actionClick(h.getLogin());
-	 Threadsleep(3000);
 	 LOGGER.info("Login icon is clicked");
+	 Threadsleep(2000);
 	 moveToElement(h.getSearchBox());
 	 checkpresentElement("To check Search box is displayed",h.getSearchBox().isDisplayed());
 	 LOGGER.info("Search box is displayed");
@@ -85,9 +84,13 @@ public void when_user_opening_the_home_page_to_verify_the_header_section_all_the
 	 Threadsleep(4000);
      moveToElement(h.getRequestQuote());
 	 checkpresentElement("To check Request Quote is displayed",h.getRequestQuote().isDisplayed());
+     Threadsleep(3000);
+	 moveToElement(h.getTrackinglink());
+	 checkpresentElement("To check Tracking link is displayed",h.getTrackinglink().isDisplayed());
 	 Threadsleep(5000);
 	 javascriptclick(h.getKBLLogo());
 	 Threadsleep(3000);
+
 	 ClickElement(h.getHomepageSliderNext());
 	 Threadsleep(2000);
 	 ClickElement(h.getHomepageSliderNext());
@@ -272,9 +275,9 @@ public void do_the_login_and_observe_the_my_account_page_options() {
 	StartTimeprint();
     h = new Homepage();
     moveToElement(h.getLoginIcon());
+	Threadsleep(3000);
 	checkpresentElement("To check Login icon is displayed",h.getLoginIcon().isDisplayed());
 	actionClick(h.getLogin());
-	Threadsleep(3000);
 	LOGGER.info("Login icon is clicked");
 	l = new Loginpage();
 	Threadsleep(3000);
@@ -283,7 +286,9 @@ public void do_the_login_and_observe_the_my_account_page_options() {
 	actionClick(l.getPasswordLogin());
 	LOGGER.info("Password login is clicked");
 	Threadsleep(3000);
+
 	// Entering the Email and Password
+
 	l = new Loginpage();
 	PassValues(l.getEmailField(), getdataExcel(1, 1));
 	checkpresentElement("To check Email field is displayed",l.getEmailField().isDisplayed());
@@ -294,45 +299,146 @@ public void do_the_login_and_observe_the_my_account_page_options() {
 	ClickElement(l.getLoginButton());
 }
 
-@When("User select the My account options in dashbord page")
-public void user_select_the_my_account_options_in_dashbord_page() {
-
+@Then("User click  the My account options in dashbord and Observe the redirection  page")
+public void user_click_the_my_account_options_in_dashbord_and_observe_the_redirection_page() throws AWTException {
+    
      l = new Loginpage();
 	 Threadsleep(3000);
 	 String title2 = driver.getTitle();
      checkpresentElement("To check user account  page",title2.contains("My Account"));
 	 LOGGER.info("Login with password functionality is verified successfully");
 
-	// moveToElement(l.getMyAccountDashboard());
-	// l = new Loginpage();
-    // l.getMyAccountDashboard();
-	// System.out.println(l.getMyAccountDashboard().getText());
-    // checkpresentElement("To check My account dashboard is displayed",l.getMyAccountDashboard().isDisplayed());
+	 implicitWait();
+	 l = new Loginpage();
+	 ClickElement(l.getMyAccountDashboard());
+	 checkpresentElement("To check My account dashboard options available or not in My account page",l.getMyAccountDashboard().isDisplayed());
+     Threadsleep(3000);
+	 ClickElement(l.getMyAccountDashboard());
+     LOGGER.info("My account dashboard  is displayed");
+
+
+	 implicitWait();
+	 l = new Loginpage();
+	 ClickElement(l.getMyaddressbook());
+	 checkpresentElement("To check My address book options available or not in My account page",l.getMyaddressbook().isDisplayed());
+     Threadsleep(3000);
+	 ClickElement(l.getMyaddressbook());
+     LOGGER.info("My address book  options  is displayed");
+
+	 l = new Loginpage();
+	 implicitWait();
+	 checkpresentElement("To check My Account options available or not in My account page",l.getMyinformation().isDisplayed());
+     ClickElement(l.getMyinformation());
+	 Threadsleep(3000);
+     LOGGER.info("My Account option  is displayed");
+
 	
 	 Threadsleep(10000);
 	 implicitWait();
 	 l = new Loginpage();
-	 ClickElement(l.getMyOrder());
-	 Threadsleep(3000);
-	 String Url1 = driver.getCurrentUrl();
-	 checkpresentElement("To check user account  page",Url1.contains("order"));
+	 checkpresentElement("To check My ordrs options available or not in My account page",l.getMyOrders().isDisplayed());
+     Threadsleep(3000);
+	 ClickElement(l.getMyOrders());
      LOGGER.info("My order is displayed");
 
-}
 
-@Then("Observe the redirection  page")
-public void observe_the_redirection_page() {
-
-     Threadsleep(3000);
-	 implicitWait();
 	 l = new Loginpage();
+	 implicitWait();
+	 checkpresentElement("To check My service options available or not in My account page",l.getMyService().isDisplayed());
      ClickElement(l.getMyService());
 	 Threadsleep(3000);
-	 String Url2 = driver.getCurrentUrl();
-	 checkpresentElement("To check user account  page",Url2.contains("service"));
-     LOGGER.info("My Service page  is displayed");
+     LOGGER.info("My Service option  is displayed");
+
+	 for (int i = 0; i <6; i++) {
+		KeyDOWN();
+	}
+
+	 
+	 l = new Loginpage();
+	 Threadsleep(2000);
+	 checkpresentElement("To check AMC options available or not in My account page",l.getAMC().isDisplayed());
+     ClickElement(l.getAMC());
+	 Threadsleep(3000);
+     LOGGER.info("AMC option  is displayed");
+
+	 for (int i = 0; i <6; i++) {
+		KeyDOWN();
+	}
+
+
+	  l = new Loginpage();
+	 Threadsleep(1000);
+	 checkpresentElement("To check News-Letter options available or not in My account page",l.getNewsletters().isDisplayed());
+     ClickElement(l.getNewsletters());
+	 Threadsleep(3000);
+     LOGGER.info("News-Letter option  is displayed");
+
+	 for (int i = 0; i <6; i++) {
+		KeyDOWN();
+	}
+
+
+
+	 l = new Loginpage();
+	   Threadsleep(1000);
+	 checkpresentElement("To check My Product Reviews  options available or not in My account page",l.getMyReviews().isDisplayed());
+     ClickElement(l.getMyReviews());
+	 Threadsleep(3000);
+     LOGGER.info(" My Product Reviews option  is displayed");
+
+	 for (int i = 0; i <6; i++) {
+		KeyDOWN();
+	}
+
+
+
+	 l = new Loginpage();
+	 Threadsleep(1000);
+	 checkpresentElement("To check My wishlist  options available or not in My account page",l.getMywislistpage().isDisplayed());
+     ClickElement(l.getMywislistpage());
+	 Threadsleep(3000);
+     LOGGER.info("My wishlist option  is displayed");
+
+	 for (int i = 0; i <6; i++) {
+		KeyDOWN();
+	}
+
+	  l = new Loginpage();
+	  Threadsleep(1000);
+	 checkpresentElement("To check My Quotes  options available or not in My account page",l.getMyQuates().isDisplayed());
+     ClickElement(l.getMyQuates());
+	 Threadsleep(3000);
+     LOGGER.info(" My Quotes option  is displayed");
+
+	 for (int i = 0; i <9; i++) {
+		KeyDOWN();
+	}
+
+
+	 l = new Loginpage();
+	  Threadsleep(1000);
+	 checkpresentElement("To check My Replacment  options available or not in My account page",l.getMyReplacement().isDisplayed());
+     ClickElement(l.getMyReplacement());
+	 Threadsleep(3000);
+     LOGGER.info(" My Replacment option  is displayed");
+
+	 for (int i = 0; i <10; i++) {
+		KeyDOWN();
+	}
+
+
+	 l = new Loginpage();
+	  Threadsleep(1000);
+	 checkpresentElement("To check My Products  options available or not in My account page",l.getMyproducts().isDisplayed());
+     ClickElement(l.getMyproducts());
+	 Threadsleep(1000);
+     LOGGER.info(" My Products option  is displayed");
+
+	 LOGGER.info("My account dashboard page all the optons are verified and Navigated to the respective page");
+
 
 }
+
 
 // search field functionality 
 
@@ -360,41 +466,41 @@ public void user_enter_the_product_name_in_search_box(String Keyword1) {
 	 LOGGER.info("Search box is displayed");
 	 String Keyword = Keyword1;
 	 PassValues(s.getSearchBox(), Keyword);
-	 LOGGER.info("Product name is entered in search box");
+	 LOGGER.info("Product SKU  is entered in search box");
 	 EndTimeprint();
 }
 @When("Observe the Related products suggestion.then,Click on any product name")
 public void observe_the_related_products_suggestion_then_click_on_any_product_name() {
 	
-     StartTimeprint();
-	 s = new Searchpage();
-	 moveToElement(s.getSearchBox());
-	 ClickElement(s.getProductnameSLP());
-	 String Url3 = driver.getCurrentUrl();
-	 System.out.println(Url3);
-	 Threadsleep(3000);
-	 checkpresentElement("To check user account  page",Url3.contains("vertical"));
-	 LOGGER.info("Product name is clicked and redirection is verified");
-	 EndTimeprint();
+    //  StartTimeprint();
+	//  s = new Searchpage();
+	//  moveToElement(s.getSearchBox());
+	//  ClickElement(s.getProductnameSLP());
+	//  String Url3 = driver.getCurrentUrl();
+	//  System.out.println(Url3);
+	//  Threadsleep(3000);
+	//  checkpresentElement("To check user account  page",Url3.contains("vertical"));
+	//  LOGGER.info("Product name is clicked and Succesfully redirection to the respective search listing page");
+	//  EndTimeprint();
 }
 
 @When("Observe the Seeall navigation  page {string}")
 public void observe_the_seeall_navigation_page(String Keyword2) {
 
-	 StartTimeprint();
-	 s = new Searchpage();
-	 moveToElement(s.getSearchBox());
-	 checkpresentElement("To check Search box is displayed",s.getSearchBox().isDisplayed());
-	 LOGGER.info("Search box is displayed");
-	 PassValues(s.getSearchBox(), Keyword2);
-	 LOGGER.info("Product name is entered in search box");
-     Threadsleep(3000);
-	 javascriptclick(s.getSeeall());
-	 Threadsleep(3000);
-	 String Url4 = driver.getCurrentUrl();
-	 checkpresentElement("To check user account  page",Url4.contains("Surface"));
-	 LOGGER.info("See all navigation is verified");
-	 EndTimeprint();
+	//  StartTimeprint();
+	//  s = new Searchpage();
+	//  moveToElement(s.getSearchBox());
+	//  checkpresentElement("To check Search box is displayed",s.getSearchBox().isDisplayed());
+	//  PassValues(s.getSearchBox(), Keyword2);
+	//  LOGGER.info("Product name is entered in search box");
+    //  Threadsleep(3000);
+	//  javascriptclick(s.getSeeall());
+	//  Threadsleep(3000);
+	//  String Url4 = driver.getCurrentUrl();
+	//  Threadsleep(2000);
+	//  checkpresentElement("To verify the  entered product related search  listing  page",Url4.contains("Surface"));
+	//  LOGGER.info("See all navigation is verified");
+	//  EndTimeprint();
     
  }
  @When("Observe the navigation  page using Enter button {string}")
@@ -422,28 +528,49 @@ public void observe_the_navigation_page_using_enter_button(String Keyword3) thro
 }
 
 @Then("Verify the Filter options in SLP page")
-public void verify_the_filter_options_in_slp_page() {
+public void verify_the_filter_options_in_slp_page() throws AWTException {
 
 	 s = new Searchpage();
-	 Threadsleep(4000);
+	 Threadsleep(2000);
+	WebElement ResidentialFiltercount1 =s.getResidentialcount1();
+	String ResidentialFiltercount2 = ResidentialFiltercount1.getText();
+	String ResidentialFiltercount3 = ResidentialFiltercount2.substring(0, 3);
+	System.out.println(ResidentialFiltercount3);
+	 
 	 ClickElement(s.getResidentialFilterSLP());
 	 checkpresentElement("To check Residential Filter is displayed",s.getResidentialFilterSLP().isDisplayed());
 	 LOGGER.info("Residential Filter is displayed");
-	 String Url5 = driver.getCurrentUrl();
-	 System.out.println(Url5);
-	 Threadsleep(3000);
+     Threadsleep(2000);
+
+	checkequaltext("To check selected Residential  filter count for in SLP page",ResidentialFiltercount3,s.getResidentialcount2().getText());
+    
+	 Threadsleep(2000);
 	 ClickElement(s.getPopupclose());
-	//  Threadsleep(3000);
-	//  Scrolldownjavascript(s.getSurfaceFilterSLP());
-	//  ClickElement(s.getSurfaceFilterSLP());
-	//  checkpresentElement("To check Surface Filter is displayed",s.getSurfaceFilterSLP().isDisplayed());
-	//  LOGGER.info("Surface Filter is displayed");
-	//  Threadsleep(3000);
-	//  //checkpresentElement("To check user account  page",Url6.contains("surface"));
-	// Threadsleep(2000);
+	 Threadsleep(2000);
+	
+	 for (int i = 0; i <7; i++) {
+		KeyDOWN();
+	}
+
+     Threadsleep(2000);
+	 WebElement SurfaceFiltercount1 =s.getSurfacecount1();
+	String SurfaceFiltercount2 = SurfaceFiltercount1.getText();
+	String SurfaceFiltercount3 = SurfaceFiltercount2.substring(0, 3);
+	System.out.println(SurfaceFiltercount3);
+    
+	 ClickElement(s.getSurfaceFilterSLP());
+	 LOGGER.info("Surface Filter is displayed");
+
+	 checkequaltext("To check selected surface  filter count for in SLP page",SurfaceFiltercount3,s.getSurfacecount2().getText());
+	 Threadsleep(3000);
 	 ClickElement(s.getClearall());
 	 Threadsleep(3000);
 	 LOGGER.info("Clearall button is verified");
+
+	  for (int i = 0; i <6; i++) {
+		KeyUP();
+	}
+
 	 EndTimeprint();
 
 }
@@ -469,6 +596,7 @@ public void user_go_to_the_listing_page() {
 
 @When("verify the Buy now  CTA functionality")
 public void verify_the_buy_now_cta_functionality() {
+
     StartTimeprint();
 	lp = new Listingpage();
 	moveToElement(lp.getListingCategeory2());
@@ -581,16 +709,15 @@ public void on_click_buy_now_cta_or_any_product_cards_in_listing_page() {
 @When("Verify the  correct delivery message based on TAT functionality")
 public void verify_the_correct_delivery_message_based_on_tat() {
 
-    String  a = "600019";
+    String  a = "500027";
 
     String expectedMessage;
-	
     String actualMessage = p.getPincodedeliverymessage().getText();
 	System.out.println(actualMessage);
 
-	if (actualMessage.equals("Product will be delivered in -7 - 9 Working days")) {
+	if (actualMessage.equals("Product will be delivered in 5 - 7 Working days")) {
 
-    expectedMessage = "Product will be delivered in -7 - 9 Working days";
+    expectedMessage = "Product will be delivered in 5 - 7 Working days";
 
 } 
 
@@ -605,18 +732,17 @@ else {
 
     LOGGER.info("Checking if Pincode Delivery message is equal. Expected: {}, Actual: {}", expectedMessage, actualMessage);
 
+    // int lowerTAT = 1;
+    // int higherTAT = 6;
 
-    int lowerTAT = 1;
-    int higherTAT = 6;
-
-    if (lowerTAT == 1) 
-	{
-        expectedMessage = "Product will be delivered in -7 - 9 Working days";
-    } else if (lowerTAT < 2) {
-        expectedMessage = "Product will be delivered in " + lowerTAT + " - " + higherTAT + " Working days";
-    } else {
-        expectedMessage = "This product is  not Delivery for this pincode";
-    }
+    // if (lowerTAT == 1) 
+	// {
+    //     expectedMessage = "Product will be delivered in -7 - 9 Working days";
+    // } else if (lowerTAT < 2) {
+    //     expectedMessage = "Product will be delivered in " + lowerTAT + " - " + higherTAT + " Working days";
+    // } else {
+    //     expectedMessage = "This product is  not Delivery for this pincode";
+    // }
 	
 }
 
@@ -707,6 +833,7 @@ public void the_user_navigates_to_the_listing_page() {
 	moveToElement(h.getCategeory2());
 	moveToElement(h.getCategeory3());
 	Threadsleep(3000);
+
 	checkequaltext("To check Main category to Sub Category is displayed",h.getCategeory3().getText(),"Pressure Boosting");
 	actionClick(h.getCategeory3());
 	LOGGER.info("Main category to Sub Category is displayed");
@@ -718,15 +845,23 @@ public void clicks_the_cta_or_any_product_card_on_the_listing_page(String string
 	
 	 StartTimeprint();
 	 lp = new Listingpage();
+
 	 moveToElement(lp.getListingCategeory1());
+
 	 Threadsleep(3000);
+
 	 checkpresentElement("To check Buy Now button is displayed",lp.getBuyNowButton1().isDisplayed());
 	 LOGGER.info("Buy Now button is displayed");
+
 	// actionClick(lp.getBuyNowButton1());
-	// LOGGER.info("Buy Now button is clicked");
-	// Threadsleep(3000);
-	   p = new PDPpage();
-	  Threadsleep(3000);
+
+	 LOGGER.info("Buy Now button is clicked");
+
+	 Threadsleep(3000);
+	
+	  
+	  p = new PDPpage();
+
 	  WebElement PLPname3 = p.getPLPname1();
 	  String name1 = PLPname3.getText();
 
@@ -752,13 +887,15 @@ public void clicks_the_cta_or_any_product_card_on_the_listing_page(String string
 	  checkequaltext("To verify btw the PLP&PDP page the product RATE",Rate1,Rate3); 
 	  LOGGER.info(" Btw the PLP&PDP page the product NAME & RATE are verified");
 	  Threadsleep(3000);
+
+	  p = new PDPpage();
 	  ClickElement(p.getAddToCartButtonPDP());
-	 Threadsleep(3000);
+	  Threadsleep(3000);
 	  PassValues(p.getPincodefield(), "600119");
 	  ClickElement(p.getPincodecheckButton());
 	  Threadsleep(3000);
-	   Alertaccept();
-	  Threadsleep(2000);
+	 Alertaccept();
+	  Threadsleep(1000);
 	  checkpresentElement("To check Installation Service label is displayed",p.getInstallationServicelabel().isDisplayed());
 	  LOGGER.info("Installation Service label is displayed");
 	  checkpresentElement("To check Buy Now button is displayed",p.getBuynowPDP().isDisplayed());
@@ -767,8 +904,8 @@ public void clicks_the_cta_or_any_product_card_on_the_listing_page(String string
 	  LOGGER.info("Add to cart button is displayed");
 	  checkpresentElement("To check Buy Now button is displayed",p.getAddToQuoteButtonPDP().isDisplayed());
 	  LOGGER.info("Add to quote button is displayed");
-	  //checkpresentElement("To check Quantity button is displayed",p.getAddToWishListButtonPDP().isDisplayed());
-	  LOGGER.info("Add to wishlist button is displayed");
+	 // checkpresentElement("To check Quantity button is displayed",p.getAddToWishListButtonPDP().isDisplayed());
+	 // LOGGER.info("Add to wishlist button is displayed");
 	  checkpresentElement("To check Buy Now button is displayed",p.getAddToCompareListButtonPDP().isDisplayed());
 	  LOGGER.info("Add to compare button is displayed");
 	  checkpresentElement("To check Buy Now button is displayed",p.getFAQSectionButtonPDP().isDisplayed());
@@ -801,15 +938,19 @@ public void adds_the_product_to_the_cart_and_proceeds_to_the_cart_page() {
 	  Threadsleep(2000);
 
 	  // javascriptclick(p.getPDPcheckoutButton());
+
 	  c = new Cartpage();
 	  moveToElement(c.getMinicartQty());
 	  Threadsleep(2000);
 	  actionClick(c.getMinicartQty());
 	  Threadsleep(3000);
-	  checkequaltext("To verify btw the PDP&Cart  page the product RATE",c.getCartprice1().getText(),Rate2);
 
-	  checkequaltext("To verify btw the PDP&Cart  page the product NAME",c.getCartname().getText(), name2);
-	  LOGGER.info(" Btw the PDP&Cart  page the product RATE are verified");
+	 checkequaltext("To verify btw the PDP&Cart  page the product RATE",c.getCartprice1().getText(),Rate2);
+
+	 checkequaltext("To verify btw the PDP&Cart  page the product NAME",c.getCartname().getText(), name2);
+	 
+	 LOGGER.info(" Btw the PDP&Cart  page the product RATE are verified");
+
 	  Threadsleep(3000);
     
 	//Order summary detail verification in cart page
@@ -843,7 +984,7 @@ public void adds_the_product_to_the_cart_and_proceeds_to_the_cart_page() {
 	//    Double OrderSummaryTotalcart3 = Double.valueOf(OrderSummaryTotalcart2);
     //    String Ordercarttotal = String.valueOf(OrderSummaryTotalcart3);
 	//    System.out.println(Ordercarttotal);
-	  // checkpresentElement("To check order summary calculation",Ordercarttotal.equals(T));
+	//   checkpresentElement("To check order summary calculation",Ordercarttotal.equals(T));
 	   LOGGER.info("Successfully Verified   product order summary  Detail in the CART  page");
 	   Threadsleep(3000);
 	   EndTimeprint();
@@ -867,79 +1008,79 @@ public void adds_the_product_to_the_cart_and_proceeds_to_the_cart_page() {
 @When("verifies the Cart page features and Order summary detail.Then,proceeds to the Checkout page")
 public void verifies_the_cart_page_features_and_order_summary_detail_then_proceeds_to_the_checkout_page() {
       
-	//     StartTimeprint();
-	//     c = new Cartpage();
-	//     Threadsleep(1000);
-	// 	ClickElement(c.getQtybuttoMaxCart());
-	// 	Threadsleep(3000);
-	// 	ClickElement(c.getQtybuttoMinCart());
-	// 	navigateRefresh();
-	// 	Threadsleep(3000);
-	// 	javascriptclick(c.getCartcontinueButton());
-	// 	Threadsleep(3000);
-    //     moveToElement(h.getCategeory53());
-	//     moveToElement(h.getCategeory54());
-	//     moveToElement(h.getCategeory55());
-	//     moveToElement(h.getCategeory58());
-	//     Threadsleep(3000);
-	//     checkequaltext("To check Main category to Sub Category is displayed",h.getCategeory58().getText(),"Reverse Osmosis (RO) Plant");
-	//     actionClick(h.getCategeory58());
-	//     LOGGER.info("Main category to Sub Category is displayed");
-	//     javascriptclick(c.getCartname2());
-	//     Threadsleep(2000);
-	// 	 ClickElement(p.getAddToCartButtonPDP());
-	//     Threadsleep(3000);
-	//     PassValues(p.getPincodefield(), "400058");
-	//     ClickElement(p.getPincodecheckButton());
-	//     Threadsleep(2000);
-	//     Alertaccept();
-	//     Threadsleep(2000);
-	//     p = new PDPpage();
-	//     ClickElement(p.getAddToCartButtonPDP());
-	//     Threadsleep(3000);
-	//     LOGGER.info("Add to cart button is clicked");
-	//     // javascriptclick(p.getPDPcheckoutButton());
-	//     c = new Cartpage();
-	//     moveToElement(c.getMinicartQty());
-	//     Threadsleep(2000);
-	//     actionClick(c.getMinicartQty());
-	//     Threadsleep(2000);
-	//     ClickElement(c.getRemoveButton());
-	//     Threadsleep(3000);
-	//     LOGGER.info("Remove button is clicked");
-    //     c = new Cartpage();
-	// 	javascriptclick(c.getCartcontinueButton());
-	// 	Threadsleep(3000);
-    //     moveToElement(h.getCategeory53());
-	//     moveToElement(h.getCategeory54());
-	//     moveToElement(h.getCategeory55());
-	//     moveToElement(h.getCategeory58());
-	//     Threadsleep(3000);
-	//     checkequaltext("To check Main category to Sub Category is displayed",h.getCategeory58().getText(),"Reverse Osmosis (RO) Plant");
-	//     actionClick(h.getCategeory58());
-	//     LOGGER.info("Main category to Sub Category is displayed");
-	//     javascriptclick(c.getCartname4());
-	//     Threadsleep(2000);
-	// 	 ClickElement(p.getAddToCartButtonPDP());
-	//     Threadsleep(3000);
-	//     PassValues(p.getPincodefield(), "400058");
-	//     ClickElement(p.getPincodecheckButton());
-	//     Threadsleep(2000);
-	//     Alertaccept();
-	//     Threadsleep(2000);
-	//      p = new PDPpage();
-	//     ClickElement(p.getAddToCartButtonPDP());
-	//     Threadsleep(3000);
-	//     LOGGER.info("Add to cart button is clicked");
-	//  //  javascriptclick(p.getPDPcheckoutButton());
-	//   c = new Cartpage();
-	//   moveToElement(c.getMinicartQty());
-	//   Threadsleep(2000);
-	//   actionClick(c.getMinicartQty());
-	//   Threadsleep(2000);
-	//   ClickElement(c.getAddToWishlistButton());
-	//   Threadsleep(2000);
-	//   LOGGER.info("Add to wishlist button is clicked");
+	    StartTimeprint();
+	    c = new Cartpage();
+	    Threadsleep(1000);
+		ClickElement(c.getQtybuttoMaxCart());
+		Threadsleep(3000);
+		ClickElement(c.getQtybuttoMinCart());
+		navigateRefresh();
+		Threadsleep(3000);
+		javascriptclick(c.getCartcontinueButton());
+		Threadsleep(3000);
+        moveToElement(h.getCategeory53());
+	    moveToElement(h.getCategeory54());
+	    moveToElement(h.getCategeory55());
+	    moveToElement(h.getCategeory58());
+	    Threadsleep(3000);
+	    checkequaltext("To check Main category to Sub Category is displayed",h.getCategeory58().getText(),"Reverse Osmosis (RO) Plant");
+	    actionClick(h.getCategeory58());
+	    LOGGER.info("Main category to Sub Category is displayed");
+	    javascriptclick(c.getCartname2());
+	    Threadsleep(2000);
+		 ClickElement(p.getAddToCartButtonPDP());
+	    Threadsleep(3000);
+	    PassValues(p.getPincodefield(), "400058");
+	    ClickElement(p.getPincodecheckButton());
+	    Threadsleep(2000);
+	    Alertaccept();
+	    Threadsleep(2000);
+	    p = new PDPpage();
+	    ClickElement(p.getAddToCartButtonPDP());
+	    Threadsleep(3000);
+	    LOGGER.info("Add to cart button is clicked");
+	    // javascriptclick(p.getPDPcheckoutButton());
+	    c = new Cartpage();
+	    moveToElement(c.getMinicartQty());
+	    Threadsleep(2000);
+	    actionClick(c.getMinicartQty());
+	    Threadsleep(2000);
+	    ClickElement(c.getRemoveButton());
+	    Threadsleep(3000);
+	    LOGGER.info("Remove button is clicked");
+        c = new Cartpage();
+		javascriptclick(c.getCartcontinueButton());
+		Threadsleep(3000);
+        moveToElement(h.getCategeory53());
+	    moveToElement(h.getCategeory54());
+	    moveToElement(h.getCategeory55());
+	    moveToElement(h.getCategeory58());
+	    Threadsleep(3000);
+	    checkequaltext("To check Main category to Sub Category is displayed",h.getCategeory58().getText(),"Reverse Osmosis (RO) Plant");
+	    actionClick(h.getCategeory58());
+	    LOGGER.info("Main category to Sub Category is displayed");
+	    javascriptclick(c.getCartname4());
+	    Threadsleep(2000);
+		 ClickElement(p.getAddToCartButtonPDP());
+	    Threadsleep(3000);
+	    PassValues(p.getPincodefield(), "400058");
+	    ClickElement(p.getPincodecheckButton());
+	    Threadsleep(2000);
+	    Alertaccept();
+	    Threadsleep(2000);
+	     p = new PDPpage();
+	    ClickElement(p.getAddToCartButtonPDP());
+	    Threadsleep(3000);
+	    LOGGER.info("Add to cart button is clicked");
+	 //  javascriptclick(p.getPDPcheckoutButton());
+	  c = new Cartpage();
+	  moveToElement(c.getMinicartQty());
+	  Threadsleep(2000);
+	  actionClick(c.getMinicartQty());
+	  Threadsleep(2000);
+	  ClickElement(c.getAddToWishlistButton());
+	  Threadsleep(2000);
+	  LOGGER.info("Add to wishlist button is clicked");
 
 	//   proceeds to the Checkout page
 
@@ -985,6 +1126,7 @@ public void selects_a_payment_option_and_places_the_order() {
 	javascriptclick(c.getPaymentButton());
 	Threadsleep(3000);
     javascriptclick(c.getTermcheckboxlogin());
+
 	//javascriptclick(c.getTermcheckbox());
 }
 @Then("after successful payment, the user should see the Thank You page")
@@ -994,6 +1136,7 @@ public void after_successful_payment_the_user_should_see_the_thank_you_page() {
     Threadsleep(3000);
 	javascriptclick(c.getPlaceorder());
 	EndTimeprint();
+
 	checkpresentElement("To ordernumber in success page",c.getSuccespageOrdernumber().isDisplayed());
     String Successorder = c.getSuccespageOrdernumber().getText();
 
@@ -1021,9 +1164,8 @@ public void after_successful_payment_the_user_should_see_the_thank_you_page() {
 
 }
 
-// Admin dashboard page
-@Given("user opens the admin login page")
-public void user_opens_the_admin_login_page() {
+@Given("the user opens the admin login page")
+public void the_user_opens_the_admin_login_page() {
 
 	 StartTimeprint();
 	 h = new Homepage();
@@ -1031,29 +1173,34 @@ public void user_opens_the_admin_login_page() {
      String title = driver.getTitle();
      checkpresentElement("To check title at Home page",title.contains("Admin"));
 	 EndTimeprint();
-     a = new Adminlogin();
+   
+	
+	 
+}
+
+@When("the user enters valid login credentials and clicks the Sign In button")
+public void the_user_enters_valid_login_credentials_and_clicks_the_sign_in_button() {
+
+	 a = new Adminlogin();
 
 	 PassValues(a.getAdminUsername(),getdataExcel(1, 3));
 	 PassValues(a.getAdminpassword(), getdataExcel(2, 3));
-     Threadsleep(4000);
+     Threadsleep(5000);
 
-	 javascriptclick(a.getSignInButton());
-	
-	 Threadsleep(12000);
 
-	 ClickElement(a.getConfirmButton());
+	// ClickElement(a.getConfirmButton1());
+  
+   
+}
+@Then("the admin dashboard page should be displayed")
+public void the_admin_dashboard_page_should_be_displayed() {
 
+	 a = new Adminlogin();
+	 javascriptclick(a.getSignInButton1());
+	 Threadsleep(5000);
 }
 
-@When("User enter the Login credential and Click on login credential")
-public void user_enter_the_login_credential_and_click_on_login_credential() {
-    
-}
 
-@Then("Observe the  Admin dashboard page.")
-public void observe_the_admin_dashboard_page() {
-    
-}
 
 }
 

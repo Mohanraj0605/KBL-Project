@@ -3195,3 +3195,764 @@ INDIA
 [INFO ] 2025-09-03 18:24:17.934 [main] KBLSteps - KBL admin site  are launched
 [INFO ] 2025-09-03 18:32:34.322 [main] KBLSteps - KBL admin site  are launched
 [INFO ] 2025-09-03 18:37:54.407 [main] KBLSteps - KBL admin site  are launched
+[INFO ] 2025-09-04 10:31:29.203 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 10:31:29.226 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-04 10:31:35.461 [main] KBLSteps - KBL logo is displayed
+[INFO ] 2025-09-04 10:31:35.620 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-04 10:31:51.571 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 10:31:51.655 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-04 10:31:56.723 [main] KBLSteps - Login icon is clicked
+[INFO ] 2025-09-04 10:32:00.078 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 10:32:03.769 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 10:32:14.308 [main] KBLSteps - Login with password functionality is verified successfully
+[INFO ] 2025-09-04 10:32:29.407 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 10:32:29.489 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-04 10:32:34.575 [main] KBLSteps - Login icon is clicked
+[INFO ] 2025-09-04 10:32:37.890 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 10:32:41.006 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 10:32:47.190 [main] KBLSteps - Login with password functionality is verified successfully
+[INFO ] 2025-09-04 10:33:02.105 [main] KBLSteps - My order is displayed
+[INFO ] 2025-09-04 10:33:09.135 [main] KBLSteps - My Service page  is displayed
+[INFO ] 2025-09-04 10:33:21.282 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 10:33:21.360 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-04 10:33:21.571 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-04 10:33:21.655 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-04 10:33:29.152 [main] KBLSteps - Product name is clicked and redirection is verified
+[INFO ] 2025-09-04 10:33:29.295 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-04 10:33:29.341 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-04 10:35:55.406 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 10:35:55.481 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-04 10:36:09.817 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 10:36:17.025 [main] KBLSteps - Buy Now button is displayed
+[INFO ] 2025-09-04 10:37:04.978 [main] KBLSteps - Buy Now button is clicked
+[INFO ] 2025-09-04 10:43:10.488 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 10:43:10.755 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-04 10:43:21.750 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 10:43:25.486 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 10:43:42.745 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 10:43:48.940 [main] KBLSteps - Buy Now button is displayed
+[INFO ] 2025-09-04 10:44:05.460 [main] KBLSteps -  Btw the PLP&PDP page the product NAME & RATE are verified
+[INFO ] 2025-09-04 11:06:00.395 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 11:06:00.657 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-04 11:06:11.811 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 11:06:15.440 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 11:06:31.262 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 11:06:37.446 [main] KBLSteps - Buy Now button is displayed
+[INFO ] 2025-09-04 11:06:49.335 [main] KBLSteps -  Btw the PLP&PDP page the product NAME & RATE are verified
+[INFO ] 2025-09-04 11:07:22.241 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 11:07:22.498 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-04 11:07:36.301 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 11:07:40.060 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 11:07:58.287 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 11:08:04.500 [main] KBLSteps - Buy Now button is displayed
+[INFO ] 2025-09-04 11:08:27.552 [main] KBLSteps -  Btw the PLP&PDP page the product NAME & RATE are verified
+[INFO ] 2025-09-04 11:11:33.633 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 11:11:33.838 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-04 11:11:45.945 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 11:11:49.739 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 11:12:06.652 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 11:12:12.817 [main] KBLSteps - Buy Now button is displayed
+[INFO ] 2025-09-04 11:12:36.028 [main] KBLSteps -  Btw the PLP&PDP page the product NAME & RATE are verified
+[INFO ] 2025-09-04 11:15:53.701 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 11:15:53.936 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-04 11:16:04.849 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 11:16:08.629 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 11:16:24.869 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 11:16:31.037 [main] KBLSteps - Buy Now button is displayed
+[INFO ] 2025-09-04 11:16:53.388 [main] KBLSteps -  Btw the PLP&PDP page the product NAME & RATE are verified
+[INFO ] 2025-09-04 11:17:03.685 [main] KBLSteps - Installation Service label is displayed
+[INFO ] 2025-09-04 11:17:03.702 [main] KBLSteps - Buy Now button is displayed
+[INFO ] 2025-09-04 11:17:03.719 [main] KBLSteps - Add to cart button is displayed
+[INFO ] 2025-09-04 11:17:03.737 [main] KBLSteps - Add to quote button is displayed
+[INFO ] 2025-09-04 11:17:03.737 [main] KBLSteps - Add to wishlist button is displayed
+[INFO ] 2025-09-04 11:17:03.755 [main] KBLSteps - Add to compare button is displayed
+[INFO ] 2025-09-04 11:17:03.777 [main] KBLSteps - FAQ section button is displayed
+[INFO ] 2025-09-04 11:17:03.795 [main] KBLSteps - Service image is displayed
+[INFO ] 2025-09-04 11:17:03.814 [main] KBLSteps - Service text is displayed
+[INFO ] 2025-09-04 11:17:11.959 [main] KBLSteps - Add to cart button is clicked
+[INFO ] 2025-09-04 11:19:45.689 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 11:19:45.731 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-04 11:19:49.967 [main] KBLSteps - KBL logo is displayed
+[INFO ] 2025-09-04 11:19:50.148 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-04 11:19:55.281 [main] KBLSteps - Login icon is clicked
+[INFO ] 2025-09-04 11:19:55.453 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-04 11:19:58.616 [main] KBLSteps - Wishlist link is displayed
+[INFO ] 2025-09-04 11:20:05.980 [main] KBLSteps - Cart icon is clicked
+[INFO ] 2025-09-04 11:20:23.738 [main] KBLSteps - Homepage banner and slider next is displayed
+[INFO ] 2025-09-04 11:20:37.468 [main] KBLSteps - Residential section is displayed
+[INFO ] 2025-09-04 11:20:41.460 [main] KBLSteps - Commercial section is displayed
+[INFO ] 2025-09-04 11:20:41.797 [main] KBLSteps - Industrial section is displayed
+[INFO ] 2025-09-04 11:20:41.901 [main] KBLSteps - Agriculture section is displayed
+[INFO ] 2025-09-04 11:20:41.928 [main] KBLSteps - Testimonial section is displayed
+[INFO ] 2025-09-04 11:20:41.929 [main] KBLSteps - Home page sections all are displayed and verified 
+[INFO ] 2025-09-04 11:22:31.764 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 11:22:31.810 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-04 11:22:44.058 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 11:22:51.246 [main] KBLSteps - Buy Now button is displayed
+[INFO ] 2025-09-04 11:23:10.952 [main] KBLSteps - Buy Now button is clicked
+[INFO ] 2025-09-04 11:38:08.219 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 11:38:08.487 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-04 11:38:21.435 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 11:38:24.929 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 11:44:08.976 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 11:44:09.196 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-04 11:44:21.890 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 11:44:25.971 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 11:44:45.690 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 11:44:51.870 [main] KBLSteps - Buy Now button is displayed
+[INFO ] 2025-09-04 11:45:10.876 [main] KBLSteps -  Btw the PLP&PDP page the product NAME & RATE are verified
+[INFO ] 2025-09-04 11:45:21.189 [main] KBLSteps - Installation Service label is displayed
+[INFO ] 2025-09-04 11:45:21.212 [main] KBLSteps - Buy Now button is displayed
+[INFO ] 2025-09-04 11:45:21.230 [main] KBLSteps - Add to cart button is displayed
+[INFO ] 2025-09-04 11:45:21.250 [main] KBLSteps - Add to quote button is displayed
+[INFO ] 2025-09-04 11:45:21.250 [main] KBLSteps - Add to wishlist button is displayed
+[INFO ] 2025-09-04 11:45:21.271 [main] KBLSteps - Add to compare button is displayed
+[INFO ] 2025-09-04 11:45:21.293 [main] KBLSteps - FAQ section button is displayed
+[INFO ] 2025-09-04 11:45:21.312 [main] KBLSteps - Service image is displayed
+[INFO ] 2025-09-04 11:45:21.332 [main] KBLSteps - Service text is displayed
+[INFO ] 2025-09-04 11:45:29.457 [main] KBLSteps - Add to cart button is clicked
+[INFO ] 2025-09-04 11:49:18.923 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 11:49:19.166 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-04 11:49:30.541 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 11:49:34.539 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 11:56:13.666 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 11:56:13.924 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-04 11:56:24.994 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 11:56:28.904 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 11:56:49.624 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 11:59:21.154 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 11:59:21.376 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-04 11:59:32.352 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 11:59:36.359 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 11:59:54.563 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 12:02:26.664 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 12:02:26.897 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-04 12:02:37.984 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 12:02:41.973 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 12:02:58.873 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 12:03:11.883 [main] KBLSteps - Buy Now button is clicked
+[INFO ] 2025-09-04 12:03:23.612 [main] KBLSteps - Installation Service label is displayed
+[INFO ] 2025-09-04 12:03:23.635 [main] KBLSteps - Buy Now button is displayed
+[INFO ] 2025-09-04 12:03:23.654 [main] KBLSteps - Add to cart button is displayed
+[INFO ] 2025-09-04 12:03:23.677 [main] KBLSteps - Add to quote button is displayed
+[INFO ] 2025-09-04 12:03:23.677 [main] KBLSteps - Add to wishlist button is displayed
+[INFO ] 2025-09-04 12:03:23.699 [main] KBLSteps - Add to compare button is displayed
+[INFO ] 2025-09-04 12:03:23.721 [main] KBLSteps - FAQ section button is displayed
+[INFO ] 2025-09-04 12:03:23.747 [main] KBLSteps - Service image is displayed
+[INFO ] 2025-09-04 12:03:23.767 [main] KBLSteps - Service text is displayed
+[INFO ] 2025-09-04 12:05:44.556 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 12:05:44.821 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-04 12:05:55.822 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 12:05:59.752 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 12:06:18.434 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 12:06:43.788 [main] KBLSteps - Buy Now button is clicked
+[INFO ] 2025-09-04 12:06:55.299 [main] KBLSteps - Installation Service label is displayed
+[INFO ] 2025-09-04 12:06:55.319 [main] KBLSteps - Buy Now button is displayed
+[INFO ] 2025-09-04 12:06:55.334 [main] KBLSteps - Add to cart button is displayed
+[INFO ] 2025-09-04 12:06:55.354 [main] KBLSteps - Add to quote button is displayed
+[INFO ] 2025-09-04 12:06:55.354 [main] KBLSteps - Add to wishlist button is displayed
+[INFO ] 2025-09-04 12:06:55.374 [main] KBLSteps - Add to compare button is displayed
+[INFO ] 2025-09-04 12:06:55.395 [main] KBLSteps - FAQ section button is displayed
+[INFO ] 2025-09-04 12:06:55.414 [main] KBLSteps - Service image is displayed
+[INFO ] 2025-09-04 12:06:55.433 [main] KBLSteps - Service text is displayed
+[INFO ] 2025-09-04 12:07:05.060 [main] KBLSteps - Add to cart button is clicked
+[INFO ] 2025-09-04 12:07:19.366 [main] KBLSteps -  Btw the PDP&Cart  page the product RATE are verified
+[INFO ] 2025-09-04 12:07:22.437 [main] KBLSteps - Successfully Verified   product order summary  Detail in the CART  page
+[INFO ] 2025-09-04 12:07:35.538 [main] KBLSteps - Cart checkout button is clicked
+[INFO ] 2025-09-04 12:10:30.788 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 12:10:31.010 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-04 12:10:42.458 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 12:10:46.326 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 12:11:05.205 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 12:11:25.434 [main] KBLSteps - Buy Now button is clicked
+[INFO ] 2025-09-04 12:11:37.103 [main] KBLSteps - Installation Service label is displayed
+[INFO ] 2025-09-04 12:11:37.124 [main] KBLSteps - Buy Now button is displayed
+[INFO ] 2025-09-04 12:11:37.142 [main] KBLSteps - Add to cart button is displayed
+[INFO ] 2025-09-04 12:11:37.165 [main] KBLSteps - Add to quote button is displayed
+[INFO ] 2025-09-04 12:11:37.165 [main] KBLSteps - Add to wishlist button is displayed
+[INFO ] 2025-09-04 12:11:37.192 [main] KBLSteps - Add to compare button is displayed
+[INFO ] 2025-09-04 12:11:37.215 [main] KBLSteps - FAQ section button is displayed
+[INFO ] 2025-09-04 12:11:37.236 [main] KBLSteps - Service image is displayed
+[INFO ] 2025-09-04 12:11:37.257 [main] KBLSteps - Service text is displayed
+[INFO ] 2025-09-04 12:11:46.341 [main] KBLSteps - Add to cart button is clicked
+[INFO ] 2025-09-04 12:11:58.875 [main] KBLSteps -  Btw the PDP&Cart  page the product RATE are verified
+[INFO ] 2025-09-04 12:12:01.950 [main] KBLSteps - Successfully Verified   product order summary  Detail in the CART  page
+[INFO ] 2025-09-04 12:12:14.122 [main] KBLSteps - Cart checkout button is clicked
+[INFO ] 2025-09-04 12:23:48.477 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 12:23:48.695 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-04 12:23:59.680 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 12:24:03.703 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 12:24:21.025 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 12:24:37.796 [main] KBLSteps - Buy Now button is clicked
+[INFO ] 2025-09-04 12:24:49.572 [main] KBLSteps - Installation Service label is displayed
+[INFO ] 2025-09-04 12:24:49.590 [main] KBLSteps - Buy Now button is displayed
+[INFO ] 2025-09-04 12:24:49.607 [main] KBLSteps - Add to cart button is displayed
+[INFO ] 2025-09-04 12:24:49.626 [main] KBLSteps - Add to quote button is displayed
+[INFO ] 2025-09-04 12:24:49.626 [main] KBLSteps - Add to wishlist button is displayed
+[INFO ] 2025-09-04 12:24:49.645 [main] KBLSteps - Add to compare button is displayed
+[INFO ] 2025-09-04 12:24:49.664 [main] KBLSteps - FAQ section button is displayed
+[INFO ] 2025-09-04 12:24:49.684 [main] KBLSteps - Service image is displayed
+[INFO ] 2025-09-04 12:24:49.705 [main] KBLSteps - Service text is displayed
+[INFO ] 2025-09-04 12:24:58.826 [main] KBLSteps - Add to cart button is clicked
+[INFO ] 2025-09-04 12:25:12.118 [main] KBLSteps -  Btw the PDP&Cart  page the product RATE are verified
+[INFO ] 2025-09-04 12:25:15.206 [main] KBLSteps - Successfully Verified   product order summary  Detail in the CART  page
+[INFO ] 2025-09-04 12:25:43.826 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 12:26:07.247 [main] KBLSteps - Add to cart button is clicked
+[INFO ] 2025-09-04 12:26:25.664 [main] KBLSteps - Remove button is clicked
+[INFO ] 2025-09-04 12:26:35.812 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 12:26:53.668 [main] KBLSteps - Add to cart button is clicked
+[INFO ] 2025-09-04 12:27:04.865 [main] KBLSteps - Add to wishlist button is clicked
+[INFO ] 2025-09-04 12:27:15.745 [main] KBLSteps - Cart checkout button is clicked
+[INFO ] 2025-09-04 13:07:08.756 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 13:07:08.990 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-04 13:07:19.769 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 13:07:23.368 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 13:07:40.896 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 13:07:52.218 [main] KBLSteps - Buy Now button is clicked
+[INFO ] 2025-09-04 13:08:03.649 [main] KBLSteps - Installation Service label is displayed
+[INFO ] 2025-09-04 13:08:03.669 [main] KBLSteps - Buy Now button is displayed
+[INFO ] 2025-09-04 13:08:03.684 [main] KBLSteps - Add to cart button is displayed
+[INFO ] 2025-09-04 13:08:03.704 [main] KBLSteps - Add to quote button is displayed
+[INFO ] 2025-09-04 13:08:03.704 [main] KBLSteps - Add to wishlist button is displayed
+[INFO ] 2025-09-04 13:08:03.725 [main] KBLSteps - Add to compare button is displayed
+[INFO ] 2025-09-04 13:08:03.744 [main] KBLSteps - FAQ section button is displayed
+[INFO ] 2025-09-04 13:08:03.771 [main] KBLSteps - Service image is displayed
+[INFO ] 2025-09-04 13:08:03.792 [main] KBLSteps - Service text is displayed
+[INFO ] 2025-09-04 13:08:12.683 [main] KBLSteps - Add to cart button is clicked
+[INFO ] 2025-09-04 13:08:23.999 [main] KBLSteps -  Btw the PDP&Cart  page the product RATE are verified
+[INFO ] 2025-09-04 13:08:27.071 [main] KBLSteps - Successfully Verified   product order summary  Detail in the CART  page
+[INFO ] 2025-09-04 13:08:51.829 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 13:09:11.012 [main] KBLSteps - Add to cart button is clicked
+[INFO ] 2025-09-04 13:09:26.956 [main] KBLSteps - Remove button is clicked
+[INFO ] 2025-09-04 13:09:36.162 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 13:09:53.510 [main] KBLSteps - Add to cart button is clicked
+[INFO ] 2025-09-04 13:10:03.795 [main] KBLSteps - Add to wishlist button is clicked
+[INFO ] 2025-09-04 13:10:16.175 [main] KBLSteps - Cart checkout button is clicked
+[INFO ] 2025-09-04 15:51:45.265 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 15:51:45.291 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-04 15:51:49.431 [main] KBLSteps - KBL logo is displayed
+[INFO ] 2025-09-04 15:51:49.594 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-04 15:51:54.998 [main] KBLSteps - Login icon is clicked
+[INFO ] 2025-09-04 15:51:55.144 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-04 15:51:58.318 [main] KBLSteps - Wishlist link is displayed
+[INFO ] 2025-09-04 15:52:04.727 [main] KBLSteps - Cart icon is clicked
+[INFO ] 2025-09-04 15:53:33.531 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 15:53:33.595 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-04 15:53:37.580 [main] KBLSteps - KBL logo is displayed
+[INFO ] 2025-09-04 15:53:37.751 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-04 15:53:42.039 [main] KBLSteps - Login icon is clicked
+[INFO ] 2025-09-04 15:53:42.196 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-04 15:53:45.346 [main] KBLSteps - Wishlist link is displayed
+[INFO ] 2025-09-04 15:53:52.369 [main] KBLSteps - Cart icon is clicked
+[INFO ] 2025-09-04 15:54:15.375 [main] KBLSteps - Residential section is displayed
+[INFO ] 2025-09-04 15:54:18.887 [main] KBLSteps - Commercial section is displayed
+[INFO ] 2025-09-04 15:54:18.912 [main] KBLSteps - Industrial section is displayed
+[INFO ] 2025-09-04 15:54:18.933 [main] KBLSteps - Agriculture section is displayed
+[INFO ] 2025-09-04 15:54:18.958 [main] KBLSteps - Testimonial section is displayed
+[INFO ] 2025-09-04 15:54:18.958 [main] KBLSteps - Home page sections all are displayed and verified 
+[INFO ] 2025-09-04 15:56:21.660 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 15:56:21.705 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-04 15:56:26.337 [main] KBLSteps - Login icon is clicked
+[INFO ] 2025-09-04 15:56:29.642 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 15:56:33.514 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 15:56:40.267 [main] KBLSteps - Login with password functionality is verified successfully
+[INFO ] 2025-09-04 15:57:10.342 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 15:57:10.396 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-04 15:57:16.134 [main] KBLSteps - Login icon is clicked
+[INFO ] 2025-09-04 15:57:19.446 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 15:57:23.458 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 15:57:30.441 [main] KBLSteps - Login with password functionality is verified successfully
+[INFO ] 2025-09-04 15:57:45.327 [main] KBLSteps - My order is displayed
+[INFO ] 2025-09-04 15:57:52.482 [main] KBLSteps - My Service page  is displayed
+[INFO ] 2025-09-04 15:58:28.926 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 15:58:28.938 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-04 15:58:29.165 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-04 15:58:29.247 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-04 15:58:43.200 [main] KBLSteps - Product name is clicked and redirection is verified
+[INFO ] 2025-09-04 15:58:43.363 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-04 15:58:43.438 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-04 15:58:54.714 [main] KBLSteps - See all navigation is verified
+[INFO ] 2025-09-04 15:59:04.038 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-04 15:59:04.086 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-04 15:59:10.208 [main] KBLSteps - Using Enter key navigation page is verified
+[INFO ] 2025-09-04 15:59:14.327 [main] KBLSteps - Residential Filter is displayed
+[INFO ] 2025-09-04 15:59:43.310 [main] KBLSteps - Clearall button is verified
+[INFO ] 2025-09-04 16:00:45.223 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 16:00:45.271 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-04 16:00:56.820 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 16:01:04.040 [main] KBLSteps - Buy Now button is displayed
+[INFO ] 2025-09-04 16:01:30.403 [main] KBLSteps - Buy Now button is clicked
+[INFO ] 2025-09-04 16:01:58.889 [main] KBLSteps - Compare now button is displayed
+[INFO ] 2025-09-04 16:02:05.432 [main] KBLSteps - Compare now checkbox is clicked and redirection is verified
+[INFO ] 2025-09-04 16:02:18.335 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 16:02:18.350 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-04 16:02:29.851 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 16:03:21.696 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 16:03:21.746 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-04 16:03:34.403 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 16:03:41.583 [main] KBLSteps - Buy Now button is displayed
+[INFO ] 2025-09-04 16:15:38.079 [main] KBLSteps - KBL admin site  are launched
+[INFO ] 2025-09-04 16:23:09.773 [main] KBLSteps - KBL admin site  are launched
+[INFO ] 2025-09-04 18:04:36.727 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 18:04:37.058 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-04 18:04:48.283 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 18:04:52.858 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 18:05:09.654 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 18:05:25.443 [main] KBLSteps - Buy Now button is clicked
+[INFO ] 2025-09-04 18:05:37.043 [main] KBLSteps - Installation Service label is displayed
+[INFO ] 2025-09-04 18:05:37.095 [main] KBLSteps - Buy Now button is displayed
+[INFO ] 2025-09-04 18:05:37.143 [main] KBLSteps - Add to cart button is displayed
+[INFO ] 2025-09-04 18:05:37.195 [main] KBLSteps - Add to quote button is displayed
+[INFO ] 2025-09-04 18:05:37.195 [main] KBLSteps - Add to wishlist button is displayed
+[INFO ] 2025-09-04 18:05:37.240 [main] KBLSteps - Add to compare button is displayed
+[INFO ] 2025-09-04 18:05:37.280 [main] KBLSteps - FAQ section button is displayed
+[INFO ] 2025-09-04 18:05:37.325 [main] KBLSteps - Service image is displayed
+[INFO ] 2025-09-04 18:05:37.367 [main] KBLSteps - Service text is displayed
+[INFO ] 2025-09-04 18:05:46.259 [main] KBLSteps - Add to cart button is clicked
+[INFO ] 2025-09-04 18:06:00.791 [main] KBLSteps -  Btw the PDP&Cart  page the product RATE are verified
+[INFO ] 2025-09-04 18:06:03.952 [main] KBLSteps - Successfully Verified   product order summary  Detail in the CART  page
+[INFO ] 2025-09-04 18:06:34.962 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 18:06:57.722 [main] KBLSteps - Add to cart button is clicked
+[INFO ] 2025-09-04 18:07:14.194 [main] KBLSteps - Remove button is clicked
+[INFO ] 2025-09-04 18:07:24.124 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 18:07:47.937 [main] KBLSteps - Add to cart button is clicked
+[INFO ] 2025-09-04 18:07:59.092 [main] KBLSteps - Add to wishlist button is clicked
+[INFO ] 2025-09-04 18:08:11.096 [main] KBLSteps - Cart checkout button is clicked
+[INFO ] 2025-09-04 18:46:04.342 [main] KBLSteps - KBL admin site  are launched
+[INFO ] 2025-09-04 18:47:36.720 [main] KBLSteps - KBL admin site  are launched
+[INFO ] 2025-09-04 18:51:17.736 [main] KBLSteps - KBL admin site  are launched
+[INFO ] 2025-09-04 18:57:31.309 [main] KBLSteps - KBL admin site  are launched
+[INFO ] 2025-09-04 19:01:22.577 [main] KBLSteps - KBL admin site  are launched
+[INFO ] 2025-09-04 22:39:41.647 [main] KBLSteps - KBL admin site  are launched
+[INFO ] 2025-09-04 22:51:20.621 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 22:51:20.869 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-04 22:51:31.651 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 22:51:35.692 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 22:51:52.938 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 22:51:59.161 [main] KBLSteps - Buy Now button is displayed
+[INFO ] 2025-09-04 22:52:05.665 [main] KBLSteps - Buy Now button is clicked
+[INFO ] 2025-09-04 22:53:43.795 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 22:53:44.061 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-04 22:53:55.123 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 22:53:59.077 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 22:54:16.352 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 22:54:22.616 [main] KBLSteps - Buy Now button is displayed
+[INFO ] 2025-09-04 22:54:27.336 [main] KBLSteps - Buy Now button is clicked
+[INFO ] 2025-09-04 22:57:25.997 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 22:57:26.232 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-04 22:57:37.685 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 22:57:41.667 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 22:57:58.538 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 22:58:04.830 [main] KBLSteps - Buy Now button is displayed
+[INFO ] 2025-09-04 22:58:04.830 [main] KBLSteps - Buy Now button is clicked
+[INFO ] 2025-09-04 22:58:18.153 [main] KBLSteps -  Btw the PLP&PDP page the product NAME & RATE are verified
+[INFO ] 2025-09-04 22:58:29.578 [main] KBLSteps - Installation Service label is displayed
+[INFO ] 2025-09-04 22:58:29.622 [main] KBLSteps - Buy Now button is displayed
+[INFO ] 2025-09-04 22:58:29.654 [main] KBLSteps - Add to cart button is displayed
+[INFO ] 2025-09-04 22:58:29.686 [main] KBLSteps - Add to quote button is displayed
+[INFO ] 2025-09-04 23:01:03.066 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 23:01:03.352 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-04 23:01:14.189 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 23:01:18.203 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 23:01:35.686 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 23:01:41.951 [main] KBLSteps - Buy Now button is displayed
+[INFO ] 2025-09-04 23:01:41.951 [main] KBLSteps - Buy Now button is clicked
+[INFO ] 2025-09-04 23:01:56.213 [main] KBLSteps -  Btw the PLP&PDP page the product NAME & RATE are verified
+[INFO ] 2025-09-04 23:02:07.435 [main] KBLSteps - Installation Service label is displayed
+[INFO ] 2025-09-04 23:02:07.474 [main] KBLSteps - Buy Now button is displayed
+[INFO ] 2025-09-04 23:02:07.499 [main] KBLSteps - Add to cart button is displayed
+[INFO ] 2025-09-04 23:02:07.531 [main] KBLSteps - Add to quote button is displayed
+[INFO ] 2025-09-04 23:02:07.569 [main] KBLSteps - Add to compare button is displayed
+[INFO ] 2025-09-04 23:02:07.602 [main] KBLSteps - FAQ section button is displayed
+[INFO ] 2025-09-04 23:02:07.635 [main] KBLSteps - Service image is displayed
+[INFO ] 2025-09-04 23:02:07.666 [main] KBLSteps - Service text is displayed
+[INFO ] 2025-09-04 23:02:17.015 [main] KBLSteps - Add to cart button is clicked
+[INFO ] 2025-09-04 23:02:27.078 [main] KBLSteps -  Btw the PDP&Cart  page the product RATE are verified
+[INFO ] 2025-09-04 23:02:30.225 [main] KBLSteps - Successfully Verified   product order summary  Detail in the CART  page
+[INFO ] 2025-09-04 23:03:05.482 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 23:03:43.661 [main] KBLSteps - Add to cart button is clicked
+[INFO ] 2025-09-04 23:04:02.509 [main] KBLSteps - Remove button is clicked
+[INFO ] 2025-09-04 23:04:15.389 [main] KBLSteps - Main category to Sub Category is displayed
+[INFO ] 2025-09-04 23:04:48.621 [main] KBLSteps - Add to cart button is clicked
+[INFO ] 2025-09-04 23:05:04.524 [main] KBLSteps - Add to wishlist button is clicked
+[INFO ] 2025-09-04 23:05:34.189 [main] KBLSteps - Cart checkout button is clicked
+[INFO ] 2025-09-04 23:09:07.969 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 23:09:07.988 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-04 23:09:12.350 [main] KBLSteps - Login icon is clicked
+[INFO ] 2025-09-04 23:09:15.771 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 23:09:19.654 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 23:09:26.062 [main] KBLSteps - Login with password functionality is verified successfully
+[INFO ] 2025-09-04 23:09:40.953 [main] KBLSteps - My order is displayed
+[INFO ] 2025-09-04 23:09:48.529 [main] KBLSteps - My Service page  is displayed
+[INFO ] 2025-09-04 23:47:37.887 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 23:47:37.948 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-04 23:48:09.482 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 23:48:09.536 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-04 23:48:14.277 [main] KBLSteps - Login icon is clicked
+[INFO ] 2025-09-04 23:48:17.615 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 23:48:21.587 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 23:48:27.979 [main] KBLSteps - Login with password functionality is verified successfully
+[INFO ] 2025-09-04 23:48:31.255 [main] KBLSteps - My account dashboard  is displayed
+[INFO ] 2025-09-04 23:48:36.775 [main] KBLSteps - My address book  options  is displayed
+[INFO ] 2025-09-04 23:48:41.226 [main] KBLSteps - My Account option  is displayed
+[INFO ] 2025-09-04 23:48:55.431 [main] KBLSteps - My order is displayed
+[INFO ] 2025-09-04 23:49:01.374 [main] KBLSteps - My Service option  is displayed
+[INFO ] 2025-09-04 23:54:03.836 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 23:54:03.877 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-04 23:54:08.404 [main] KBLSteps - Login icon is clicked
+[INFO ] 2025-09-04 23:54:11.823 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 23:54:15.779 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 23:54:22.056 [main] KBLSteps - Login with password functionality is verified successfully
+[INFO ] 2025-09-04 23:54:25.376 [main] KBLSteps - My account dashboard  is displayed
+[INFO ] 2025-09-04 23:54:29.889 [main] KBLSteps - My address book  options  is displayed
+[INFO ] 2025-09-04 23:54:34.742 [main] KBLSteps - My Account option  is displayed
+[INFO ] 2025-09-04 23:54:49.507 [main] KBLSteps - My order is displayed
+[INFO ] 2025-09-04 23:54:53.883 [main] KBLSteps - My Service option  is displayed
+[INFO ] 2025-09-04 23:56:55.034 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 23:56:55.061 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-04 23:57:00.236 [main] KBLSteps - Login icon is clicked
+[INFO ] 2025-09-04 23:57:03.659 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 23:57:07.587 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 23:57:13.938 [main] KBLSteps - Login with password functionality is verified successfully
+[INFO ] 2025-09-04 23:57:17.325 [main] KBLSteps - My account dashboard  is displayed
+[INFO ] 2025-09-04 23:57:21.584 [main] KBLSteps - My address book  options  is displayed
+[INFO ] 2025-09-04 23:57:26.064 [main] KBLSteps - My Account option  is displayed
+[INFO ] 2025-09-04 23:57:40.737 [main] KBLSteps - My order is displayed
+[INFO ] 2025-09-04 23:57:45.739 [main] KBLSteps - My Service option  is displayed
+[INFO ] 2025-09-04 23:59:27.216 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-04 23:59:27.234 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-04 23:59:31.778 [main] KBLSteps - Login icon is clicked
+[INFO ] 2025-09-04 23:59:35.128 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-04 23:59:39.092 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-04 23:59:45.457 [main] KBLSteps - Login with password functionality is verified successfully
+[INFO ] 2025-09-04 23:59:48.819 [main] KBLSteps - My account dashboard  is displayed
+[INFO ] 2025-09-04 23:59:52.933 [main] KBLSteps - My address book  options  is displayed
+[INFO ] 2025-09-04 23:59:57.429 [main] KBLSteps - My Account option  is displayed
+[INFO ] 2025-09-05 00:00:11.937 [main] KBLSteps - My order is displayed
+[INFO ] 2025-09-05 00:00:16.805 [main] KBLSteps - My Service option  is displayed
+[INFO ] 2025-09-05 00:00:23.866 [main] KBLSteps - AMC option  is displayed
+[INFO ] 2025-09-05 00:01:32.008 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 00:01:32.072 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 00:01:36.713 [main] KBLSteps - Login icon is clicked
+[INFO ] 2025-09-05 00:01:40.069 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-05 00:01:44.188 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-05 00:01:50.480 [main] KBLSteps - Login with password functionality is verified successfully
+[INFO ] 2025-09-05 00:01:53.613 [main] KBLSteps - My account dashboard  is displayed
+[INFO ] 2025-09-05 00:01:58.781 [main] KBLSteps - My address book  options  is displayed
+[INFO ] 2025-09-05 00:02:02.972 [main] KBLSteps - My Account option  is displayed
+[INFO ] 2025-09-05 00:02:17.107 [main] KBLSteps - My order is displayed
+[INFO ] 2025-09-05 00:02:22.464 [main] KBLSteps - My Service option  is displayed
+[INFO ] 2025-09-05 00:02:29.458 [main] KBLSteps - AMC option  is displayed
+[INFO ] 2025-09-05 00:02:34.800 [main] KBLSteps - News-Letter option  is displayed
+[INFO ] 2025-09-05 00:02:38.770 [main] KBLSteps -  My Product Reviews option  is displayed
+[INFO ] 2025-09-05 00:04:07.639 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 00:04:07.692 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 00:04:12.192 [main] KBLSteps - Login icon is clicked
+[INFO ] 2025-09-05 00:04:15.542 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-05 00:04:19.454 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-05 00:04:25.723 [main] KBLSteps - Login with password functionality is verified successfully
+[INFO ] 2025-09-05 00:04:28.945 [main] KBLSteps - My account dashboard  is displayed
+[INFO ] 2025-09-05 00:04:33.511 [main] KBLSteps - My address book  options  is displayed
+[INFO ] 2025-09-05 00:04:37.742 [main] KBLSteps - My Account option  is displayed
+[INFO ] 2025-09-05 00:04:52.296 [main] KBLSteps - My order is displayed
+[INFO ] 2025-09-05 00:04:57.011 [main] KBLSteps - My Service option  is displayed
+[INFO ] 2025-09-05 00:05:04.369 [main] KBLSteps - AMC option  is displayed
+[INFO ] 2025-09-05 00:06:44.079 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 00:06:44.147 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 00:06:48.806 [main] KBLSteps - Login icon is clicked
+[INFO ] 2025-09-05 00:06:52.188 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-05 00:06:56.203 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-05 00:07:02.446 [main] KBLSteps - Login with password functionality is verified successfully
+[INFO ] 2025-09-05 00:07:05.613 [main] KBLSteps - My account dashboard  is displayed
+[INFO ] 2025-09-05 00:07:09.951 [main] KBLSteps - My address book  options  is displayed
+[INFO ] 2025-09-05 00:07:14.340 [main] KBLSteps - My Account option  is displayed
+[INFO ] 2025-09-05 00:07:29.034 [main] KBLSteps - My order is displayed
+[INFO ] 2025-09-05 00:07:33.092 [main] KBLSteps - My Service option  is displayed
+[INFO ] 2025-09-05 00:07:40.402 [main] KBLSteps - AMC option  is displayed
+[INFO ] 2025-09-05 00:07:47.308 [main] KBLSteps - News-Letter option  is displayed
+[INFO ] 2025-09-05 00:07:53.638 [main] KBLSteps -  My Product Reviews option  is displayed
+[INFO ] 2025-09-05 00:08:00.069 [main] KBLSteps - My wishlist option  is displayed
+[INFO ] 2025-09-05 00:08:05.324 [main] KBLSteps -  My Quotes option  is displayed
+[INFO ] 2025-09-05 00:09:00.327 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 00:09:00.359 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 00:09:04.969 [main] KBLSteps - Login icon is clicked
+[INFO ] 2025-09-05 00:09:08.336 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-05 00:09:12.236 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-05 00:09:18.543 [main] KBLSteps - Login with password functionality is verified successfully
+[INFO ] 2025-09-05 00:09:21.712 [main] KBLSteps - My account dashboard  is displayed
+[INFO ] 2025-09-05 00:09:25.973 [main] KBLSteps - My address book  options  is displayed
+[INFO ] 2025-09-05 00:09:30.189 [main] KBLSteps - My Account option  is displayed
+[INFO ] 2025-09-05 00:09:44.868 [main] KBLSteps - My order is displayed
+[INFO ] 2025-09-05 00:09:49.270 [main] KBLSteps - My Service option  is displayed
+[INFO ] 2025-09-05 00:09:56.565 [main] KBLSteps - AMC option  is displayed
+[INFO ] 2025-09-05 00:10:03.367 [main] KBLSteps - News-Letter option  is displayed
+[INFO ] 2025-09-05 00:10:09.319 [main] KBLSteps -  My Product Reviews option  is displayed
+[INFO ] 2025-09-05 00:10:16.404 [main] KBLSteps - My wishlist option  is displayed
+[INFO ] 2025-09-05 00:10:21.645 [main] KBLSteps -  My Quotes option  is displayed
+[INFO ] 2025-09-05 00:10:26.922 [main] KBLSteps -  My Replacment option  is displayed
+[INFO ] 2025-09-05 00:12:16.300 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 00:12:16.316 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 00:12:44.805 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 00:12:44.820 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 00:13:15.809 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 00:13:15.827 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 00:15:15.281 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 00:15:15.315 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 00:15:20.249 [main] KBLSteps - Login icon is clicked
+[INFO ] 2025-09-05 00:15:23.611 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-05 00:15:27.665 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-05 00:15:34.016 [main] KBLSteps - Login with password functionality is verified successfully
+[INFO ] 2025-09-05 00:15:37.189 [main] KBLSteps - My account dashboard  is displayed
+[INFO ] 2025-09-05 00:15:41.582 [main] KBLSteps - My address book  options  is displayed
+[INFO ] 2025-09-05 00:15:46.447 [main] KBLSteps - My Account option  is displayed
+[INFO ] 2025-09-05 00:16:00.866 [main] KBLSteps - My order is displayed
+[INFO ] 2025-09-05 00:16:04.849 [main] KBLSteps - My Service option  is displayed
+[INFO ] 2025-09-05 00:16:11.188 [main] KBLSteps - AMC option  is displayed
+[INFO ] 2025-09-05 00:16:17.379 [main] KBLSteps - News-Letter option  is displayed
+[INFO ] 2025-09-05 00:16:22.351 [main] KBLSteps -  My Product Reviews option  is displayed
+[INFO ] 2025-09-05 00:16:27.871 [main] KBLSteps - My wishlist option  is displayed
+[INFO ] 2025-09-05 00:16:32.977 [main] KBLSteps -  My Quotes option  is displayed
+[INFO ] 2025-09-05 00:16:38.316 [main] KBLSteps -  My Replacment option  is displayed
+[INFO ] 2025-09-05 00:16:41.310 [main] KBLSteps -  My Products option  is displayed
+[INFO ] 2025-09-05 00:16:41.311 [main] KBLSteps - My account dashboard page all the optons are verified and Navigated to the respective page
+[INFO ] 2025-09-05 00:17:23.465 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 00:17:23.481 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 00:17:28.190 [main] KBLSteps - Login icon is clicked
+[INFO ] 2025-09-05 00:17:31.518 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-05 00:17:35.747 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-05 00:17:42.318 [main] KBLSteps - Login with password functionality is verified successfully
+[INFO ] 2025-09-05 00:17:45.520 [main] KBLSteps - My account dashboard  is displayed
+[INFO ] 2025-09-05 00:17:49.996 [main] KBLSteps - My address book  options  is displayed
+[INFO ] 2025-09-05 00:17:54.391 [main] KBLSteps - My Account option  is displayed
+[INFO ] 2025-09-05 00:18:09.653 [main] KBLSteps - My order is displayed
+[INFO ] 2025-09-05 00:18:14.365 [main] KBLSteps - My Service option  is displayed
+[INFO ] 2025-09-05 00:18:20.662 [main] KBLSteps - AMC option  is displayed
+[INFO ] 2025-09-05 00:18:27.050 [main] KBLSteps - News-Letter option  is displayed
+[INFO ] 2025-09-05 00:18:32.496 [main] KBLSteps -  My Product Reviews option  is displayed
+[INFO ] 2025-09-05 00:18:37.897 [main] KBLSteps - My wishlist option  is displayed
+[INFO ] 2025-09-05 00:18:43.114 [main] KBLSteps -  My Quotes option  is displayed
+[INFO ] 2025-09-05 00:18:48.455 [main] KBLSteps -  My Replacment option  is displayed
+[INFO ] 2025-09-05 00:18:51.783 [main] KBLSteps -  My Products option  is displayed
+[INFO ] 2025-09-05 00:18:51.783 [main] KBLSteps - My account dashboard page all the optons are verified and Navigated to the respective page
+[INFO ] 2025-09-05 00:26:22.345 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 00:26:22.395 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 00:27:13.918 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 00:27:13.980 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 00:29:59.896 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 00:29:59.914 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 00:30:03.479 [main] KBLSteps - KBL logo is displayed
+[INFO ] 2025-09-05 00:30:05.673 [main] KBLSteps - Login icon is displayed
+[INFO ] 2025-09-05 00:30:09.675 [main] KBLSteps - Login icon is clicked
+[INFO ] 2025-09-05 00:30:11.863 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 00:30:15.061 [main] KBLSteps - Wishlist link is displayed
+[INFO ] 2025-09-05 00:30:21.765 [main] KBLSteps - Cart icon is clicked
+[INFO ] 2025-09-05 00:30:43.128 [main] KBLSteps - Homepage banner and slider next is displayed
+[INFO ] 2025-09-05 00:30:58.627 [main] KBLSteps - Residential section is displayed
+[INFO ] 2025-09-05 00:31:00.996 [main] KBLSteps - Commercial section is displayed
+[INFO ] 2025-09-05 00:31:02.899 [main] KBLSteps - Industrial section is displayed
+[INFO ] 2025-09-05 00:31:06.396 [main] KBLSteps - Agriculture section is displayed
+[INFO ] 2025-09-05 00:31:06.429 [main] KBLSteps - Testimonial section is displayed
+[INFO ] 2025-09-05 00:31:06.430 [main] KBLSteps - Home page sections all are displayed and verified 
+[INFO ] 2025-09-05 00:33:50.266 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 00:33:50.299 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 00:33:50.497 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 00:33:50.593 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 00:34:17.603 [main] KBLSteps - Product name is clicked and redirection is verified
+[INFO ] 2025-09-05 00:34:17.803 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 00:34:17.889 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 00:34:29.082 [main] KBLSteps - See all navigation is verified
+[INFO ] 2025-09-05 00:34:38.749 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 00:34:38.850 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 00:34:45.002 [main] KBLSteps - Using Enter key navigation page is verified
+[INFO ] 2025-09-05 00:34:49.198 [main] KBLSteps - Residential Filter is displayed
+[INFO ] 2025-09-05 00:35:18.231 [main] KBLSteps - Clearall button is verified
+[INFO ] 2025-09-05 01:08:41.931 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 01:08:41.956 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 01:08:42.233 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 01:08:42.349 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 01:09:05.044 [main] KBLSteps - Product name is clicked and redirection is verified
+[INFO ] 2025-09-05 01:09:05.275 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 01:09:05.408 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 01:09:16.360 [main] KBLSteps - See all navigation is verified
+[INFO ] 2025-09-05 01:09:25.928 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 01:09:26.044 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 01:09:33.076 [main] KBLSteps - Using Enter key navigation page is verified
+[INFO ] 2025-09-05 01:10:54.275 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 01:10:54.307 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 01:10:54.604 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 01:10:54.705 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 01:11:07.264 [main] KBLSteps - Product name is clicked and redirection is verified
+[INFO ] 2025-09-05 01:11:07.521 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 01:11:07.681 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 01:12:43.568 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 01:12:43.592 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 01:12:43.891 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 01:12:44.107 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 01:12:55.724 [main] KBLSteps - Product name is clicked and redirection is verified
+[INFO ] 2025-09-05 01:12:55.946 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 01:12:56.063 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 01:20:51.324 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 01:20:51.354 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 01:20:51.636 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 01:20:51.828 [main] KBLSteps - Product SKU  is entered in search box
+[INFO ] 2025-09-05 01:21:12.021 [main] KBLSteps - Product name is clicked and Succesfully redirection to the respective search listing page
+[INFO ] 2025-09-05 01:21:12.362 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 01:21:25.265 [main] KBLSteps - See all navigation is verified
+[INFO ] 2025-09-05 01:21:35.060 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 01:21:35.234 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 01:21:41.522 [main] KBLSteps - Using Enter key navigation page is verified
+[INFO ] 2025-09-05 01:21:43.870 [main] KBLSteps - Residential Filter is displayed
+[INFO ] 2025-09-05 01:25:25.593 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 01:25:25.624 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 01:25:25.871 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 01:25:26.026 [main] KBLSteps - Product SKU  is entered in search box
+[INFO ] 2025-09-05 01:25:44.046 [main] KBLSteps - Product name is clicked and Succesfully redirection to the respective search listing page
+[INFO ] 2025-09-05 01:25:55.658 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 01:25:55.780 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 01:26:03.175 [main] KBLSteps - Using Enter key navigation page is verified
+[INFO ] 2025-09-05 01:26:05.591 [main] KBLSteps - Residential Filter is displayed
+[INFO ] 2025-09-05 01:34:14.600 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 01:34:14.635 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 01:34:14.922 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 01:34:15.205 [main] KBLSteps - Product SKU  is entered in search box
+[INFO ] 2025-09-05 01:34:32.181 [main] KBLSteps - Product name is clicked and Succesfully redirection to the respective search listing page
+[INFO ] 2025-09-05 01:34:43.747 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 01:34:43.910 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 01:34:51.040 [main] KBLSteps - Using Enter key navigation page is verified
+[INFO ] 2025-09-05 01:34:53.369 [main] KBLSteps - Residential Filter is displayed
+[INFO ] 2025-09-05 01:38:19.490 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 01:38:19.526 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 01:38:19.821 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 01:38:20.048 [main] KBLSteps - Product SKU  is entered in search box
+[INFO ] 2025-09-05 01:38:27.033 [main] KBLSteps - Product name is clicked and Succesfully redirection to the respective search listing page
+[INFO ] 2025-09-05 01:38:36.935 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 01:38:37.044 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 01:38:46.950 [main] KBLSteps - Using Enter key navigation page is verified
+[INFO ] 2025-09-05 01:38:49.304 [main] KBLSteps - Residential Filter is displayed
+[INFO ] 2025-09-05 01:49:57.110 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 01:49:57.142 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 01:49:57.381 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 01:49:57.496 [main] KBLSteps - Product SKU  is entered in search box
+[INFO ] 2025-09-05 01:50:07.013 [main] KBLSteps - Product name is clicked and Succesfully redirection to the respective search listing page
+[INFO ] 2025-09-05 01:50:16.777 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 01:50:16.902 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 01:50:23.179 [main] KBLSteps - Using Enter key navigation page is verified
+[INFO ] 2025-09-05 01:51:28.068 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 01:51:28.194 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 01:51:28.508 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 01:51:28.765 [main] KBLSteps - Product SKU  is entered in search box
+[INFO ] 2025-09-05 01:51:42.433 [main] KBLSteps - Product name is clicked and Succesfully redirection to the respective search listing page
+[INFO ] 2025-09-05 01:51:52.972 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 01:51:53.080 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 01:51:59.299 [main] KBLSteps - Using Enter key navigation page is verified
+[INFO ] 2025-09-05 02:02:13.192 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 02:02:13.238 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 02:02:13.554 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 02:02:13.680 [main] KBLSteps - Product SKU  is entered in search box
+[INFO ] 2025-09-05 02:02:39.380 [main] KBLSteps - Product name is clicked and Succesfully redirection to the respective search listing page
+[INFO ] 2025-09-05 02:02:50.202 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 02:02:50.355 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 02:02:56.562 [main] KBLSteps - Using Enter key navigation page is verified
+[INFO ] 2025-09-05 02:08:04.660 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 02:08:04.702 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 02:08:04.977 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 02:08:05.154 [main] KBLSteps - Product SKU  is entered in search box
+[INFO ] 2025-09-05 02:08:24.983 [main] KBLSteps - Product name is clicked and Succesfully redirection to the respective search listing page
+[INFO ] 2025-09-05 02:08:35.933 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 02:08:36.093 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 02:08:42.289 [main] KBLSteps - Using Enter key navigation page is verified
+[INFO ] 2025-09-05 02:08:44.737 [main] KBLSteps - Residential Filter is displayed
+[INFO ] 2025-09-05 02:16:32.940 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 02:16:33.167 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 02:16:33.592 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 02:16:33.854 [main] KBLSteps - Product SKU  is entered in search box
+[INFO ] 2025-09-05 02:16:44.860 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 02:16:45.000 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 02:19:38.769 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 02:19:38.814 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 02:19:39.177 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 02:19:39.348 [main] KBLSteps - Product SKU  is entered in search box
+[INFO ] 2025-09-05 02:19:49.418 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 02:19:49.563 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 02:19:56.018 [main] KBLSteps - Using Enter key navigation page is verified
+[INFO ] 2025-09-05 02:19:58.459 [main] KBLSteps - Residential Filter is displayed
+[INFO ] 2025-09-05 02:21:52.486 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 02:21:52.531 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 02:21:52.910 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 02:21:53.120 [main] KBLSteps - Product SKU  is entered in search box
+[INFO ] 2025-09-05 02:22:05.161 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 02:22:05.336 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 02:22:11.517 [main] KBLSteps - Using Enter key navigation page is verified
+[INFO ] 2025-09-05 02:23:44.333 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 02:23:44.385 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 02:23:44.702 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 02:23:44.920 [main] KBLSteps - Product SKU  is entered in search box
+[INFO ] 2025-09-05 02:23:55.081 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 02:23:55.214 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 02:24:01.387 [main] KBLSteps - Using Enter key navigation page is verified
+[INFO ] 2025-09-05 02:25:09.800 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 02:25:09.845 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 02:25:10.167 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 02:25:10.388 [main] KBLSteps - Product SKU  is entered in search box
+[INFO ] 2025-09-05 02:25:20.424 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 02:25:20.565 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 02:25:26.747 [main] KBLSteps - Using Enter key navigation page is verified
+[INFO ] 2025-09-05 02:25:29.106 [main] KBLSteps - Residential Filter is displayed
+[INFO ] 2025-09-05 02:27:23.416 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 02:27:23.512 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 02:27:23.842 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 02:27:24.122 [main] KBLSteps - Product SKU  is entered in search box
+[INFO ] 2025-09-05 02:27:35.366 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 02:27:35.502 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 02:27:43.222 [main] KBLSteps - Using Enter key navigation page is verified
+[INFO ] 2025-09-05 02:27:45.617 [main] KBLSteps - Residential Filter is displayed
+[INFO ] 2025-09-05 02:28:15.552 [main] KBLSteps - Surface Filter is displayed
+[INFO ] 2025-09-05 02:28:21.814 [main] KBLSteps - Clearall button is verified
+[INFO ] 2025-09-05 02:37:04.314 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 02:37:04.363 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 02:37:04.689 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 02:37:04.946 [main] KBLSteps - Product SKU  is entered in search box
+[INFO ] 2025-09-05 02:37:14.990 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 02:37:15.139 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 02:37:22.441 [main] KBLSteps - Using Enter key navigation page is verified
+[INFO ] 2025-09-05 02:37:24.889 [main] KBLSteps - Residential Filter is displayed
+[INFO ] 2025-09-05 02:37:54.161 [main] KBLSteps - Surface Filter is displayed
+[INFO ] 2025-09-05 02:41:47.881 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 02:41:47.991 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 02:41:48.444 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 02:41:48.663 [main] KBLSteps - Product SKU  is entered in search box
+[INFO ] 2025-09-05 02:42:01.041 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 02:42:01.191 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 02:42:07.580 [main] KBLSteps - Using Enter key navigation page is verified
+[INFO ] 2025-09-05 02:42:09.995 [main] KBLSteps - Residential Filter is displayed
+[INFO ] 2025-09-05 02:42:40.270 [main] KBLSteps - Surface Filter is displayed
+[INFO ] 2025-09-05 02:42:46.657 [main] KBLSteps - Clearall button is verified
+[INFO ] 2025-09-05 02:48:24.047 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 02:48:24.146 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 02:48:24.846 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 02:48:25.185 [main] KBLSteps - Product SKU  is entered in search box
+[INFO ] 2025-09-05 02:48:36.221 [main] KBLSteps - Search box is displayed
+[INFO ] 2025-09-05 02:48:36.403 [main] KBLSteps - Product name is entered in search box
+[INFO ] 2025-09-05 02:48:42.621 [main] KBLSteps - Using Enter key navigation page is verified
+[INFO ] 2025-09-05 02:48:45.018 [main] KBLSteps - Residential Filter is displayed
+[INFO ] 2025-09-05 02:49:14.915 [main] KBLSteps - Surface Filter is displayed
+[INFO ] 2025-09-05 02:49:21.285 [main] KBLSteps - Clearall button is verified
+[INFO ] 2025-09-05 02:54:08.057 [main] KBLSteps - KBL site home page are launched
+[INFO ] 2025-09-05 02:54:08.100 [main] KBLSteps - Home page title is verified
+[INFO ] 2025-09-05 02:54:13.450 [main] KBLSteps - Login icon is clicked
+[INFO ] 2025-09-05 02:54:16.885 [main] KBLSteps - Password login is clicked
+[INFO ] 2025-09-05 02:54:22.840 [main] KBLSteps - Email field is displayed
+[INFO ] 2025-09-05 02:54:29.457 [main] KBLSteps - Login with password functionality is verified successfully
+[INFO ] 2025-09-05 02:54:32.882 [main] KBLSteps - My account dashboard  is displayed
+[INFO ] 2025-09-05 02:54:37.673 [main] KBLSteps - My address book  options  is displayed
+[INFO ] 2025-09-05 02:54:42.448 [main] KBLSteps - My Account option  is displayed
+[INFO ] 2025-09-05 02:54:57.154 [main] KBLSteps - My order is displayed
+[INFO ] 2025-09-05 02:55:01.504 [main] KBLSteps - My Service option  is displayed
+[INFO ] 2025-09-05 02:55:08.349 [main] KBLSteps - AMC option  is displayed
+[INFO ] 2025-09-05 02:55:14.455 [main] KBLSteps - News-Letter option  is displayed
+[INFO ] 2025-09-05 02:55:19.921 [main] KBLSteps -  My Product Reviews option  is displayed
+[INFO ] 2025-09-05 02:55:25.736 [main] KBLSteps - My wishlist option  is displayed
+[INFO ] 2025-09-05 02:55:31.386 [main] KBLSteps -  My Quotes option  is displayed
+[INFO ] 2025-09-05 02:55:37.103 [main] KBLSteps -  My Replacment option  is displayed
+[INFO ] 2025-09-05 02:55:40.922 [main] KBLSteps -  My Products option  is displayed
+[INFO ] 2025-09-05 02:55:40.922 [main] KBLSteps - My account dashboard page all the optons are verified and Navigated to the respective page

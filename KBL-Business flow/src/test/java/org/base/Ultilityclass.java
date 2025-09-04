@@ -358,6 +358,13 @@ public  static void close() {
            R.keyPress(KeyEvent.VK_DOWN);
            R.keyRelease(KeyEvent.VK_DOWN);;
 	}
+
+  public static void KeyUP() throws AWTException {
+		             R = new Robot();
+
+           R.keyPress(KeyEvent.VK_UP);
+           R.keyRelease(KeyEvent.VK_UP);;
+	}
       
 
     /*
@@ -677,9 +684,9 @@ public static void waitUntilClickable(WebElement categoryLink) {
       * @ Purpose:  Verification Using By text
       */
 
-     public static void checkequaltext(String commit,String Expected ,String Actual) {
+     public static void checkequaltext(String commit,String  Value1 ,String Actual) {
 
-    	 Assert.assertEquals(commit, Expected, Actual);
+    	 Assert.assertEquals(commit, Value1, Actual);
     	
       }
      /*

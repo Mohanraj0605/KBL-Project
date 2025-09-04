@@ -25,8 +25,8 @@ Scenario: To  Valiadte the My account page options & redirection in dashboard
 
 Given  User open the Home page
 When   do  the login  and Observe the my account page options
-And    User select the My account options in dashbord page
-Then   Observe the redirection  page
+Then   User click  the My account options in dashbord and Observe the redirection  page 
+ 
 
  
 @Case4
@@ -81,13 +81,6 @@ And   selects a payment option and places the order
 Then  after successful payment, the user should see the Thank You page
 
 
-@Case8
-
-Scenario: To verify the Admin page
-
-Given user opens the admin login page
-When  User enter the Login credential and Click on login credential
-Then  Observe the  Admin dashboard page.
  
 
 
