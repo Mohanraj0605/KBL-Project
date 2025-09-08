@@ -1,4 +1,4 @@
-package org.Pages;
+package org.pages;
 
 import org.base.Ultilityclass;
 import org.openqa.selenium.WebElement;
@@ -17,7 +17,7 @@ public class Loginpage extends Ultilityclass {
  private WebElement PasswordLogin;
 
 
-  @FindBy(xpath="//li[@class='nav item accountdashboard']")
+  @FindBy(xpath="(//div[@id='block-collapsible-nav']//ul//li)[1]")
   private WebElement MyAccountDashboard;
 
  public WebElement getMyAccountDashboard() {
@@ -25,33 +25,92 @@ public class Loginpage extends Ultilityclass {
   }
 
 
- @FindBy(xpath="(//div[@class='box-content'])[1]")
-  private WebElement Myaccountcontent;
+ @FindBy(xpath="(//div[@id='block-collapsible-nav']//ul//li)[2]")
+  private WebElement Myaddressbook;
 
- @FindBy(xpath="//li[@class='nav item addressbook']")
-  private WebElement AddressBook;
+  @FindBy(xpath="(//div[@id='block-collapsible-nav']//ul//li)[3]")
+  private WebElement Myinformation;
 
- @FindBy(xpath="//li[@class='nav item myorder']")
-  private WebElement MyOrder;
 
- @FindBy(xpath="//li[@class='nav item myservice']")
+
+ public WebElement getMyaddressbook() {
+    return Myaddressbook;
+  }
+
+
+  public WebElement getMyinformation() {
+    return Myinformation;
+  }
+
+
+  public WebElement getMyOrders() {
+    return MyOrders;
+  }
+
+
+ @FindBy(xpath="(//div[@id='block-collapsible-nav']//ul//li)[4]")
+  private WebElement MyOrders;
+
+ @FindBy(xpath="(//div[@id='block-collapsible-nav']//ul//li)[5]")
   private WebElement MyService;
 
+  @FindBy(xpath="(//div[@id='block-collapsible-nav']//ul//li)[6]")
+  private WebElement AMC;
+
+  @FindBy(xpath="(//div[@id='block-collapsible-nav']//ul//li)[8]")
+  private WebElement Newsletters;
 
 
-  public WebElement getMyaccountcontent() {
-  return Myaccountcontent;
-}
+  
+  @FindBy(xpath="(//div[@id='block-collapsible-nav']//ul//li)[10]")
+  private WebElement MyReviews;
+
+  
+  @FindBy(xpath="(//div[@id='block-collapsible-nav']//ul//li)[11]")
+  private WebElement Mywislistpage;
+
+   @FindBy(xpath="(//div[@id='block-collapsible-nav']//ul//li)[12]")
+  private WebElement MyQuates;
+
+  @FindBy(xpath="(//div[@id='block-collapsible-nav']//ul//li)[13]")
+  private WebElement MyReplacement;
+
+  @FindBy(xpath="(//div[@id='block-collapsible-nav']//ul//li)[14]")
+  private WebElement Myproducts;
+
+ public WebElement getAMC() {
+    return AMC;
+  }
 
 
- public WebElement getAddressBook() {
-  return AddressBook;
- }
+  public WebElement getNewsletters() {
+    return Newsletters;
+  }
 
 
- public WebElement getMyOrder() {
-  return MyOrder;
- }
+  public WebElement getMyReviews() {
+    return MyReviews;
+  }
+
+
+  public WebElement getMywislistpage() {
+    return Mywislistpage;
+  }
+
+
+  public WebElement getMyQuates() {
+    return MyQuates;
+  }
+
+
+  public WebElement getMyReplacement() {
+    return MyReplacement;
+  }
+
+
+  public WebElement getMyproducts() {
+    return Myproducts;
+  }
 
 
  public WebElement getMyService() {

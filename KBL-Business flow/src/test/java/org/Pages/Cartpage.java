@@ -1,19 +1,89 @@
-package org.Pages;
-
-
+package org.pages;
 
 import org.base.Ultilityclass;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+
 public class  Cartpage extends Ultilityclass {
 	
 	public Cartpage() {
 		PageFactory.initElements(driver, this);
 	}
+     
 
 
+
+      @FindBy(xpath="(//button[@class='action action-show'])[4]")
+      private WebElement Termconditionlink;
+
+     
+      @FindBy(xpath="(//span[text()='Close'])[4]")
+      private WebElement Termcloselink;
+
+     
+       public WebElement getTermcloselink() {
+          return Termcloselink;
+     }
+
+
+       public WebElement getTermconditionlink() {
+          return Termconditionlink;
+     }
+
+
+       @FindBy(xpath="//a[@class='order-number']")
+      private WebElement SuccespageOrdernumber;
+
+
+     public WebElement getSuccespageOrdernumber() {
+          return SuccespageOrdernumber;
+     }
+
+
+     @FindBy(id="authorization-trigger")
+      private WebElement LoginIcon2;
+
+     public WebElement getLoginIcon2() {
+          return LoginIcon2;
+     }
+
+     
+     @FindBy(xpath="//a[@id='idR8YNIHUr']")
+      private WebElement Myaccountlink;
+
+
+     public WebElement getMyaccountlink() {
+          return Myaccountlink;
+     }
+
+      @FindBy(xpath="//li[@class='nav item myorder']")
+      private WebElement MyOrder1;
+
+      public WebElement getMyOrder1() {
+          return MyOrder1;
+     }
+
+       @FindBy(xpath="//tr//td[1]")
+      private WebElement Ordernumber;
+
+
+     public WebElement getOrdernumber() {
+          return Ordernumber;
+     }
+
+     
+
+
+      @FindBy(xpath="(//td[@class='col actions'])[1]")
+      private WebElement Vieworder;
+
+
+public WebElement getVieworder() {
+          return Vieworder;
+     }
+      
      @FindBy(xpath="(//div[@class='product-item-details'])[2]")
      private WebElement Cartname;
 
@@ -147,6 +217,8 @@ public class  Cartpage extends Ultilityclass {
          return Streetaddress3;
     }
 
+
+
     
      @FindBy(xpath="(//input[@class='input-text'])[46]")
    private WebElement Zip;
@@ -162,12 +234,24 @@ public class  Cartpage extends Ultilityclass {
          return Addresstype;
     }
 
-    @FindBy(xpath="(//input[@class='input-text'])[49]")
-   private WebElement Mobilenumber;
-
+    @FindBy(xpath="(//input[@class='input-text'])[50]")
+    private WebElement Mobilenumber;
+    
+    
     public WebElement getMobilenumber() {
-         return Mobilenumber;
-    }
+     return Mobilenumber;
+}
+
+    @FindBy(xpath="(//span[@class='price'])[1]")
+    private WebElement preselectshipping;
+
+
+    public WebElement getPreselectshipping() {
+     return preselectshipping;
+}
+
+
+
 
     @FindBy(xpath="//button[@class='action primary action-save-address']")
    private WebElement SaveAddressButton;
@@ -175,6 +259,40 @@ public class  Cartpage extends Ultilityclass {
     public WebElement getSaveAddressButton() {
          return SaveAddressButton;
     }
+
+
+     @FindBy(xpath="(//input[@name='billing-address-same-as-shipping'])[3]")
+     private WebElement Billingaddress;
+
+
+    public WebElement getBillingaddress() {
+          return Billingaddress;
+     }
+
+     
+     @FindBy(xpath=" //button[@class='show-more-btn']")
+     private WebElement Showmoreoption;
+
+     @FindBy(xpath="(//button[@class='action action-apply'])[4]")
+     private WebElement Applybutton;
+
+     @FindBy(xpath="(//button[@class='action action-cancel'])[4]")
+     private WebElement Cancelbutton;
+
+
+    public WebElement getShowmoreoption() {
+          return Showmoreoption;
+     }
+
+
+     public WebElement getApplybutton() {
+          return Applybutton;
+     }
+
+
+     public WebElement getCancelbutton() {
+          return Cancelbutton;
+     }
 
 
     @FindBy(xpath="(//input[@type='radio'])[4]")
@@ -222,8 +340,16 @@ public class  Cartpage extends Ultilityclass {
 
     @FindBy(xpath="(//table[@class='data table totals']//tr//td)[1]")
     private WebElement Cartsubtotal;
-    
-        
+
+
+     @FindBy(xpath="(//table[@class='data table totals']//tr//td)[2]")
+     private WebElement CARTIGST;
+       
+        public WebElement getCARTIGST() {
+          return CARTIGST;
+     }
+
+
         public WebElement getCartsubtotal() {
      return Cartsubtotal;
 }
@@ -234,8 +360,71 @@ public class  Cartpage extends Ultilityclass {
     }
 
 
-        @FindBy(xpath="(//table[@class='data table totals']//tr//td)[2]")
-    private WebElement CartSGSTtax;
+
+   @FindBy(xpath="(//table[@class='data table table-totals']//tr//td)[3]")
+   private WebElement CheckoutDiscount1;
+
+   
+   @FindBy(xpath="(//table[@class='data table table-totals']//tr//td)[5]")
+   private WebElement CheckoutDiscount1Ordertotal;
+
+
+   @FindBy(xpath="(//table[@class='data table table-totals']//tr//td)[1]")
+   private WebElement Checkoutsubtotal;
+
+   @FindBy(xpath="(//table[@class='data table table-totals']//tr//td)[2]")
+   private WebElement checkoutIGST;
+
+    
+
+     @FindBy(xpath="(//table[@class='data table table-totals']//tr//td)[1]")
+     private WebElement checkoutwithoutcoupon1;
+
+     @FindBy(xpath="(//table[@class='data table table-totals']//tr//td)[2]")
+     private WebElement checkoutwithoutcoupon2;
+
+     @FindBy(xpath="(//table[@class='data table table-totals']//tr//td)[4]")
+     private WebElement checkoutwithoutcoupon4;
+
+    
+    public WebElement getCheckoutwithoutcoupon1() {
+          return checkoutwithoutcoupon1;
+     }
+
+
+     public WebElement getCheckoutwithoutcoupon2() {
+          return checkoutwithoutcoupon2;
+     }
+
+
+     public WebElement getCheckoutwithoutcoupon4() {
+          return checkoutwithoutcoupon4;
+     }
+
+
+    public WebElement getCheckoutDiscount1Ordertotal() {
+     return CheckoutDiscount1Ordertotal;
+}
+
+
+   public WebElement getCheckoutsubtotal() {
+     return Checkoutsubtotal;
+   }
+
+
+   public WebElement getCheckoutIGST() {
+     return checkoutIGST;
+   }
+
+
+   public WebElement getCheckoutDiscount1() {
+     return CheckoutDiscount1;
+}
+
+
+
+   @FindBy(xpath="(//table[@class='data table totals']//tr//td)[2]")
+   private WebElement CartSGSTtax;
 
 
      public WebElement getCartStax() {
@@ -256,6 +445,18 @@ public class  Cartpage extends Ultilityclass {
      public WebElement getCartOrderSummaryTotal() {
           return CartOrderSummaryTotal;
      }
+
+     @FindBy(xpath="(//table[@class='data table totals']//tr//td)[4]")
+     private WebElement CARTIGSTORDERSUMMARYTOTAL;
+
+
+
+     public WebElement getCARTIGSTORDERSUMMARYTOTAL() {
+          return CARTIGSTORDERSUMMARYTOTAL;
+     }
+
+
+
 
      @FindBy(xpath="(//button[@type='button'])[6]")
       private WebElement Shippherebutton;

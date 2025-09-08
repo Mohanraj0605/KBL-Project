@@ -25,8 +25,8 @@ Scenario: To  Valiadte the My account page options & redirection in dashboard
 
 Given  User open the Home page
 When   do  the login  and Observe the my account page options
-And    User select the My account options in dashbord page
-Then   Observe the redirection  page
+Then   User click  the My account options in dashbord and Observe the redirection  page 
+ 
 
  
 @Case4
@@ -39,9 +39,10 @@ And    Observe the Seeall navigation  page "<Product Name2>"
 And    Observe the navigation  page using Enter button "<Product Name3>"
 Then   Verify the Filter options in SLP page
 
+
 Examples:
-          |Product Name1| |Product Name2|  |Product Name3|  
-          |Borwell pump|  |Surface Pump|   |Submersible Pump| 
+          |Product Name1|    |Product Name2|  |Product Name3|  
+          |TL16010016A12211| |Surface pump|   |Submersible Pump| 
 
 
 # D11130060676   
@@ -63,7 +64,8 @@ Scenario: To Validate  the PDP page to Cart Page for Guest  user
 Given User open the Home page 
 When  User go to the listing page
 And   On click Buy now CTA or any product cards in listing page
-Then  verify the PDP page features and products prices & do the add to cart.Then,go to cart page
+And   Verify the  correct delivery message based on TAT functionality
+Then  verify the PDP page features and products prices & do the add to cart.
 
 @Case7
 
@@ -79,13 +81,6 @@ And   selects a payment option and places the order
 Then  after successful payment, the user should see the Thank You page
 
 
-@Case7
-
-Scenario: To verify the Admin page
-
-Given user opens the admin login page
-When  User enter the Login credential and Click on login credential
-Then  Observe the  Admin dashboard page.
  
 
 

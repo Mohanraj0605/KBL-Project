@@ -1,4 +1,4 @@
-package org.Pages;
+package org.pages;
 
 import org.base.Ultilityclass;
 import org.openqa.selenium.WebElement;
@@ -12,6 +12,15 @@ public class  PDPpage extends Ultilityclass {
 		PageFactory.initElements(driver, this);
 	}
 
+
+    @FindBy(xpath="//div[@class='pincode-available delivery-wrapper']")
+    private WebElement Pincodedeliverymessage;
+
+    public WebElement getPincodedeliverymessage() {
+        return Pincodedeliverymessage;
+    }
+
+    
     @FindBy(xpath="//div[@class='qty-plus']")
     private WebElement QtybuttoMaxPDP;
    
@@ -48,11 +57,19 @@ public class  PDPpage extends Ultilityclass {
        return InstallationServicelabel;
    }
 
-   @FindBy(xpath=" (//span[@class='special-price'])[1]")
+   @FindBy(xpath=" (//span[@class='special-price'])[3]")
     private WebElement PLPprice;
 
    public WebElement getPLPprice() {
        return PLPprice;
+   }
+
+   
+   @FindBy(xpath=" (//span[@class='special-price'])[1]")
+    private WebElement PLPprice1;
+
+   public WebElement getPLPprice1() {
+       return PLPprice1;
    }
 
    @FindBy(xpath="(//span[text()='₹10,380.00'])[1]")
@@ -62,12 +79,22 @@ public class  PDPpage extends Ultilityclass {
        return PDPprice;
    }
 
-    @FindBy(id="buy-now")
+     @FindBy(xpath="(//span[text()='₹26,526.40'])[1]")
+    private WebElement getPDPprice2;
+
+    public WebElement getPDPprice2() {
+        return getPDPprice2;
+    }
+
+
+
+    @FindBy(xpath= "//button[@class='action primary buy-now-btn']")
     private WebElement BuynowPDP;
 
    public WebElement getBuynowPDP() {
        return BuynowPDP;
    }
+
      @FindBy(xpath="//button[@title='Add to Cart']")
     private WebElement AddToCartButtonPDP;
 
@@ -117,12 +144,21 @@ public class  PDPpage extends Ultilityclass {
        return ServiceTextPDP;
    }
 
-    @FindBy(xpath="(//a[@class='product-item-link'])[1]")
+    @FindBy(xpath="(//a[@class='product-item-link'])[3]")
    private WebElement PLPname;
 
     public WebElement getPLPname() {
          return PLPname;
     }
+
+    @FindBy(xpath="(//a[@class='product-item-link'])[1]")
+   private WebElement PLPname1;
+
+    public WebElement getPLPname1() {
+         return PLPname1;
+    }
+
+    
 
      @FindBy(xpath="//span[@class='base']")
    private WebElement PDPname;

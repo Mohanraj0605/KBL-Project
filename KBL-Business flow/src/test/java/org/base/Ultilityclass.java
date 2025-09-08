@@ -6,7 +6,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
@@ -31,6 +35,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import junit.framework.Assert;
@@ -247,11 +252,19 @@ public  static void close() {
  	 * @author:MOHANRAJ K
  	 * @ Purpose:MouseHover In Actions Class
  	 */
-     public static void moveToElement (WebElement TargetName ) {
+     public static void moveToElement (WebElement categeoryoptions2 ) {
         	
         	actions = new Actions(driver);
-        	actions.moveToElement(TargetName).perform();
+        	actions.moveToElement(categeoryoptions2).perform();
     }
+
+
+    //  public static void  moveToElement2( List<WebElement> ListofElement ) {
+        	
+    //     	actions = new Actions(driver);
+    //     	actions.moveToElement ((WebElement) ListofElement).perform();
+    // }
+    
     /*
   	 * @ Purpose:Drag and Drop THE Element
   	 */
@@ -327,6 +340,12 @@ public  static void close() {
 		navigate.refresh();
 	}
 
+
+   public static void Quite() {
+
+		driver.quit();
+		
+	}
        public static void KeyEnter() throws AWTException {
 		             R = new Robot();
            R.keyPress(KeyEvent.VK_ENTER);
@@ -338,6 +357,13 @@ public  static void close() {
 
            R.keyPress(KeyEvent.VK_DOWN);
            R.keyRelease(KeyEvent.VK_DOWN);;
+	}
+
+  public static void KeyUP() throws AWTException {
+		             R = new Robot();
+
+           R.keyPress(KeyEvent.VK_UP);
+           R.keyRelease(KeyEvent.VK_UP);;
 	}
       
 
@@ -359,6 +385,12 @@ public  static void close() {
 		navigate.back();
 	}
      
+
+  public static void Refresh() {
+    
+    driver.navigate().refresh();
+    
+  }
      /*
       * @ Purpose:  Screenshot By Using Takescreenshot
       */
@@ -535,6 +567,15 @@ public  static void close() {
     	 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1000));
 	}
 
+
+/*
+ * Waits until the given element is clickable.
+ */
+public static void waitUntilClickable(WebElement categoryLink) {
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    wait.until(org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable(categoryLink));
+}
+
      
      /*
       * @ Purpose:  Click Using By JavascriptExecutor
@@ -629,9 +670,18 @@ public  static void close() {
          driver.switchTo().window(ID);
    }
      
+
+   public void setPriceRange(WebElement element, String value) throws InterruptedException {
+    
+    element.clear();
+    Thread.sleep(3000); // Or use WebDriverWait
+    PassValues(element, value);
+}
      /*
       * @ Purpose:  Verification and Vadidation Using By Assertion
       */
+
+
      public static void checkpresentElement(String commit,boolean ele) {
     	 
     	Assert.assertTrue(commit, ele);
@@ -641,9 +691,9 @@ public  static void close() {
       * @ Purpose:  Verification Using By text
       */
 
-     public static void checkequaltext(String commit,String Expected ,String Actual) {
+     public static void checkequaltext(String commit,String  Value1 ,String Actual) {
 
-    	 Assert.assertEquals(commit, Expected, Actual);
+    	 Assert.assertEquals(commit, Value1, Actual);
     	
       }
      /*
@@ -681,7 +731,7 @@ public  static void close() {
       */
     
      public static String  getdataExcel(int row,int col)   {
-    	 String value = "";
+    	String value = "";
     	 
     	 try {
      File f = new File ("E:\\KBL-Project\\KBL-Business flow\\target\\Data\\KBL datas.xlsx"); 
@@ -724,12 +774,45 @@ public  static void close() {
      return value;
      
      }
+
+     
+      public static List<Map<String, String>> getExcelData2(String path, String sheetName) {
+
+
+        List<Map<String, String>> dataList = new ArrayList<>();
+      try (FileInputStream fis = new FileInputStream("E:\\KBL-Project\\KBL-Business flow\\target\\Data\\Footerlinks.xlsx");
+           Workbook workbook = new XSSFWorkbook(fis)) {
+
+          Sheet sheet = workbook.getSheet("Footer");
+          Row headerRow = sheet.getRow(1);
+
+          for (int i = 1; i <= sheet.getLastRowNum(); i++) {
+            Row row = sheet.getRow(i);
+            Map<String, String> rowMap = new HashMap<>();
+
+            for (int j = 0; j < row.getLastCellNum(); j++) {
+                String key = headerRow.getCell(j).getStringCellValue().trim();
+                String value = row.getCell(j).getStringCellValue().trim();
+                rowMap.put(key, value);
+            }
+
+            dataList.add(rowMap);
+          }
+
+      } catch (Exception e) {
+          e.printStackTrace();
+      }
+        return dataList;
+    }
+
+
      
      /*
       * @ Purpose:  To create the Excel sheet
       * 
       */
      
+
      public static void createSheet (String filepath,int row,int col,String value) {
     	try {
     	 File f =new File (System.getProperty("user.dir")+filepath);
@@ -750,9 +833,40 @@ public  static void close() {
     	 
      }    
      
+
+
+    public static  List<Map<String, String>> Categeoryreader (String path, String sheetName) {
+
+        List<Map<String, String>> Categeorydatas = new ArrayList<>();
+
+        try (FileInputStream fis = new FileInputStream("E:\\KBL-Project\\KBL-Business flow\\target\\Data\\KBL datas.xlsx");
+             Workbook workbook = new XSSFWorkbook(fis)) {
+
+            Sheet sheet = workbook.getSheet("KBL datas");
+            Row headerRow = sheet.getRow(1);
+
+            for (int i = 1; i <= sheet.getLastRowNum(); i++) {
+                Row row = sheet.getRow(i);
+                Map<String, String> rowMap = new HashMap<>();
+
+                for (int j = 0; j < headerRow.getLastCellNum(); j++) {
+                    String key = headerRow.getCell(j).getStringCellValue();
+                    String value = row.getCell(j).getStringCellValue();
+                    rowMap.put(key, value);
+                }
+
+                Categeorydatas.add(rowMap);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return Categeorydatas;
+    }
 	
 	
-	
+
 	
 
 }

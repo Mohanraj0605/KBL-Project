@@ -1,4 +1,4 @@
-package org.Pages;
+package org.pages;
 
 import org.base.Ultilityclass;
 import org.openqa.selenium.WebElement;
@@ -11,6 +11,44 @@ public class Searchpage extends Ultilityclass {
 	public Searchpage() {
 		PageFactory.initElements(driver, this);
 	}
+
+   
+    @FindBy(xpath="(//span[@class='count'])[1]")
+     private WebElement Residentialcount1;
+
+    @FindBy(xpath="(//span[@class='toolbar-number'])[3]")
+    private WebElement Residentialcount2;
+
+
+
+    public WebElement getResidentialcount1() {
+        return Residentialcount1;
+    }
+
+
+    public WebElement getResidentialcount2() {
+        return Residentialcount2;
+    }
+
+
+    @FindBy(xpath="(//span[@class='count'])[6]")
+    private WebElement Surfacecount1;
+
+
+    @FindBy(xpath="(//span[text()='249'])[1]")
+    private WebElement Surfacecount2;
+
+
+    public WebElement getSurfacecount1() {
+        return Surfacecount1;
+    }
+
+
+    public WebElement getSurfacecount2() {
+        return Surfacecount2;
+    }
+
+
 
     @FindBy(xpath="//input[@name='q']")
     private WebElement SearchBox;
@@ -51,12 +89,13 @@ public class Searchpage extends Ultilityclass {
         return Popupclose;
     }
 
-    @FindBy(xpath="//label[text()='Surface']")
+    @FindBy(xpath="//label[@for='filter-pump_type_one-0']")
     private WebElement SurfaceFilterSLP;
 
     public WebElement getSurfaceFilterSLP() {
         return SurfaceFilterSLP;
     }
+
 
      @FindBy(xpath="//span[text()='Clear All']")
     private WebElement Clearall;

@@ -1,8 +1,10 @@
-package org.Pages;
+package org.pages;
+
 
 import org.base.Ultilityclass;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 public class Homepage extends Ultilityclass {
@@ -14,8 +16,28 @@ public class Homepage extends Ultilityclass {
 	
 
 
+@FindBys({
+	@FindBy(xpath = "//header//div//ul[@class='groupmenu']//a")
+})
+private java.util.List<WebElement> groupMenuLinks1;
 
-	@FindBy(xpath="//a[text()='Privacy Policy for Platform']")
+public java.util.List<WebElement> getGroupMenuLinks1() {
+	return groupMenuLinks1;
+}
+
+	@FindBys({
+		@FindBy(xpath ="//header//div//ul[@class='groupmenu']//a")
+	})
+
+	private java.util.List<WebElement> groupMenuLinks;
+
+	public java.util.List<WebElement> getGroupMenuLinks() {
+		return groupMenuLinks;
+	}
+
+
+
+	@FindBy(xpath = "//a[text()='Privacy Policy for Platform']")
     private WebElement Footerink1;
 
 
@@ -23,8 +45,7 @@ public class Homepage extends Ultilityclass {
 		return Footerink1;
 	}
 
-
-
+	
 
 	@FindBy(xpath="(//a[@class='menu-link'])[1]")
     private WebElement Categeory1; 
@@ -36,6 +57,21 @@ public class Homepage extends Ultilityclass {
     @FindBy(xpath="(//a[@class='menu-link'])[13]")
 	private WebElement Categeory3;
 
+
+	@FindBy(xpath="(//a[@class='menu-link'])[14]")
+   	private WebElement Categeory4;
+
+	@FindBy(xpath="(//a[@class='menu-link'])[15]")
+   	private WebElement Categeory5;
+		
+		
+	public WebElement getCategeory4() {
+		return Categeory4;
+	}
+
+	public WebElement getCategeory5() {
+		return Categeory5;
+	}
 
 	public WebElement getCategeory2() {
 		return Categeory2;
@@ -78,6 +114,16 @@ public class Homepage extends Ultilityclass {
 	public WebElement getCategeory53() {
 		return Categeory53;
 	}
+
+	@FindBy(xpath="(//i[@class='menu-icon img-icon'])[1]")
+    private WebElement Trackinglink; 
+
+
+	public WebElement getTrackinglink() {
+		return Trackinglink;
+	}
+
+
 
 	@FindBy(xpath="//a[@class='header-user']")
     private WebElement LoginImageIcon; 

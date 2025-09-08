@@ -1,4 +1,4 @@
-package org.Pages;
+package org.pages;
 
 import org.base.Ultilityclass;
 import org.openqa.selenium.WebElement;
@@ -12,7 +12,48 @@ public class Listingpage extends Ultilityclass {
 		PageFactory.initElements(driver, this);
 	}
 
+
+    
+
+    @FindBy(xpath="//input[@name='min_price']")
+    private WebElement PLPminpricerange;
+
+    @FindBy(xpath="//input[@name='max_price']")
+    private WebElement PLPmaxpricerange;
+
+
+
+    public WebElement getPLPminpricerange() {
+        return PLPminpricerange;
+    }
+
+
+    public WebElement getPLPmaxpricerange() {
+        return PLPmaxpricerange;
+    }
+
+
+
+
+    @FindBy(xpath="//input[@id='filter-product_series-0']")
+    private WebElement PLPpageseriesfilter;
+
+
+    @FindBy(xpath="//input[@id='filter-phase-1']")
+    private WebElement Phasefilter;
+
+
+
+    public WebElement getPhasefilter() {
+        return Phasefilter;
+    }
+
+
+    public WebElement getPLPpageseriesfilter() {
+        return PLPpageseriesfilter;
+    }
   
+
     @FindBy(xpath="//a[text()='comparison list']")
     private WebElement comparisonLink;
 
@@ -36,6 +77,26 @@ public class Listingpage extends Ultilityclass {
 
     public WebElement getListingCompare1() {
         return ListingCompare1;
+    }
+
+
+    @FindBy(xpath="(//strong[@class='product name product-item-name'])[1]")
+    private WebElement Listingpageproductname1; 
+
+   
+
+
+    public WebElement getListingpageproductname1() {
+        return Listingpageproductname1;
+    }
+
+
+
+    @FindBy(xpath="(//div[@class='product-item-info'])[1]")
+    private WebElement OvertankListingCategeory1; 
+
+    public WebElement getOvertankListingCategeory1() {
+        return OvertankListingCategeory1;
     }
 
 
