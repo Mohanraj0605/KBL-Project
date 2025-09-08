@@ -42,9 +42,6 @@ public class Adminlogin extends Ultilityclass {
       }
 
 
-
-
-
      @FindBy(xpath="(//span[text()='Orders'])[1]")
      private WebElement SalesOrder;
   
@@ -61,37 +58,24 @@ public class Adminlogin extends Ultilityclass {
      }
 
 
-
-
-
      @FindBy(xpath="(//input[@class='admin__control-text'])[1]")
      private WebElement adminUsername;
 
     
-
      @FindBy(xpath="(//input[@class='admin__control-text'])[2]")
      private WebElement Adminpassword;
 
-    
-
-     @FindBy(xpath="//div[@class='actions']")
-     private WebElement SignInButton;
 
       @FindBy (xpath="//span[normalize-space()='Sign in']")
      private WebElement SignInButton1;
-
-
 
       public WebElement getSignInButton1() {
           return SignInButton1;
      }
 
-
       @FindBy(xpath="//span[normalize-space()='Confirm']")
      private WebElement ConfirmButton1;
 
-
-     
 
      public WebElement getWarhouseallcationcode() {
           return Warhouseallcationcode;
@@ -119,11 +103,6 @@ public class Adminlogin extends Ultilityclass {
 
      public WebElement getAdminpassword() {
           return Adminpassword;
-     }
-
-
-     public WebElement getSignInButton() {
-          return SignInButton;
      }
 
 

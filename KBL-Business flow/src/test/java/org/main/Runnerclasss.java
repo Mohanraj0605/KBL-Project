@@ -6,11 +6,10 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src\\test\\resources",glue="org.steps",tags="@Case3",
+@CucumberOptions(features="src\\test\\resources",glue="org.steps",tags="@Case7",
                  monochrome=true,dryRun=false,
 		 plugin = { "json:target\\Cucumber-Reports\\Kbl.json",
 		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
-
 		)
 
 
@@ -22,6 +21,5 @@ public class Runnerclasss {
 		Jvmreports.generateJVM(System.getProperty("user.dir")+"\\target\\Cucumber-Reports\\Kbl.json");
 		  	
 	}
-	
 	
 }

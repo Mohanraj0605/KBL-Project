@@ -18,6 +18,8 @@ public class KBLHooks extends Ultilityclass {
 	@Before
 	public void Start() {
 
+      
+
 		launchBrowser(1);
 
 		//launchurl("https://deveshop.kirloskarpumps.com/");
@@ -25,7 +27,7 @@ public class KBLHooks extends Ultilityclass {
 	
 		launchurl("https://betaeshop.kirloskarpumps.com/");
 
-	    //launchurl("https://betaeshopadm.kirloskarpumps.com/kbladmin");
+	   // launchurl("https://betaeshopadm.kirloskarpumps.com/kbladmin");
 
 		 //launchurl("https://eshop.kirloskarpumps.com/");
 
@@ -41,7 +43,6 @@ public class KBLHooks extends Ultilityclass {
 
 			byte[] screenshotAs = tk.getScreenshotAs(OutputType.BYTES);
 		 
-			//s.embed(screenshotAs, "image/png");
 			s.attach(screenshotAs,"image/png" , s.getName());
 			
 		} else {

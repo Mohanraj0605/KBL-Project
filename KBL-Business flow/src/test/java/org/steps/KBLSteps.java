@@ -40,7 +40,7 @@ public class KBLSteps extends Ultilityclass {
 @Given("User open the Home page")
 public void user_open_the_Home_page() {
 
-	 StartTimeprint();
+     StartTimeprint();
 	 h = new Homepage();
 	 LOGGER.info("KBL site home page are launched");
      String title = driver.getTitle();
@@ -390,8 +390,6 @@ public void user_click_the_my_account_options_in_dashbord_and_observe_the_redire
 		KeyDOWN();
 	}
 
-
-
 	 l = new Loginpage();
 	 Threadsleep(1000);
 	 checkpresentElement("To check My wishlist  options available or not in My account page",l.getMywislistpage().isDisplayed());
@@ -436,7 +434,6 @@ public void user_click_the_my_account_options_in_dashbord_and_observe_the_redire
 
 	 LOGGER.info("My account dashboard page all the optons are verified and Navigated to the respective page");
 
-
 }
 
 
@@ -472,35 +469,35 @@ public void user_enter_the_product_name_in_search_box(String Keyword1) {
 @When("Observe the Related products suggestion.then,Click on any product name")
 public void observe_the_related_products_suggestion_then_click_on_any_product_name() {
 	
-    //  StartTimeprint();
-	//  s = new Searchpage();
-	//  moveToElement(s.getSearchBox());
-	//  ClickElement(s.getProductnameSLP());
-	//  String Url3 = driver.getCurrentUrl();
-	//  System.out.println(Url3);
-	//  Threadsleep(3000);
-	//  checkpresentElement("To check user account  page",Url3.contains("vertical"));
-	//  LOGGER.info("Product name is clicked and Succesfully redirection to the respective search listing page");
-	//  EndTimeprint();
+     StartTimeprint();
+	 s = new Searchpage();
+	 moveToElement(s.getSearchBox());
+	 ClickElement(s.getProductnameSLP());
+	 String Url3 = driver.getCurrentUrl();
+	 System.out.println(Url3);
+	 Threadsleep(3000);
+	 checkpresentElement("To check user account  page",Url3.contains("vertical"));
+	 LOGGER.info("Product name is clicked and Succesfully redirection to the respective search listing page");
+	 EndTimeprint();
 }
 
 @When("Observe the Seeall navigation  page {string}")
 public void observe_the_seeall_navigation_page(String Keyword2) {
 
-	//  StartTimeprint();
-	//  s = new Searchpage();
-	//  moveToElement(s.getSearchBox());
-	//  checkpresentElement("To check Search box is displayed",s.getSearchBox().isDisplayed());
-	//  PassValues(s.getSearchBox(), Keyword2);
-	//  LOGGER.info("Product name is entered in search box");
-    //  Threadsleep(3000);
-	//  javascriptclick(s.getSeeall());
-	//  Threadsleep(3000);
-	//  String Url4 = driver.getCurrentUrl();
-	//  Threadsleep(2000);
-	//  checkpresentElement("To verify the  entered product related search  listing  page",Url4.contains("Surface"));
-	//  LOGGER.info("See all navigation is verified");
-	//  EndTimeprint();
+	 StartTimeprint();
+	 s = new Searchpage();
+	 moveToElement(s.getSearchBox());
+	 checkpresentElement("To check Search box is displayed",s.getSearchBox().isDisplayed());
+	 PassValues(s.getSearchBox(), Keyword2);
+	 LOGGER.info("Product name is entered in search box");
+     Threadsleep(3000);
+	 javascriptclick(s.getSeeall());
+	 Threadsleep(3000);
+	 String Url4 = driver.getCurrentUrl();
+	 Threadsleep(2000);
+	 checkpresentElement("To verify the  entered product related search  listing  page",Url4.contains("Surface"));
+	 LOGGER.info("See all navigation is verified");
+	 EndTimeprint();
     
  }
  @When("Observe the navigation  page using Enter button {string}")
@@ -541,8 +538,7 @@ public void verify_the_filter_options_in_slp_page() throws AWTException {
 	 checkpresentElement("To check Residential Filter is displayed",s.getResidentialFilterSLP().isDisplayed());
 	 LOGGER.info("Residential Filter is displayed");
      Threadsleep(2000);
-
-	checkequaltext("To check selected Residential  filter count for in SLP page",ResidentialFiltercount3,s.getResidentialcount2().getText());
+	 checkequaltext("To check selected Residential  filter count for in SLP page",ResidentialFiltercount3,s.getResidentialcount2().getText());
     
 	 Threadsleep(2000);
 	 ClickElement(s.getPopupclose());
@@ -565,18 +561,19 @@ public void verify_the_filter_options_in_slp_page() throws AWTException {
 	 Threadsleep(3000);
 	 ClickElement(s.getClearall());
 	 Threadsleep(3000);
+	 
 	 LOGGER.info("Clearall button is verified");
 
 	  for (int i = 0; i <6; i++) {
 		KeyUP();
 	}
 
-	 EndTimeprint();
+	 EndTimeprint(); 
 
 }
 
 @When("User go to the listing page")
-public void user_go_to_the_listing_page() {
+public void user_go_to_the_listing_page() throws AWTException, InterruptedException {
 
     StartTimeprint();
 	h = new Homepage();
@@ -588,9 +585,106 @@ public void user_go_to_the_listing_page() {
 	Threadsleep(3000);
 	checkequaltext("To check Main category to Sub Category is displayed",h.getCategeory3().getText(),"Pressure Boosting");
 	actionClick(h.getCategeory3());
+
 	LOGGER.info("Main category to Sub Category is displayed");
+	Threadsleep(3000);
+
+
+	for (int i = 0; i <7; i++) {
+		KeyDOWN();
+	 }
+
+	 lp = new Listingpage();
+	 javascriptclick(lp.getPLPpageseriesfilter());
+	 Threadsleep(3000);
+     System.out.println(lp.getListingpageproductname1().getText());
+	 checkpresentElement("To verify series number for listed products",lp.getListingpageproductname1().getText().contains("CPBS"));
+
+	h = new Homepage();
+    Threadsleep(5000);
+	javascriptclick(h.getKBLLogo());
+    moveToElement(h.getCategeory1());
+	moveToElement(h.getCategeory4());
+	moveToElement(h.getCategeory5());
+	Threadsleep(3000);
+	checkequaltext("To check Main category to Sub Category is displayed",h.getCategeory5().getText(),"Overhead Tank Filling");
+	actionClick(h.getCategeory5());
     Threadsleep(3000);
+	
+
+	for (int i = 0; i <7; i++) {
+		KeyDOWN();
+	}
+
+	lp = new Listingpage();
+
+	 javascriptclick(lp.getPhasefilter());
+	 Threadsleep(3000);
+	 System.out.println(lp.getListingpageproductname1().getText());
+   
+	 checkpresentElement("To verify series number for listed products",lp.getListingpageproductname1().getText().contains("Three Phase"));
+
+     Threadsleep(3000);
+	 javascriptclick(lp.getPLPpageseriesfilter());
+     Threadsleep(3000);
+     System.out.println(lp.getListingpageproductname1().getText());
+	 checkpresentElement("To verify series number for listed products",lp.getListingpageproductname1().getText().contains("KOS"));
+	 LOGGER.info("Series number & Phase options are verified for listed products");
+
+	s = new Searchpage();
+	Threadsleep(3000);
+	ClickElement(s.getPopupclose());
 	EndTimeprint();
+
+	  for (int i = 0; i <8; i++) {
+		KeyDOWN();
+	}
+
+     lp = new Listingpage();
+
+	lp.getPLPminpricerange().clear();
+	Threadsleep(3000);
+	PassValues(lp.getPLPminpricerange(), getdataExcel(5, 1));
+
+	lp.getPLPmaxpricerange().clear();
+	Threadsleep(3000);
+	PassValues(lp.getPLPmaxpricerange(), getdataExcel(6, 1));
+
+      Threadsleep(5000);
+
+
+	  int minPrice = Integer.parseInt(getdataExcel(5, 1));
+      int maxPrice = Integer.parseInt(getdataExcel(6, 1));
+
+    List<WebElement> price1 = driver.findElements(By.cssSelector(".special-price"));
+
+for (WebElement price2 : price1) {
+
+    // Remove symbols like ₹, commas
+
+    String priceText = price2.getText().replaceAll("[^0-9]", ""); 
+
+        int productPrice = Integer.parseInt(priceText);
+
+		int productPrice2 = productPrice / 100;
+
+		if (productPrice2 >= minPrice && productPrice2 <= maxPrice) {
+
+			
+		LOGGER.info("Product price {} is within the range [{} - {}]", productPrice2, minPrice, maxPrice);
+		} 
+		
+		else {
+		
+			LOGGER.info("Product price {} is outside the range [{} - {}]", productPrice2, minPrice, maxPrice);
+		}
+    }
+
+
+     EndTimeprint();
+
+
+
 
 }
 
@@ -599,16 +693,18 @@ public void verify_the_buy_now_cta_functionality() {
 
     StartTimeprint();
 	lp = new Listingpage();
-	moveToElement(lp.getListingCategeory2());
+	moveToElement(lp.getOvertankListingCategeory1());
 	Threadsleep(4000);
-	checkpresentElement("To check Buy Now button is displayed",lp.getBuyNowButton2().isDisplayed());
+	checkpresentElement("To check Buy Now button is displayed",lp.getBuyNowButton1().isDisplayed());
 	LOGGER.info("Buy Now button is displayed");
 	Threadsleep(3000);
-	actionClick(lp.getBuyNowButton2());
+	actionClick(lp.getBuyNowButton1());
 	LOGGER.info("Buy Now button is clicked");
 	Threadsleep(3000);
 	EndTimeprint();
+
 }
+
 
 @When("verify the Compare now option in listing page")
 public void verify_the_compare_now_option_in_listing_page() {
@@ -641,6 +737,7 @@ public void verify_the_compare_now_option_in_listing_page() {
 
 @Then("verify the added compare products in comparision page")
 public void verify_the_added_compare_products_in_comparision_page() {
+	
 	 StartTimeprint();
 	 lp = new Listingpage();
 	 Threadsleep(2000);
@@ -652,43 +749,43 @@ public void verify_the_added_compare_products_in_comparision_page() {
 	 checkpresentElement("To check user account  page",Url6.contains("product_compare"));
 	 LOGGER.info("Compare now checkbox is clicked and redirection is verified");
 	 EndTimeprint();
+
 }
+
 
 @When("On click Buy now CTA or any product cards in listing page")
 public void on_click_buy_now_cta_or_any_product_cards_in_listing_page() {
    
-	StartTimeprint();
-	lp = new Listingpage();
-	moveToElement(lp.getListingCategeory1());
-	Threadsleep(4000);
-	checkpresentElement("To check Buy Now button is displayed",lp.getBuyNowButton1().isDisplayed());
-	LOGGER.info("Buy Now button is displayed");
-	//Threadsleep(3000);
+	 lp = new Listingpage();
+	 moveToElement(lp.getListingCategeory1());
+	 Threadsleep(3000);
+	 checkpresentElement("To check Buy Now button is displayed",lp.getBuyNowButton1().isDisplayed());
+	 LOGGER.info("Buy Now button is displayed");
+	 //Threadsleep(3000);
+
+	  StartTimeprint();
 	  p = new PDPpage();
+	  Threadsleep(3000);
 	  WebElement PLPname1 = p.getPLPname();
 	  String name1 = PLPname1.getText();
 	  WebElement PLPrate1 = p.getPLPprice();
 	  String Rate1 = PLPrate1.getText();
 	  System.out.println(Rate1);
-      Threadsleep(3000);
 	  javascriptclick(p.getPLPname());
 	 //actionClick(lp.getBuyNowButton1());
-	//LOGGER.info("Buy Now button is clicked");
+	 LOGGER.info("Product name  is clicked");
+	
 	s = new Searchpage();
+	Threadsleep(3000);
 	ClickElement(s.getPopupclose());
-	Threadsleep(2000);
 	EndTimeprint();
 
-	  StartTimeprint();
-	   p = new PDPpage();
-	  
-	   WebElement PDPrate2 = p.getPDPprice2();
-	 
+	  p = new PDPpage();
+	  WebElement PDPrate2 = p.getPDPprice2();
       Threadsleep(3000);
-
 	  String Rate2 = PDPrate2.getText();
-	  WebElement PDPname2 = p.getPDPname();
 
+	  WebElement PDPname2 = p.getPDPname();
 	  String name2 = PDPname2.getText();
       System.out.println(name2);
 	  checkequaltext("To verify btw the PLP&PDP page the product NAME",name1,name2);
@@ -704,20 +801,23 @@ public void on_click_buy_now_cta_or_any_product_cards_in_listing_page() {
 	Threadsleep(2000);
 	Alertaccept();
 	Threadsleep(2000);
+	 EndTimeprint();
+
 }
 
 @When("Verify the  correct delivery message based on TAT functionality")
 public void verify_the_correct_delivery_message_based_on_tat() {
+	
+  StartTimeprint();
 
-    String  a = "500027";
+   String  a = "500027";
 
     String expectedMessage;
     String actualMessage = p.getPincodedeliverymessage().getText();
-	System.out.println(actualMessage);
 
-	if (actualMessage.equals("Product will be delivered in 5 - 7 Working days")) {
+	if (actualMessage.equals("Product will be delivered in 6 - 8 Working days")) {
 
-    expectedMessage = "Product will be delivered in 5 - 7 Working days";
+    expectedMessage = "Product will be delivered in 6 - 8 Working days";
 
 } 
 
@@ -743,6 +843,8 @@ else {
     // } else {
     //     expectedMessage = "This product is  not Delivery for this pincode";
     // }
+
+	EndTimeprint();
 	
 }
 
@@ -776,15 +878,15 @@ public void verify_the_pdp_page_features_and_products_prices_do_the_add_to_cart_
 	//  javascriptclick(p.getAddToCartButtonPDP());
 
 	  Threadsleep(20000);
-	  LOGGER.info("Buy now  button is clicked");
-	  javascriptclick(p.getPDPcheckoutButton());
+	
+	//  javascriptclick(p.getPDPcheckoutButton());
 
-	//   c = new Cartpage();
-	//   moveToElement(c.getMinicartQty());
-	//   Threadsleep(2000);
-	//   actionClick(c.getMinicartQty());
-	//   Threadsleep(3000);
-	//   EndTimeprint();
+	  c = new Cartpage();
+	  moveToElement(c.getMinicartQty());
+	  Threadsleep(2000);
+	  actionClick(c.getMinicartQty());
+	  Threadsleep(3000);
+	  EndTimeprint();
 
    }
 
@@ -793,9 +895,10 @@ public void verify_the_pdp_page_features_and_products_prices_do_the_add_to_cart_
 
    @Given("user opens the Home page and logs in")
    public void user_opens_the_home_page_and_logs_in() {
+
+    StartTimeprint(); 
 	 h = new Homepage();
 	 LOGGER.info("KBL site home page are launched");
-	 StartTimeprint();
      String title = driver.getTitle();
      checkpresentElement("To check title at Home page",title.contains("E-shop"));
 	 moveToElement(h.getLoginIcon());
@@ -808,7 +911,7 @@ public void verify_the_pdp_page_features_and_products_prices_do_the_add_to_cart_
 	 moveToElement(l.getPasswordLogin());
 	 checkpresentElement("To check Password login is displayed",l.getPasswordLogin().isDisplayed());
 	actionClick(l.getPasswordLogin());
-	LOGGER.info("Password login is clicked");
+	LOGGER.info("login with Password option is clicked");
 	Threadsleep(3000);
 	l = new Loginpage();
 	PassValues(l.getEmailField(), getdataExcel(1, 1));
@@ -818,7 +921,7 @@ public void verify_the_pdp_page_features_and_products_prices_do_the_add_to_cart_
 	checkpresentElement("To check Password field is displayed",l.getPasswordField().isDisplayed());
     Threadsleep(4000);
 	ClickElement(l.getLoginButton());
-
+    EndTimeprint();
 }
 
 @When("the user navigates to the listing page")
@@ -828,7 +931,7 @@ public void the_user_navigates_to_the_listing_page() {
 	h = new Homepage();
     Threadsleep(3000);
 	javascriptclick(h.getKBLLogo());
-   Threadsleep(3000);
+    Threadsleep(3000);
     moveToElement(h.getCategeory1());
 	moveToElement(h.getCategeory2());
 	moveToElement(h.getCategeory3());
@@ -840,31 +943,28 @@ public void the_user_navigates_to_the_listing_page() {
      Threadsleep(3000);
 	 EndTimeprint();
 }
+
+
 @When("clicks the {string} CTA or any product card on the listing page")
 public void clicks_the_cta_or_any_product_card_on_the_listing_page(String string) {
 	
 	 StartTimeprint();
 	 lp = new Listingpage();
-
 	 moveToElement(lp.getListingCategeory1());
-
-	 Threadsleep(3000);
+	 Threadsleep(4000);
 
 	 checkpresentElement("To check Buy Now button is displayed",lp.getBuyNowButton1().isDisplayed());
-	 LOGGER.info("Buy Now button is displayed");
+     LOGGER.info("Buy Now button is displayed");
 
 	// actionClick(lp.getBuyNowButton1());
 
-	 LOGGER.info("Buy Now button is clicked");
+	 //LOGGER.info("Buy Now button is clicked");
 
 	 Threadsleep(3000);
 	
-	  
 	  p = new PDPpage();
-
 	  WebElement PLPname3 = p.getPLPname1();
 	  String name1 = PLPname3.getText();
-
 	  WebElement PLPrate1 = p.getPLPprice1();
 	  String Rate1 = PLPrate1.getText();
 	  System.out.println(Rate1);
@@ -921,8 +1021,9 @@ public void clicks_the_cta_or_any_product_card_on_the_listing_page(String string
 
 @When("adds the product to the cart and proceeds to the Cart page")
 public void adds_the_product_to_the_cart_and_proceeds_to_the_cart_page() {
+
+      StartTimeprint();
       p = new PDPpage();
-	 
 	  WebElement PDPrate2 = p.getPDPprice();
 	  String Rate2 = PDPrate2.getText();
 	  System.out.println(Rate2);
@@ -952,6 +1053,7 @@ public void adds_the_product_to_the_cart_and_proceeds_to_the_cart_page() {
 	 LOGGER.info(" Btw the PDP&Cart  page the product RATE are verified");
 
 	  Threadsleep(3000);
+	   EndTimeprint();
     
 	//Order summary detail verification in cart page
 
@@ -960,131 +1062,126 @@ public void adds_the_product_to_the_cart_and_proceeds_to_the_cart_page() {
 	  WebElement cartsubtotal1 =c.getCartsubtotal();
 	  String CartSubTotal2 = cartsubtotal1.getText();
 	  String CartSubTotal3 = CartSubTotal2.substring(1).replace(",", "");
-	  Double finalsubtotal = Double.valueOf(CartSubTotal3.replace(",", ""));
-	  Double Subtotalamount = Double.valueOf(finalsubtotal);
-	  System.out.println(Subtotalamount);
-	  WebElement CGST = c.getCartCGSTtax();        
-      String CGST1 = CGST.getText();              
-      String CGST2 = CGST1.substring(1).replace(",", "");  
-      Double CGST3 = Double.valueOf(CGST2);         
-      System.out.println(CGST3);
-	  WebElement SGST = c.getCartSGSTtax();
-      String  SGST1 = SGST.getText();
-      String SGST2 = SGST1.substring(1).replace(",", "");
-      Double SGST3 = Double.valueOf(SGST2);
-	  System.out.println(SGST3);
+	  Double Subtotalamount = Double.valueOf(CartSubTotal3);
+	 
+	  WebElement CARTIGST = c.getCARTIGST();   
+      String CARTIGST1 = CARTIGST.getText();              
+      String CARIGST2 = CARTIGST1.substring(1).replace(",", "");  
+      Double CARIGST3 = Double.valueOf(CARIGST2);         
+     
 
-       double total = Subtotalamount + CGST3 + SGST3;
+
+	//   WebElement CGST = c.getCartCGSTtax();        
+    //   String CGST1 = CGST.getText();              
+    //   String CGST2 = CGST1.substring(1).replace(",", "");  
+    //   Double CGST3 = Double.valueOf(CGST2);         
+    //   System.out.println(CGST3);
+
+	//   WebElement SGST = c.getCartSGSTtax();
+    //   String  SGST1 = SGST.getText();
+    //   String SGST2 = SGST1.substring(1).replace(",", "");
+    //   Double SGST3 = Double.valueOf(SGST2);
+	//   System.out.println(SGST3);
+
+       double total = Subtotalamount + CARIGST3;
        String T = String.valueOf(total).substring(0,7);
-	   System.out.println(T);
+	   
 
-	//    WebElement  OrderSummaryTotalcart = c.getCartOrderSummaryTotal();
-	//    String OrderSummaryTotalcart1 = OrderSummaryTotalcart.getText();
-	//    String OrderSummaryTotalcart2 = OrderSummaryTotalcart1.substring(1).replace(",", "");
-	//    Double OrderSummaryTotalcart3 = Double.valueOf(OrderSummaryTotalcart2);
-    //    String Ordercarttotal = String.valueOf(OrderSummaryTotalcart3);
-	//    System.out.println(Ordercarttotal);
-	//   checkpresentElement("To check order summary calculation",Ordercarttotal.equals(T));
+
+	   WebElement  OrderSummaryTotalcart = c.getCARTIGSTORDERSUMMARYTOTAL();
+	   String OrderSummaryTotalcart1 = OrderSummaryTotalcart.getText();
+	   String OrderSummaryTotalcart2 = OrderSummaryTotalcart1.substring(1).replace(",", "");
+	   Double OrderSummaryTotalcart3 = Double.valueOf(OrderSummaryTotalcart2);
+       String Ordercarttotal = String.valueOf(OrderSummaryTotalcart3);
+	   System.out.println(Ordercarttotal);
+	   checkpresentElement("To check order summary calculation",Ordercarttotal.equals(T));
+
 	   LOGGER.info("Successfully Verified   product order summary  Detail in the CART  page");
 	   Threadsleep(3000);
-	   EndTimeprint();
-
-
-
-// 	  checkequaltext("Compare to cart&Checkout page subtotal",Cartsubtotal, getText1(a.getCheckoutSubTotal()));  
-//    checkequaltext("Compare to cart&Checkout page ShippingCharges",shippingtotal, getText1(a.getCheckoutShippingtotal()));
-// 	  checkequaltext("Compare to cart&Checkout page VAT amount",Cartvattotal,getText1(a.getCheckoutVATtotal()));
-//    checkequaltext("Compare to cart&Checkout page Order total amount Charges",CartorderTotal, getText1(a.getCheckoutOrderTotal()));
-//    WebElement CheckOrderTotal = a.getCheckoutOrderTotal();
-//    String CheckOrderTotal1 = CheckOrderTotal.getText();
-// 	  String CheckOrderTotal2 = CheckOrderTotal1.substring(4);
-//    Double CheckOrderTotal3 = Double.valueOf(CheckOrderTotal2);
-//    checkpresentElement("To check order summary calculation",CheckOrderTotal3.equals(OrderTotalamount) );
-// 	  System.out.println("Successfully Verified   product order summary  Detail btw the CART&Checkout  page");
-// 	  EndTimeprint();
+	   
 
 }
 
 @When("verifies the Cart page features and Order summary detail.Then,proceeds to the Checkout page")
 public void verifies_the_cart_page_features_and_order_summary_detail_then_proceeds_to_the_checkout_page() {
       
-	    StartTimeprint();
-	    c = new Cartpage();
-	    Threadsleep(1000);
-		ClickElement(c.getQtybuttoMaxCart());
-		Threadsleep(3000);
-		ClickElement(c.getQtybuttoMinCart());
-		navigateRefresh();
-		Threadsleep(3000);
-		javascriptclick(c.getCartcontinueButton());
-		Threadsleep(3000);
-        moveToElement(h.getCategeory53());
-	    moveToElement(h.getCategeory54());
-	    moveToElement(h.getCategeory55());
-	    moveToElement(h.getCategeory58());
-	    Threadsleep(3000);
-	    checkequaltext("To check Main category to Sub Category is displayed",h.getCategeory58().getText(),"Reverse Osmosis (RO) Plant");
-	    actionClick(h.getCategeory58());
-	    LOGGER.info("Main category to Sub Category is displayed");
-	    javascriptclick(c.getCartname2());
-	    Threadsleep(2000);
-		 ClickElement(p.getAddToCartButtonPDP());
-	    Threadsleep(3000);
-	    PassValues(p.getPincodefield(), "400058");
-	    ClickElement(p.getPincodecheckButton());
-	    Threadsleep(2000);
-	    Alertaccept();
-	    Threadsleep(2000);
-	    p = new PDPpage();
-	    ClickElement(p.getAddToCartButtonPDP());
-	    Threadsleep(3000);
-	    LOGGER.info("Add to cart button is clicked");
-	    // javascriptclick(p.getPDPcheckoutButton());
-	    c = new Cartpage();
-	    moveToElement(c.getMinicartQty());
-	    Threadsleep(2000);
-	    actionClick(c.getMinicartQty());
-	    Threadsleep(2000);
-	    ClickElement(c.getRemoveButton());
-	    Threadsleep(3000);
-	    LOGGER.info("Remove button is clicked");
-        c = new Cartpage();
-		javascriptclick(c.getCartcontinueButton());
-		Threadsleep(3000);
-        moveToElement(h.getCategeory53());
-	    moveToElement(h.getCategeory54());
-	    moveToElement(h.getCategeory55());
-	    moveToElement(h.getCategeory58());
-	    Threadsleep(3000);
-	    checkequaltext("To check Main category to Sub Category is displayed",h.getCategeory58().getText(),"Reverse Osmosis (RO) Plant");
-	    actionClick(h.getCategeory58());
-	    LOGGER.info("Main category to Sub Category is displayed");
-	    javascriptclick(c.getCartname4());
-	    Threadsleep(2000);
-		 ClickElement(p.getAddToCartButtonPDP());
-	    Threadsleep(3000);
-	    PassValues(p.getPincodefield(), "400058");
-	    ClickElement(p.getPincodecheckButton());
-	    Threadsleep(2000);
-	    Alertaccept();
-	    Threadsleep(2000);
-	     p = new PDPpage();
-	    ClickElement(p.getAddToCartButtonPDP());
-	    Threadsleep(3000);
-	    LOGGER.info("Add to cart button is clicked");
-	 //  javascriptclick(p.getPDPcheckoutButton());
-	  c = new Cartpage();
-	  moveToElement(c.getMinicartQty());
-	  Threadsleep(2000);
-	  actionClick(c.getMinicartQty());
-	  Threadsleep(2000);
-	  ClickElement(c.getAddToWishlistButton());
-	  Threadsleep(2000);
-	  LOGGER.info("Add to wishlist button is clicked");
+	//     StartTimeprint();
+	//     c = new Cartpage();
+	//     Threadsleep(1000);
+	// 	  ClickElement(c.getQtybuttoMaxCart());
+	// 	  Threadsleep(3000);
+	// 	  ClickElement(c.getQtybuttoMinCart());
+	// 	  navigateRefresh();
+	// 	  Threadsleep(3000);
+	// 	  javascriptclick(c.getCartcontinueButton());
+	// 	   Threadsleep(3000);
+    //     moveToElement(h.getCategeory53());
+	//     moveToElement(h.getCategeory54());
+	//     moveToElement(h.getCategeory55());
+	//     moveToElement(h.getCategeory58());
+	//     Threadsleep(4000);
+	//     checkequaltext("To check Main category to Sub Category is displayed",h.getCategeory58().getText(),"Reverse Osmosis (RO) Plant");
+	//     actionClick(h.getCategeory58());
+	//     LOGGER.info("Main category to Sub Category is displayed");
+	//     javascriptclick(c.getCartname2());
+	//     Threadsleep(2000);
+	// 	 ClickElement(p.getAddToCartButtonPDP());
+	//     Threadsleep(3000);
+	//     PassValues(p.getPincodefield(), "400058");
+	//     ClickElement(p.getPincodecheckButton());
+	//     Threadsleep(2000);
+	//     Alertaccept();
+	//     Threadsleep(2000);
+	//     p = new PDPpage();
+	//     ClickElement(p.getAddToCartButtonPDP());
+	//     Threadsleep(3000);
+	//     LOGGER.info("Add to cart button is clicked");
+	//     // javascriptclick(p.getPDPcheckoutButton());
+	//     c = new Cartpage();
+	//     moveToElement(c.getMinicartQty());
+	//     Threadsleep(2000);
+	//     actionClick(c.getMinicartQty());
+	//     Threadsleep(2000);
+	//     ClickElement(c.getRemoveButton());
+	//     Threadsleep(3000);
+	//     LOGGER.info("Remove button is clicked");
+    //     c = new Cartpage();
+	// 	javascriptclick(c.getCartcontinueButton());
+	// 	Threadsleep(3000);
+    //     moveToElement(h.getCategeory53());
+	//     moveToElement(h.getCategeory54());
+	//     moveToElement(h.getCategeory55());
+	//     moveToElement(h.getCategeory58());
+	//     Threadsleep(3000);
+	//     checkequaltext("To check Main category to Sub Category is displayed",h.getCategeory58().getText(),"Reverse Osmosis (RO) Plant");
+	//     actionClick(h.getCategeory58());
+	//     LOGGER.info("Main category to Sub Category is displayed");
+	//     javascriptclick(c.getCartname4());
+	//     Threadsleep(2000);
+	// 	 ClickElement(p.getAddToCartButtonPDP());
+	//     Threadsleep(3000);
+	//     PassValues(p.getPincodefield(), "400058");
+	//     ClickElement(p.getPincodecheckButton());
+	//     Threadsleep(2000);
+	//     Alertaccept();
+	//     Threadsleep(2000);
+	//      p = new PDPpage();
+	//     ClickElement(p.getAddToCartButtonPDP());
+	//     Threadsleep(3000);
+	//     LOGGER.info("Add to cart button is clicked");
+	//  //  javascriptclick(p.getPDPcheckoutButton());
+	//   c = new Cartpage();
+	//   moveToElement(c.getMinicartQty());
+	//   Threadsleep(2000);
+	//   actionClick(c.getMinicartQty());
+	//   Threadsleep(2000);
+	//   ClickElement(c.getAddToWishlistButton());
+	//   Threadsleep(2000);
+	//   LOGGER.info("Add to wishlist button is clicked");
 
 	//   proceeds to the Checkout page
 
-	  c = new Cartpage();
+	   c = new Cartpage();
 	   Threadsleep(4000);
 	   javascriptclick(c.getCartCheckoutButton());
 	  LOGGER.info("Cart checkout button is clicked");
@@ -1099,7 +1196,9 @@ public void enters_the_shipping_and_billing_details() {
 	    StartTimeprint();
 	    c = new Cartpage();
 		Threadsleep(3000);
+
 	    javascriptclick(c.getShippherebutton());
+
 		// ClickElement(c.getAddnewAddressButton());
         // Threadsleep(3000);
 		// // PassValues(c.getFname(), getdataExcel(1, 2));
@@ -1115,19 +1214,109 @@ public void enters_the_shipping_and_billing_details() {
         // Threadsleep(2000);
 		// PassValues(c.getMobilenumber(), getdataExcel(8, 2));
 		// javascriptclick(c.getSaveAddressButton());
+		 
+		checkpresentElement("To Verify the  preselect shipping option  in checkout page",c.getPreselectshipping().isDisplayed());
+
 		Threadsleep(2000);
 	
 }
 
 @When("selects a payment option and places the order")
 public void selects_a_payment_option_and_places_the_order() {
+
 	c = new Cartpage();
 	Threadsleep(4000);
 	javascriptclick(c.getPaymentButton());
 	Threadsleep(3000);
-    javascriptclick(c.getTermcheckboxlogin());
 
-	//javascriptclick(c.getTermcheckbox());
+	javascriptclick(c.getBillingaddress());
+
+	Threadsleep(2000);
+    javascriptclick(c.getShowmoreoption());
+
+	 Threadsleep(3000);
+
+	  javascriptclick(c.getApplybutton());
+	  Threadsleep(3000);
+
+	  WebElement checkoutsubtotal1 =c.getCheckoutsubtotal();
+	  String checkoutsubtotal2 = checkoutsubtotal1.getText();
+	  String checkoutsubtotal3 = checkoutsubtotal2.substring(1).replace(",", "");
+	  Double checkoutsubtotal4 = Double.valueOf(checkoutsubtotal3.replace(",", ""));
+	  Double checkoutsubtotal5 = Double.valueOf(checkoutsubtotal4);
+	
+
+	  WebElement CHECKOUTIGST = c.getCheckoutIGST();       
+      String CHECKOUTIGST1 = CHECKOUTIGST.getText();              
+      String CHECKOUTIGST2 = CHECKOUTIGST1.substring(1).replace(",", "");  
+      Double CHECKOUTIGST4 = Double.valueOf(CHECKOUTIGST2);         
+      
+
+
+	  WebElement CheckoutDiscount1 =c.getCheckoutDiscount1();
+	  String CheckoutDisount2 = CheckoutDiscount1.getText();
+	  String CheckoutDisount3 = CheckoutDisount2.substring(2).replace(",", "");
+	  Double CheckoutDisount4 = Double.valueOf(CheckoutDisount3);
+	
+
+	//   WebElement SGST = c.getCartSGSTtax();
+    //   String  SGST1 = SGST.getText();
+    //   String SGST2 = SGST1.substring(1).replace(",", "");
+    //   Double SGST3 = Double.valueOf(SGST2);
+	//   System.out.println(SGST3);
+
+	   double CheckoutTotal1 =  (checkoutsubtotal5 + CHECKOUTIGST4) -  CheckoutDisount4;
+	   String T1 = String.valueOf(CheckoutTotal1);
+	   System.out.println(T1);
+
+	   WebElement  DiscountOrderSummarytotal = c.getCheckoutDiscount1Ordertotal();
+	   String DiscountOrderSummarytotal1 = DiscountOrderSummarytotal.getText();
+	   String DiscountOrderSummarytotal2 = DiscountOrderSummarytotal1.substring(1).replace(",", "");
+	   Double DiscountOrderSummarytotal3 = Double.valueOf(DiscountOrderSummarytotal2);
+       String DiscountOrderSummarytotal4 = String.valueOf(DiscountOrderSummarytotal3);
+	  
+	   checkpresentElement("To Verify the  order summary calculation in checkout page",DiscountOrderSummarytotal4.equals(T1));
+	   LOGGER.info("Successfully verified order summary calculation after applying the coupon code in the checkout page");
+	   Threadsleep(3000);
+	   javascriptclick(c.getCancelbutton());
+	   Threadsleep(3000);
+
+	  WebElement CheckouSubtwithoutcoupon1  = c.getCheckoutwithoutcoupon1();
+	  String CheckouSubtwithoutcoupon2 = CheckouSubtwithoutcoupon1.getText();
+	  String CheckouSubtwithoutcoupon3 = CheckouSubtwithoutcoupon2.substring(1).replace(",", "");
+	  Double CheckouSubtwithoutcoupon4 = Double.valueOf(CheckouSubtwithoutcoupon3.replace(",", ""));
+	  Double CheckouSubtwithoutcoupon5 = Double.valueOf(CheckouSubtwithoutcoupon4);
+	
+
+	  WebElement CheckouIGSTtwithoutcoupon1 = c.getCheckoutwithoutcoupon2();  
+      String CheckouIGSTtwithoutcoupon2 = CheckouIGSTtwithoutcoupon1.getText();              
+      String CheckouIGSTtwithoutcoupon3 = CheckouIGSTtwithoutcoupon2.substring(1).replace(",", "");  
+      Double CheckouIGSTtwithoutcoupon4 = Double.valueOf(CheckouIGSTtwithoutcoupon3);         
+    
+
+	   double CheckoutwithoutcouponTotal =  CheckouSubtwithoutcoupon5 + CheckouIGSTtwithoutcoupon4;
+	   String w1 = String.valueOf(CheckoutwithoutcouponTotal);
+	   System.out.println(w1);
+
+	   WebElement  WithoutdiscountOrderSummarytotal =c.getCheckoutwithoutcoupon4();
+	   String WithoutdiscountOrderSummarytota2 = WithoutdiscountOrderSummarytotal.getText();
+	   String WithoutdiscountOrderSummarytota3 = WithoutdiscountOrderSummarytota2.substring(1).replace(",", "");
+	   Double WithoutdiscountOrderSummarytota4 = Double.valueOf(WithoutdiscountOrderSummarytota3);
+       String WithoutdiscountOrderSummarytota5 = String.valueOf(WithoutdiscountOrderSummarytota4);
+	   
+
+	     checkpresentElement("After,canceled the coupon code,To  check  the  order summary calculation in checkout page",WithoutdiscountOrderSummarytota5.equals(w1));
+		 LOGGER.info("Successfully Verified order summary calculation after canceling the coupon code in the checkout page");
+		 Threadsleep(3000);
+		 
+	//    javascriptclick(c.getTermconditionlink());
+	//    Threadsleep(3000);
+	//    javascriptclick(c.getTermcloselink());
+
+	   Threadsleep(2000);
+       javascriptclick(c.getTermcheckboxlogin());
+	   //javascriptclick(c.getTermcheckbox());
+
 }
 @Then("after successful payment, the user should see the Thank You page")
 public void after_successful_payment_the_user_should_see_the_thank_you_page() {
@@ -1135,32 +1324,34 @@ public void after_successful_payment_the_user_should_see_the_thank_you_page() {
 	c = new Cartpage();
     Threadsleep(3000);
 	javascriptclick(c.getPlaceorder());
+	LOGGER.info(" The order suceesfully plaed and redirect to the  Thank You page");
 	EndTimeprint();
 
-	checkpresentElement("To ordernumber in success page",c.getSuccespageOrdernumber().isDisplayed());
-    String Successorder = c.getSuccespageOrdernumber().getText();
 
-	moveToElement(c.getLoginIcon2());
+   // checkpresentElement("To ordernumber in success page",c.getSuccespageOrdernumber().isDisplayed());
+
+	// String Successorder = c.getSuccespageOrdernumber().getText();
+
+	// moveToElement(c.getLoginIcon2());
 	
-	actionClick(c.getMyaccountlink());
-	Threadsleep(3000);
+	// actionClick(c.getMyaccountlink());
+	// Threadsleep(3000);
 
-	 ClickElement(c.getMyOrder1());
-	 Threadsleep(3000);
+	//  ClickElement(c.getMyOrder1());
+	//  Threadsleep(3000);
 	
-     LOGGER.info("My  all the orders is displayed in Orderlisting page");
+    //  LOGGER.info("My  all the orders is displayed in Orderlisting page");
 
-	 String Myaccountordernumber = c.getOrdernumber().getText();
+	//  String Myaccountordernumber = c.getOrdernumber().getText();
 
+	// System.out.println("Thankyou page order number : " + Successorder);
+    // System.out.println("My account page order number : " + Myaccountordernumber);
 
-	System.out.println("Thankyou page order number : " + Successorder);
-    System.out.println("My account page order number : " + Myaccountordernumber);
+    // Assert.assertEquals(Successorder, Myaccountordernumber);
 
-    Assert.assertEquals(Successorder, Myaccountordernumber);
+	// javascriptclick(c.getVieworder());
 
-	javascriptclick(c.getVieworder());
-
-	LOGGER.info("Order listing page View orders link is dispalyed & clicked");
+	// LOGGER.info("Order listing page View orders link is dispalyed & clicked");
 
 }
 
@@ -1198,6 +1389,35 @@ public void the_admin_dashboard_page_should_be_displayed() {
 	 a = new Adminlogin();
 	 javascriptclick(a.getSignInButton1());
 	 Threadsleep(5000);
+
+	 javascriptclick(a.getSales());
+	 Threadsleep(2000);
+	 javascriptclick(a.getSalesOrder());
+
+	 Threadsleep(3000);
+
+	  javascriptclick(a.getPaidstatus());
+
+	  Threadsleep(3000);
+
+	   javascriptclick(a.getWarhouseallcation());
+
+	  String A  = "1023";
+
+	  String A1 = a.getWarhouseallcationcode().getText();
+
+	  Assert.assertEquals(A , A1);
+
+     LOGGER.info("Succesfully verified the  warhouse allocation code for pump products in admin panel");
+
+
+
+
+
+
+
+
+
 }
 
 

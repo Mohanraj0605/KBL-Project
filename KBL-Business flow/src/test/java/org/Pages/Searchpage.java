@@ -48,9 +48,6 @@ public class Searchpage extends Ultilityclass {
         return Surfacecount2;
     }
 
-    
-
-    
 
 
     @FindBy(xpath="//input[@name='q']")

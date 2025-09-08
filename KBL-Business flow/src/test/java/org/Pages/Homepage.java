@@ -25,8 +25,6 @@ public java.util.List<WebElement> getGroupMenuLinks1() {
 	return groupMenuLinks1;
 }
 
-
-
 	@FindBys({
 		@FindBy(xpath ="//header//div//ul[@class='groupmenu']//a")
 	})
@@ -59,6 +57,21 @@ public java.util.List<WebElement> getGroupMenuLinks1() {
     @FindBy(xpath="(//a[@class='menu-link'])[13]")
 	private WebElement Categeory3;
 
+
+	@FindBy(xpath="(//a[@class='menu-link'])[14]")
+   	private WebElement Categeory4;
+
+	@FindBy(xpath="(//a[@class='menu-link'])[15]")
+   	private WebElement Categeory5;
+		
+		
+	public WebElement getCategeory4() {
+		return Categeory4;
+	}
+
+	public WebElement getCategeory5() {
+		return Categeory5;
+	}
 
 	public WebElement getCategeory2() {
 		return Categeory2;

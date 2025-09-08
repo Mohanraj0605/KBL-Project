@@ -57,7 +57,7 @@ public class  PDPpage extends Ultilityclass {
        return InstallationServicelabel;
    }
 
-   @FindBy(xpath=" (//span[@class='special-price'])[2]")
+   @FindBy(xpath=" (//span[@class='special-price'])[3]")
     private WebElement PLPprice;
 
    public WebElement getPLPprice() {
@@ -79,10 +79,8 @@ public class  PDPpage extends Ultilityclass {
        return PDPprice;
    }
 
-     @FindBy(xpath="(//span[text()='₹22,325.60'])[1]")
+     @FindBy(xpath="(//span[text()='₹26,526.40'])[1]")
     private WebElement getPDPprice2;
-
-
 
     public WebElement getPDPprice2() {
         return getPDPprice2;
@@ -146,7 +144,7 @@ public class  PDPpage extends Ultilityclass {
        return ServiceTextPDP;
    }
 
-    @FindBy(xpath="(//a[@class='product-item-link'])[2]")
+    @FindBy(xpath="(//a[@class='product-item-link'])[3]")
    private WebElement PLPname;
 
     public WebElement getPLPname() {

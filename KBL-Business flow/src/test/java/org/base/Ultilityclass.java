@@ -670,6 +670,13 @@ public static void waitUntilClickable(WebElement categoryLink) {
          driver.switchTo().window(ID);
    }
      
+
+   public void setPriceRange(WebElement element, String value) throws InterruptedException {
+    
+    element.clear();
+    Thread.sleep(3000); // Or use WebDriverWait
+    PassValues(element, value);
+}
      /*
       * @ Purpose:  Verification and Vadidation Using By Assertion
       */
