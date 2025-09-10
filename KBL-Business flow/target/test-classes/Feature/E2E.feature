@@ -45,8 +45,6 @@ Examples:
           |TL16010016A12211| |Surface pump|   |Submersible Pump| 
 
 
-# D11130060676   
-
 @Case5  
 
 Scenario: To  Valiadte the listing Buy now functionaity for Guest user
@@ -62,7 +60,6 @@ Then  verify the added compare products in comparision page
 Scenario: To Validate  the PDP page to Cart Page for Guest  user
 
 Given User open the Home page 
-When  User go to the listing page
 And   On click Buy now CTA or any product cards in listing page
 And   Verify the  correct delivery message based on TAT functionality
 Then  verify the PDP page features and products prices & do the add to cart.
