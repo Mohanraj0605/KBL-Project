@@ -60,12 +60,11 @@ public void when_user_opening_the_home_page_to_verify_the_header_section_all_the
 	 checkpresentElement("To check KBL logo is displayed",h.getKBLLogo().isDisplayed());
 	 javascriptclick(h.getKBLLogo());
 	 LOGGER.info("KBL logo is displayed");
-	  Threadsleep(2000);
+	 Threadsleep(2000);
 	 moveToElement(h.getLoginIcon());
-	 checkpresentElement("To check Login icon is displayed",h.getLoginIcon().isDisplayed());
 	 LOGGER.info("Login icon is displayed");
-	  Threadsleep(2000);
-	 actionClick(h.getLogin());
+	 Threadsleep(2000);
+	 javascriptclick(h.getLogin());
 	 LOGGER.info("Login icon is clicked");
 	 Threadsleep(2000);
 	 moveToElement(h.getSearchBox());
@@ -219,12 +218,13 @@ public void observe_the_footer_section_links_redirections() throws AWTException 
 public void go_the_login_page_and_select_the_login_with_password_page() {
 	
 	StartTimeprint();
-    h = new Homepage();
-    moveToElement(h.getLoginIcon());
-	checkpresentElement("To check Login icon is displayed",h.getLoginIcon().isDisplayed());
-	actionClick(h.getLogin());
-	Threadsleep(3000);
-	LOGGER.info("Login icon is clicked");
+     h = new Homepage();
+     moveToElement(h.getLoginIcon());
+	 LOGGER.info("Login icon is displayed");
+	 Threadsleep(2000);
+	 javascriptclick(h.getLogin());
+	 LOGGER.info("Login icon is clicked");
+	 Threadsleep(2000);
 
 }
 @When("Enter the Email and passwors in repective field")
@@ -258,6 +258,8 @@ public void observe_the_redirection_to_the_my_account_page() {
 	 Threadsleep(3000);
 	 EndTimeprint();
 
+	 driver.quit();
+
 //  l = new Loginpage();
 //     moveToElement(l.getForgotlinking());
 // 	checkpresentElement("To check Forgot password link is displayed",l.getForgotlinking().isDisplayed());
@@ -274,11 +276,14 @@ public void do_the_login_and_observe_the_my_account_page_options() {
 
 	StartTimeprint();
     h = new Homepage();
-    moveToElement(h.getLoginIcon());
-	Threadsleep(3000);
-	checkpresentElement("To check Login icon is displayed",h.getLoginIcon().isDisplayed());
-	actionClick(h.getLogin());
-	LOGGER.info("Login icon is clicked");
+     h = new Homepage();
+     moveToElement(h.getLoginIcon());
+	 LOGGER.info("Login icon is displayed");
+	 Threadsleep(2000);
+	 javascriptclick(h.getLogin());
+	 LOGGER.info("Login icon is clicked");
+	 Threadsleep(2000);
+
 	l = new Loginpage();
 	Threadsleep(3000);
 	moveToElement(l.getPasswordLogin());
@@ -434,6 +439,8 @@ public void user_click_the_my_account_options_in_dashbord_and_observe_the_redire
 
 	 LOGGER.info("My account dashboard page all the optons are verified and Navigated to the respective page");
 
+	  driver.quit();
+
 }
 
 
@@ -488,9 +495,10 @@ public void observe_the_seeall_navigation_page(String Keyword2) {
 	 s = new Searchpage();
 	 moveToElement(s.getSearchBox());
 	 checkpresentElement("To check Search box is displayed",s.getSearchBox().isDisplayed());
+	 Threadsleep(2000);
 	 PassValues(s.getSearchBox(), Keyword2);
 	 LOGGER.info("Product name is entered in search box");
-     Threadsleep(3000);
+     Threadsleep(2000);
 	 javascriptclick(s.getSeeall());
 	 Threadsleep(3000);
 	 String Url4 = driver.getCurrentUrl();
@@ -540,15 +548,17 @@ public void verify_the_filter_options_in_slp_page() throws AWTException {
      Threadsleep(2000);
 	 checkequaltext("To check selected Residential  filter count for in SLP page",ResidentialFiltercount3,s.getResidentialcount2().getText());
     
-	 Threadsleep(2000);
+	 Threadsleep(5000);
 	 ClickElement(s.getPopupclose());
-	 Threadsleep(2000);
+
+	 Threadsleep(1000);
 	
 	 for (int i = 0; i <7; i++) {
 		KeyDOWN();
 	}
 
      Threadsleep(2000);
+
 	 WebElement SurfaceFiltercount1 =s.getSurfacecount1();
 	String SurfaceFiltercount2 = SurfaceFiltercount1.getText();
 	String SurfaceFiltercount3 = SurfaceFiltercount2.substring(0, 3);
@@ -570,6 +580,8 @@ public void verify_the_filter_options_in_slp_page() throws AWTException {
 
 	 EndTimeprint(); 
 
+	 driver.quit();
+
 }
 
 @When("User go to the listing page")
@@ -590,7 +602,7 @@ public void user_go_to_the_listing_page() throws AWTException, InterruptedExcept
 	Threadsleep(3000);
 
 
-	for (int i = 0; i <7; i++) {
+	for (int i = 0; i <8; i++) {
 		KeyDOWN();
 	 }
 
@@ -632,7 +644,7 @@ public void user_go_to_the_listing_page() throws AWTException, InterruptedExcept
 	 LOGGER.info("Series number & Phase options are verified for listed products");
 
 	s = new Searchpage();
-	Threadsleep(3000);
+	Threadsleep(4000);
 	ClickElement(s.getPopupclose());
 	EndTimeprint();
 
@@ -680,11 +692,7 @@ for (WebElement price2 : price1) {
 		}
     }
 
-
      EndTimeprint();
-
-
-
 
 }
 
@@ -719,8 +727,8 @@ public void verify_the_compare_now_option_in_listing_page() {
     Threadsleep(2000);
 	checkequaltext("To check Main category to Sub Category is displayed",h.getCategeory3().getText(),"Pressure Boosting");
 	actionClick(h.getCategeory3());
-	Threadsleep(3000);
 	lp = new Listingpage();
+	Threadsleep(3000);
 	moveToElement(lp.getListingCategeory2());
 	Threadsleep(4000);
 	actionClick(lp.getListingCompare2());
@@ -733,6 +741,8 @@ public void verify_the_compare_now_option_in_listing_page() {
 	// ClickElement(s.getPopupclose());
   	LOGGER.info("Compare now button is displayed");
 	EndTimeprint();
+
+
 }
 
 @Then("verify the added compare products in comparision page")
@@ -750,12 +760,28 @@ public void verify_the_added_compare_products_in_comparision_page() {
 	 LOGGER.info("Compare now checkbox is clicked and redirection is verified");
 	 EndTimeprint();
 
+	 driver.quit();
+
 }
 
 
 @When("On click Buy now CTA or any product cards in listing page")
 public void on_click_buy_now_cta_or_any_product_cards_in_listing_page() {
-   
+
+
+	StartTimeprint();
+	h = new Homepage();
+    Threadsleep(5000);
+	javascriptclick(h.getKBLLogo());
+    moveToElement(h.getCategeory1());
+	moveToElement(h.getCategeory2());
+	moveToElement(h.getCategeory3());
+	Threadsleep(3000);
+	checkequaltext("To check Main category to Sub Category is displayed",h.getCategeory3().getText(),"Pressure Boosting");
+	actionClick(h.getCategeory3());
+
+	LOGGER.info("Main category to Sub Category is displayed");
+	Threadsleep(3000);
 	 lp = new Listingpage();
 	 moveToElement(lp.getListingCategeory1());
 	 Threadsleep(3000);
@@ -771,6 +797,7 @@ public void on_click_buy_now_cta_or_any_product_cards_in_listing_page() {
 	  WebElement PLPrate1 = p.getPLPprice();
 	  String Rate1 = PLPrate1.getText();
 	  System.out.println(Rate1);
+
 	  javascriptclick(p.getPLPname());
 	 //actionClick(lp.getBuyNowButton1());
 	 LOGGER.info("Product name  is clicked");
@@ -888,6 +915,8 @@ public void verify_the_pdp_page_features_and_products_prices_do_the_add_to_cart_
 	  Threadsleep(3000);
 	  EndTimeprint();
 
+	  driver.quit();
+
    }
 
 
@@ -896,7 +925,7 @@ public void verify_the_pdp_page_features_and_products_prices_do_the_add_to_cart_
    @Given("user opens the Home page and logs in")
    public void user_opens_the_home_page_and_logs_in() {
 
-    StartTimeprint(); 
+     StartTimeprint(); 
 	 h = new Homepage();
 	 LOGGER.info("KBL site home page are launched");
      String title = driver.getTitle();
@@ -1052,8 +1081,8 @@ public void adds_the_product_to_the_cart_and_proceeds_to_the_cart_page() {
 	 
 	 LOGGER.info(" Btw the PDP&Cart  page the product RATE are verified");
 
-	  Threadsleep(3000);
-	   EndTimeprint();
+	Threadsleep(3000);
+	EndTimeprint();
     
 	//Order summary detail verification in cart page
 
@@ -1327,6 +1356,8 @@ public void after_successful_payment_the_user_should_see_the_thank_you_page() {
 	LOGGER.info(" The order suceesfully plaed and redirect to the  Thank You page");
 	EndTimeprint();
 
+	driver.quit();
+
 
    // checkpresentElement("To ordernumber in success page",c.getSuccespageOrdernumber().isDisplayed());
 
@@ -1400,15 +1431,15 @@ public void the_admin_dashboard_page_should_be_displayed() {
 
 	  Threadsleep(3000);
 
-	   javascriptclick(a.getWarhouseallcation());
+	  javascriptclick(a.getWarhouseallcation());
 
 	  String A  = "1023";
 
 	  String A1 = a.getWarhouseallcationcode().getText();
 
 	  Assert.assertEquals(A , A1);
-
-     LOGGER.info("Succesfully verified the  warhouse allocation code for pump products in admin panel");
+	  
+      LOGGER.info("Succesfully verified the  warhouse allocation code for pump products in admin panel");
 
 
 

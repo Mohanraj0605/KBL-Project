@@ -139,7 +139,7 @@ public java.util.List<WebElement> getGroupMenuLinks1() {
 		return KBLLogo;
 	} 
 
-	@FindBy(id="authorization-trigger")
+	@FindBy(xpath="//div[@class='action toggle switcher-trigger']")
     private WebElement LoginIcon;
 
      @FindBy(xpath="(//span[text()='My Cart'])[1]")
@@ -198,6 +198,7 @@ public java.util.List<WebElement> getGroupMenuLinks1() {
 		return WishlistLink;
 	}
 
+	
 	@FindBy(xpath="(//a[@class='action create primary'])[1]")
     private WebElement Login;
 	
