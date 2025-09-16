@@ -11,6 +11,65 @@ public class Adminlogin extends Ultilityclass {
 		PageFactory.initElements(driver, this);
 	}
 
+     @FindBy(xpath="(//button[@class='action-tertiary action-clear'])[1]")
+     private WebElement Clearallinlorderdetailpage;
+
+       @FindBy(xpath="(//button[@class='action-default'])[1]")
+     private WebElement Filteroptions;
+
+      @FindBy(xpath="(//input[@class='admin__control-text'])[2]")
+      private WebElement Pincodefield;
+
+
+      @FindBy(xpath="//table//tr/td[2]")
+      private WebElement codesinWarhousepage;
+
+
+      @FindBy(xpath="//table//tr/td[6]")
+      private WebElement SKUqtysinWarhousepage;
+
+      @FindBy(xpath="//table//tr/td[6]")
+      private WebElement   listedcodesqty;
+
+
+     public WebElement getCodesinWarhousepage() {
+          return codesinWarhousepage;
+     }
+
+      public WebElement getSKUqtysinWarhousepage() {
+           return SKUqtysinWarhousepage;
+      }
+
+      public WebElement getListedcodesqty() {
+           return listedcodesqty;
+      }
+
+      public WebElement getSKUfield() {
+           return SKUfield;
+      }
+
+     @FindBy(xpath="(//input[@class='admin__control-text'])[6]")
+     private WebElement SKUfield;
+
+     
+     public WebElement getPincodefield() {
+          return Pincodefield;
+     }
+
+     public WebElement getFilteroptions() {
+          return Filteroptions;
+     }
+
+     public WebElement getClearallinlorderdetailpage() {
+          return Clearallinlorderdetailpage;
+     }
+
+      @FindBy(xpath="//button[@class='action-default scalable paid']")
+      private WebElement Paidoption;
+
+     public WebElement getPaidoption() {
+          return Paidoption;
+     }
 
 
      @FindBy(xpath="(//table[@class='admin__table-secondary']//tr//td)[3]")
@@ -18,19 +77,45 @@ public class Adminlogin extends Ultilityclass {
 
 
       @FindBy(xpath=" //a[@title='Allocated Warehouse Info']")
-     private WebElement Warhouseallcation;
+      private WebElement Warhouseallcation;
 
-      @FindBy(xpath="//input[@class='admin__control-text data-grid-search-control'])[1]")
+      @FindBy(xpath="(//input[@class='admin__control-text data-grid-search-control'])[1]")
      private WebElement Adminsearch;
 
-      @FindBy(xpath="(//tr//td)[10]")
+
+      @FindBy(xpath="(//div[@class='data-grid-cell-content'])[2]")
+     private WebElement Orderidinadmin;
+
+
+      public WebElement getOrderidinadmin() {
+          return Orderidinadmin;
+     }
+
+      @FindBy(xpath="(//div[@class='data-grid-cell-content'])[9]")
      private WebElement Paidstatus;
+
+
+      @FindBy(xpath="//button[@class='action-secondary']")
+     private WebElement Applyfilter;
+
+      public WebElement getApplyfilter() {
+          return Applyfilter;
+     }
+
+      public WebElement getManagewarehouseplistwise() {
+           return Managewarehouseplistwise;
+      }
+
+      @FindBy(xpath="(//div[@class='data-grid-cell-content'])[2]")
+     private WebElement OrderNumberlistingpage;
   
+     public WebElement getOrderNumberlistingpage() {
+          return OrderNumberlistingpage;
+     }
 
      public WebElement getWarhouseallcation() {
           return Warhouseallcation;
      }
-
 
       public WebElement getAdminsearch() {
            return Adminsearch;
@@ -42,16 +127,72 @@ public class Adminlogin extends Ultilityclass {
       }
 
 
-     @FindBy(xpath="(//span[text()='Orders'])[1]")
+     @FindBy(xpath="//li[@Class='item-sales-order    level-2']")
      private WebElement SalesOrder;
   
      public WebElement getSalesOrder() {
           return SalesOrder;
      }
 
-     @FindBy(xpath=" //a[@class='_active']")
+      @FindBy(xpath="//li[@class='item-sales  parent  level-0']")
      private WebElement Sales;
 
+      @FindBy(xpath="//li[@id='menu-ambab-core-menu']")
+      private WebElement AMbab;
+
+      @FindBy(xpath="//li[@id='menu-biztech-inventorysystem-base']")
+      private WebElement Warehouse;
+
+      public WebElement getWarehouse() {
+          return Warehouse;
+     }
+
+      @FindBy(xpath="//li[@Class='item-add-row    level-2']")
+      private WebElement AMbabManagepincode;
+
+      @FindBy(xpath="(//table//tbody//tr/td)[15]")
+      private WebElement Ambabpdppincode;
+
+        
+      
+     @FindBy(xpath="//li[@Class='item-iksula-stocklisting-stocklisting    level-1']")
+     private WebElement Warehousestocklisting;
+
+      @FindBy(xpath="//li[@Class='item-inventorysystem    level-1']")
+     private WebElement Managewarehouse1;
+
+      @FindBy(xpath="//table//tbody//tr")
+     private WebElement Managewarehouseplistwise;
+
+
+
+     public WebElement getManagewarehouse1() {
+          return Managewarehouse1;
+     }
+
+     public WebElement getWarehousestocklisting() {
+          return Warehousestocklisting;
+     }
+    
+
+     @FindBy(xpath="(//table//tbody//tr/td)[19]")
+     private WebElement Ambaballocationcode;
+
+     public WebElement getAmbabpdppincode() {
+          return Ambabpdppincode;
+     }
+
+     public WebElement getAmbaballocationcode() {
+          return Ambaballocationcode;
+     }
+
+     public WebElement getAMbabManagepincode() {
+          return AMbabManagepincode;
+     }
+
+     public WebElement getAMbab() {
+          return AMbab;
+     }
 
      public WebElement getSales() {
           return Sales;

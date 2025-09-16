@@ -22,6 +22,7 @@ import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
@@ -34,6 +35,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -247,6 +249,19 @@ public  static void close() {
          System.out.println("End Time:" +d);
 
      }
+
+     public void waitForClickableAndClick(WebElement element) {
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(7));
+    wait.until(ExpectedConditions.elementToBeClickable(element));
+    element.click();  
+    
+    
+}
+
+public void waitUntilVisible(WebElement element) {
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+    wait.until(ExpectedConditions.visibilityOf(element));
+}
      
     /*
  	 * @author:MOHANRAJ K
@@ -726,6 +741,7 @@ public static void waitUntilClickable(WebElement categoryLink) {
 
       }
 
+
      /*
       * @ Purpose:  To read the Excel
       */
@@ -737,7 +753,7 @@ public static void waitUntilClickable(WebElement categoryLink) {
      File f = new File ("E:\\KBL-Project\\KBL-Business flow\\target\\Data\\KBL datas.xlsx"); 
      FileInputStream fin = new FileInputStream(f); 
      Workbook w = new XSSFWorkbook(fin);
-     Sheet sheet = w.getSheet("KBL datas");
+     Sheet sheet = w.getSheet("KBL-Sheet");
      
      Row rowdata = sheet.getRow(row);
      Cell cell = rowdata.getCell(col);
@@ -776,36 +792,33 @@ public static void waitUntilClickable(WebElement categoryLink) {
      }
 
      
-      public static List<Map<String, String>> getExcelData2(String path, String sheetName) {
+    //   public static List<Map<String, String>> getExcelData2(String path, String sheetName) 
 
+    //     List<Map<String, String>> dataList = new ArrayList<>();
+    //   try (FileInputStream fis = new FileInputStream("E:\\KBL-Project\\KBL-Business flow\\target\\Data\\Footerlinks.xlsx");
+    //        Workbook workbook = new XSSFWorkbook(fis)) {
 
-        List<Map<String, String>> dataList = new ArrayList<>();
-      try (FileInputStream fis = new FileInputStream("E:\\KBL-Project\\KBL-Business flow\\target\\Data\\Footerlinks.xlsx");
-           Workbook workbook = new XSSFWorkbook(fis)) {
+    //       Sheet sheet = workbook.getSheet("Footer");
+    //       Row headerRow = sheet.getRow(1);
 
-          Sheet sheet = workbook.getSheet("Footer");
-          Row headerRow = sheet.getRow(1);
+    //       for (int i = 1; i <= sheet.getLastRowNum(); i++) {
+    //         Row row = sheet.getRow(i);
+    //         Map<String, String> rowMap = new HashMap<>();
 
-          for (int i = 1; i <= sheet.getLastRowNum(); i++) {
-            Row row = sheet.getRow(i);
-            Map<String, String> rowMap = new HashMap<>();
+    //         for (int j = 0; j < row.getLastCellNum(); j++) {
+    //             String key = headerRow.getCell(j).getStringCellValue().trim();
+    //             String value = row.getCell(j).getStringCellValue().trim();
+    //             rowMap.put(key, value);
+    //         }
 
-            for (int j = 0; j < row.getLastCellNum(); j++) {
-                String key = headerRow.getCell(j).getStringCellValue().trim();
-                String value = row.getCell(j).getStringCellValue().trim();
-                rowMap.put(key, value);
-            }
+    //         dataList.add(rowMap);
+    //       }
 
-            dataList.add(rowMap);
-          }
-
-      } catch (Exception e) {
-          e.printStackTrace();
-      }
-        return dataList;
-    }
-
-
+    //   } catch (Exception e) {
+    //       e.printStackTrace();
+    //   }
+    //     return dataList;
+    // }
      
      /*
       * @ Purpose:  To create the Excel sheet
@@ -830,10 +843,8 @@ public static void waitUntilClickable(WebElement categoryLink) {
     	
 
 
-    	 
      }    
      
-
 
     public static  List<Map<String, String>> Categeoryreader (String path, String sheetName) {
 
@@ -865,8 +876,119 @@ public static void waitUntilClickable(WebElement categoryLink) {
         return Categeorydatas;
     }
 	
-	
 
-	
+    
+public static void writeToExcel1(String data, String fileName) {
+    Workbook workbook = new XSSFWorkbook();
+    Sheet sheet = workbook.createSheet("Warehouse Codes");
+
+    Row row = sheet.createRow(0);  // Write to first row
+    row.createCell(0).setCellValue(data);  // Write the string in first column
+
+    try (FileOutputStream out = new FileOutputStream(fileName)) {
+        workbook.write(out);
+        workbook.close();
+        System.out.println("Excel file written: " + fileName);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+    
+public static void writeToExcel2(List<String> data, String fileName) {
+    Workbook workbook = new XSSFWorkbook();
+    Sheet sheet = workbook.createSheet("Warehouse Codes3");
+
+    int rowCount = 0;
+    for (String entry : data) {
+        Row row = sheet.createRow(rowCount++);
+        row.createCell(0).setCellValue(entry);
+    }
+
+    // make sure parent dirs exist etc.
+    try (FileOutputStream out = new FileOutputStream(fileName)) {
+        workbook.write(out);
+        System.out.println("Excel file written: " + fileName);
+    } catch (IOException e) {
+        e.printStackTrace();
+    } finally {
+        try {
+            workbook.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+    public static void writeUniqueCodesToExcel(String filePath, List<String> uniqueCodes, String sheetName) {
+    try {
+        System.out.println(">> Starting to write unique codes to Excel...");
+
+        FileInputStream fis = new FileInputStream(filePath);
+        Workbook workbook = WorkbookFactory.create(fis);
+        fis.close(); // Close input stream after loading
+
+        Sheet sheet = workbook.getSheet(sheetName);
+        if (sheet == null) {
+            System.out.println("Sheet not found. Creating new sheet: " + sheetName);
+            sheet = workbook.createSheet(sheetName);
+        }
+
+        System.out.println("Unique codes to write: " + uniqueCodes);
+        System.out.println("Total unique codes: " + uniqueCodes.size());
+
+        for (int i = 0; i < uniqueCodes.size(); i++) {
+            Row row = sheet.getRow(i);
+            if (row == null) {
+                row = sheet.createRow(i);
+            }
+            Cell cell = row.createCell(0); // Column A
+            cell.setCellValue(uniqueCodes.get(i));
+            System.out.println("Written: " + uniqueCodes.get(i));
+        }
+        FileOutputStream fos = new FileOutputStream(filePath);
+        workbook.write(fos);
+        fos.close();
+        workbook.close();
+        System.out.println("Done writing to Excel.");
+    } 
+    
+    catch (Exception e) {
+        e.printStackTrace();
+    }
+}
+
+
+
+public List<String> readWarehouseCodesFromExcel(String filePath) {
+    List<String> warehouseCodes = new ArrayList<>();
+
+    try (FileInputStream fis = new FileInputStream(filePath);
+         Workbook workbook = new XSSFWorkbook(fis)) {
+
+        Sheet sheet = workbook.getSheetAt(0); // First sheet
+
+        for (Row row : sheet) {
+            Cell cell = row.getCell(0); // Column A (index 0)
+
+            if (cell != null) {
+                String code = cell.getStringCellValue().trim();
+                if (!code.isEmpty()) {
+                    warehouseCodes.add(code);
+                }
+            }
+        }
+
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+
+    return warehouseCodes;
+}
+ 
 
 }
+
+
+
+

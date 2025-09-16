@@ -458,7 +458,7 @@ public WebElement getVieworder() {
 
 
 
-     @FindBy(xpath="(//button[@type='button'])[6]")
+     @FindBy(xpath="(//button[@class='action action-select-shipping-item'])[1]")
       private WebElement Shippherebutton;
 
      public WebElement getShippherebutton() {
