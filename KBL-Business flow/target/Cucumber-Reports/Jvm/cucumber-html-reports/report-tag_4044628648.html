@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>KBL</td>
-      <td>24 Sep 2025, 15:39</td>
+      <td>01 Oct 2025, 11:52</td>
     </tr>
   </tbody>
 </table>
@@ -127,19 +127,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@Case9</td>
-          <td      class="passed"    >5</td>
-          <td >0</td>
-          <td >0</td>
+          <td      class="passed"    >1</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >3</td>
           <td >0</td>
           <td >0</td>
           <td class="total">5</td>
 
-          <td  class="passed"    >1</td>
           <td >0</td>
+          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="135456000000">2:15.456</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="77375000000">1:17.375</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -182,14 +182,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">2:15.456</span>
+  <span class="lead-duration duration">1:17.375</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">To validate pump product  orders detail in Warehouse portal  and  E-warrnaty page based on the Allocation warehouse code</span>
+  <span class="name">To  Valiadte the listing Buy now functionaity for Guest user</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -198,7 +198,7 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details ">
+  <div id="element-1" class="collapse collapsable-details  in ">
 
 
   <div class="inner-level hooks-element-before">
@@ -220,7 +220,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">org.steps.KBLHooks.Start()</span>
 
-  <span class="lead-duration duration">9.814</span>
+  <span class="lead-duration duration">8.566</span>
 
           </div>
 
@@ -237,9 +237,9 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-3">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -249,15 +249,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-3" class="inner-level collapse collapsable-details ">
+  <div id="steps-3" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
 <div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">user opens the Home page and do the login with valid credential</span>
+  <span class="name">User open the Home page</span>
 
-  <span class="lead-duration duration">0.011</span>
+  <span class="lead-duration duration">0.051</span>
 
 </div>
 
@@ -280,11 +280,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When passed">
+<div class="brief step-name-When failed">
   <span class="keyword indention">When</span>
-  <span class="name">After,loggedin&gt;User need to Place the order successfully</span>
+  <span class="name">User go to the listing page</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">1:17.322</span>
 
 </div>
 
@@ -292,6 +292,23 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
+          <a>java.lang.NumberFormatException:</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details  in ">
+        <pre>java.lang.NumberFormatException: For input string: &quot;&quot;
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:592)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at org.steps.KBLSteps.user_go_to_the_listing_page(KBLSteps.java:709)
+	at &#10045;.User go to the listing page(file:///E:/KBL-Project/KBL-Business%20flow/src/test/resources/Feature/E2E.feature:52)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -307,9 +324,9 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
-  <span class="name">Observe the Pump  products placed Orderid and Allocated warehousecode from admin order detail page</span>
+  <span class="name">verify the Buy now  CTA functionality</span>
 
   <span class="lead-duration duration">0.001</span>
 
@@ -334,11 +351,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
-  <span class="name">To verify the Orderid are sync or not E-warranty page at admin portal</span>
+  <span class="name">verify the Compare now option in listing page</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -361,11 +378,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
-  <span class="name">To verify the Showing LSP correct or not in listing of order page for pump products</span>
+  <span class="name">verify the added compare products in comparision page</span>
 
-  <span class="lead-duration duration">2:15.442</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -392,7 +409,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-4">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-5">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -404,13 +421,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-4" class="inner-level collapse collapsable-details ">
+    <div id="after-5" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">org.steps.KBLHooks.End(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.004</span>
+  <span class="lead-duration duration">0.147</span>
 
           </div>
 
@@ -419,6 +436,21 @@ $(document).ready(function() {
 
 
 
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-6" class="collapsable-control">
+      <a>To  Valiadte the listing Buy now functionaity for Guest user</a>
+      <a href="embeddings/embedding_2024085579.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-6" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_2024085579.png">
+      </div>
+    </div>
+  </div>
+  </div>
 
         </div>
     </div>

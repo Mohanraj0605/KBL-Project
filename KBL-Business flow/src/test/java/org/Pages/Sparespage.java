@@ -158,7 +158,7 @@ public class Sparespage extends Ultilityclass {
     @FindBy(xpath="//input[@name='product[gross_weight_kg]']")
     private WebElement SKUGrossweight;
     
-    @FindBy(xpath="(//div[@class='fieldset-wrapper-title'])[8]")
+    @FindBy(xpath="(//div[@class='fieldset-wrapper-title'])[7]")
      private WebElement SKUKBLAttribute;
     
     public WebElement getSKUKBLAttribute() {

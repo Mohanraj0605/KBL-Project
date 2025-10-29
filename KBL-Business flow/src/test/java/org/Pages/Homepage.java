@@ -218,6 +218,13 @@ public java.util.List<WebElement> getGroupMenuLinks1() {
 		return RequestQuote;
 	}
 
+		@FindBy(xpath="//button[@id='top-quotecart-button']")
+    private WebElement  MyQuoteCTA;
+
+	public WebElement getMyQuoteCTA() {
+		return MyQuoteCTA;
+	}
+
 	@FindBy(xpath="(//div[@class='owl-next'])[1]")
     private WebElement  HomepageSliderNext;
 

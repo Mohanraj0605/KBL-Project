@@ -63,7 +63,7 @@ public class warehouse extends Ultilityclass {
 
 
 
-   @FindBy(xpath="//button[@class='loginwithpasswordbtn action login primary']")
+   @FindBy(xpath="//button[@class='loginwithpasswordbtntxt action login primary']")
      private WebElement LoginasEmailsubmitbtn;
 
    public WebElement getLoginasEmailsubmitbtn() {

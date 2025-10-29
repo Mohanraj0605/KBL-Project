@@ -57,21 +57,34 @@ public class  PDPpage extends Ultilityclass {
        return InstallationServicelabel;
    }
 
-   @FindBy(xpath=" (//span[@class='special-price'])[3]")
+   @FindBy(xpath="(//span[@class='price'])[5]")
     private WebElement PLPprice;
+
 
    public WebElement getPLPprice() {
        return PLPprice;
    }
 
-   
-   @FindBy(xpath=" (//span[@class='special-price'])[1]")
+     @FindBy(xpath="//button[@id='product-addtoquote']")
+    private WebElement QuetaAddCTAbtnPDP;
+
+    public WebElement getQuetaAddCTAbtnPDP() {
+         return QuetaAddCTAbtnPDP;
+    }
+
+ 
+
+
+   @FindBy(xpath="(//span[@class='price'])[2]")
     private WebElement PLPprice1;
 
    public WebElement getPLPprice1() {
        return PLPprice1;
    }
 
+
+
+   
    @FindBy(xpath="(//span[text()='₹10,380.00'])[1]")
     private WebElement PDPprice;
 
@@ -79,7 +92,8 @@ public class  PDPpage extends Ultilityclass {
        return PDPprice;
    }
 
-     @FindBy(xpath="(//span[text()='₹26,526.40'])[1]")
+
+     @FindBy(xpath="(//span[@class='price'])[2]")
     private WebElement getPDPprice2;
 
     public WebElement getPDPprice2() {
@@ -144,12 +158,15 @@ public class  PDPpage extends Ultilityclass {
        return ServiceTextPDP;
    }
 
-    @FindBy(xpath="(//a[@class='product-item-link'])[3]")
+    @FindBy(xpath="(//a[@class='product-item-link'])[4]")
    private WebElement PLPname;
 
     public WebElement getPLPname() {
          return PLPname;
     }
+
+
+
 
     @FindBy(xpath="(//a[@class='product-item-link'])[1]")
    private WebElement PLPname1;

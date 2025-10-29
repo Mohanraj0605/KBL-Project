@@ -104,6 +104,17 @@ public class Adminlogin extends Ultilityclass {
       @FindBy(xpath="(//div[@class='data-grid-cell-content'])[9]")
      private WebElement Paidstatus;
 
+     @FindBy(xpath="//li[@class='item-manage-quotes    level-2']")
+     private WebElement SaleQuotes;
+
+     
+
+
+      public WebElement getSaleQuotes() {
+          return SaleQuotes;
+     }
+
+
 
       @FindBy(xpath="//button[@class='action-secondary']")
      private WebElement Applyfilter;
@@ -122,6 +133,26 @@ public class Adminlogin extends Ultilityclass {
      public WebElement getOrderNumberlistingpage() {
           return OrderNumberlistingpage;
      }
+
+     
+
+      @FindBy(xpath="(//input[@class='admin__control-text'])[12]")
+     private WebElement Listingpageorderidfield;
+
+
+       public WebElement getListingpageorderidfield() {
+          return Listingpageorderidfield;
+     }
+
+     @FindBy(xpath="(//input[@class='admin__control-text'])[6]")
+     private WebElement Listingpagequotaorderidfield;
+
+          public WebElement getListingpagequotaorderidfield() {
+               return Listingpagequotaorderidfield;
+
+          }
+     
+
 
        @FindBy(xpath="(//div[@class='data-grid-cell-content'])[4]")
      private WebElement Ewarrantyserialnumber;

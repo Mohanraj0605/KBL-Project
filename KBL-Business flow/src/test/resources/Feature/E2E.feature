@@ -1,7 +1,7 @@
 @E2E
 Feature: To be Verify the E2E Functionality in KBL website
 
-@Case
+@Case1
 Scenario: To  Valiadte the Guser user Flow in home page
 
 Given  User open the Home page
@@ -11,7 +11,7 @@ And    To verify the Categeory L1 > L2  sub-categeory  navigation page
 Then   Observe the  Footer section links redirections  
  
 
-@Case
+@Case1
 Scenario: To  Valiadte the Login functionality with password field 
 
 Given User open the Home page
@@ -20,7 +20,7 @@ And   Enter the Email and passwors in repective field
 Then  Observe the redirection to the my account page
 
 
-@Case
+@Case1
 Scenario: To  Valiadte the My account page options & redirection in dashboard
 
 Given  User open the Home page
@@ -29,7 +29,7 @@ Then   User click  the My account options in dashbord and Observe the redirectio
  
 
  
-@Case
+@Case1
 Scenario Outline: To validate the search field functionality 
 
 Given  User go to the Home page 
@@ -45,7 +45,7 @@ Examples:
           |TL16010016A12211| |Surface pump|   |Submersible Pump| 
 
 
-@Case 
+@Case1
 Scenario: To  Valiadte the listing Buy now functionaity for Guest user
 
 Given User open the Home page 
@@ -54,7 +54,7 @@ And   verify the Buy now  CTA functionality
 And   verify the Compare now option in listing page
 Then  verify the added compare products in comparision page
 
-@Case  
+@Case1  
 Scenario: To Validate  the PDP page to Cart Page for Guest  user
 
 Given User open the Home page 
@@ -62,7 +62,7 @@ And   On click Buy now CTA or any product cards in listing page
 And   Verify the  correct delivery message based on TAT functionality
 Then  verify the PDP page features and products prices & do the add to cart.
 
-@Case
+@Case1
 Scenario: To Validate  the checkout flow  for login  user
 
 Given user opens the Home page and logs in
@@ -74,7 +74,8 @@ And   enters the shipping and billing details
 And   selects a payment option and places the order
 Then  after successful payment, the user should see the Thank You page
 
-@Case8
+
+@Case2
 Scenario Outline: To validate warehouse code   allocation functionality at admin page
 
 Given user opens the Home page and do the login with valid credential
@@ -90,7 +91,7 @@ Examples:
           |D41XB00502041033| 
    
 
-@Case9
+@Case3
 Scenario: To validate pump product  orders detail in Warehouse portal  and  E-warrnaty page based on the Allocation warehouse code 
 
 Given user opens the Home page and do the login with valid credential 
@@ -99,7 +100,7 @@ And   Observe the Pump  products placed Orderid and Allocated warehousecode from
 Then  To verify the Orderid are sync or not E-warranty page at admin portal
   
 
-@Case10
+@Case2
 
 Scenario: To validate pump products  LSP option btw the Order tagging and order detail page
 
@@ -108,7 +109,7 @@ When  User need to Place the order successfully and change the status to ready f
 Then  Observe the  Showing LSP correct or not in listing of order page for pump products from Order tagging page
 
 
-@Case11
+@Case1
 Scenario:  To Validate  all the  orders showing or not in   Global warhouse portal page
 
 Given  Warhouse Suppiler  open the home page and do the login with valid credential 
@@ -116,16 +117,16 @@ When   After,loggedin>Admin  go My orders listing page
 Then   Observe the place Orderid and All the warehouse city filter finctionality
 
 
-@Case12
+@Case3
 Scenario: To validate  Spare products orders  in Warehouse portal page based on the Allocation warehouse code
   
 Given the user opens the home page and login into the application
 When  the user navigates to the Spare Products listing page from the category menu
 And   adds an item to the cart and places the order successfully
-And    Observe the Spare products placed Orderid and   Allocated warehousecode from admin order detail page
+And   Observe the Spare products placed Orderid and   Allocated warehousecode from admin order detail page
 Then  the verify the Ready to ship status and Observe the LSP Options in Pop-up page in Listing of the Order  page
 
-@Case13
+@Case1
 Scenario: To validate  Sync order without marking status as 'Ready to Ship' showing error 
   
 Given  the user  login into the application
@@ -133,6 +134,15 @@ When   User adds the  item to the cart and places the order successfully
 And    Admin user  verify the Before Ready to ship status.This order is sync or not to LSP system
 Then   Observe the Notification message in LSP Pgae
 
+@Case4
+Scenario: To validate the Request for Quote for KBL site products
+
+Given the user  login into the application 
+When  the user navigates to the Pump Products listing page from the category menu
+And   adds an products to the Qutation cart page and do the request for Qutation
+And   Observe the Quote Request Number and Approve Qutation in admin panel
+And   After,approving the Qutation  place the order from my account Quote page
+Then   Then,placed order,Verify the Quotaton status in admin panel Quote page
 
 
 

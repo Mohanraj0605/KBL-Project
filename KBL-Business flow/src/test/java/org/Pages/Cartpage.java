@@ -273,6 +273,17 @@ public WebElement getVieworder() {
      @FindBy(xpath=" //button[@class='show-more-btn']")
      private WebElement Showmoreoption;
 
+      @FindBy(xpath="//a[@title='Continue Shopping']")
+     private WebElement ContinueCTA;
+
+     
+     public WebElement getContinueCTA() {
+          return ContinueCTA;
+     }
+
+
+
+
      @FindBy(xpath="(//button[@class='action action-apply'])[4]")
      private WebElement Applybutton;
 
@@ -302,11 +313,28 @@ public WebElement getVieworder() {
          return PaymentButton;
     }
 
-    
+    @FindBy(xpath="//a[@class='order-number']")
+   private WebElement RequoteNumber;
+
+    public WebElement getRequoteNumber() {
+        return RequoteNumber;
+    }
+
     @FindBy(xpath="(//input[@type='checkbox'])[10]")
    private WebElement Termcheckbox;
 
+   @FindBy(xpath="//textarea[@name='quote_remark']")
+   private WebElement QuoteRemark;
 
+    public WebElement getQuoteRemark() {
+        return QuoteRemark;
+    }
+@FindBy(xpath="//button[@title='Request For Quote']")
+   private WebElement QuoteCTAincart;
+
+    public WebElement getQuoteCTAincart() {
+        return QuoteCTAincart;
+    }
 
     public WebElement getTermcheckbox() {
          return Termcheckbox;

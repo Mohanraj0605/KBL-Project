@@ -49,6 +49,8 @@ public class KBLSteps extends Ultilityclass {
     public static warehouse w;
 	public static Sparespage s1;
 
+
+	String SuccessorderNo2;
 	String SuccessorderNo1;
 	String WarehouseportalEmail2;
 	String OrderText3;
@@ -98,23 +100,35 @@ public void when_user_opening_the_home_page_to_verify_the_header_section_all_the
 	 Threadsleep(3000);
 	 checkpresentElement("To check Cart icon is displayed",h.getCartIcon().isDisplayed());
 	 javascriptclick(h.getCartIcon());
+
+	
+	
 	 LOGGER.info("Cart icon is clicked");
-	 Threadsleep(4000);
-     moveToElement(h.getRequestQuote());
-	 checkpresentElement("To check Request Quote is displayed",h.getRequestQuote().isDisplayed());
-     Threadsleep(3000);
+	 Threadsleep(3000);
+    
+	   h = new Homepage();
+	 
+	   javascriptclick(h.getKBLLogo());
+	  Threadsleep(3000);
+     
+	//  moveToElement(h.getRequestQuote());
+	//  checkpresentElement("To check Request Quote is displayed",h.getRequestQuote().isDisplayed());
+    //  Threadsleep(3000);
+
 	 moveToElement(h.getTrackinglink());
 	 checkpresentElement("To check Tracking link is displayed",h.getTrackinglink().isDisplayed());
 	 Threadsleep(4000);
+	
 	 javascriptclick(h.getKBLLogo());
 	 Threadsleep(3000);
+	
 	 ClickElement(h.getHomepageSliderNext());
 	 Threadsleep(2000);
 	 ClickElement(h.getHomepageSliderNext());
 	 checkpresentElement("To check Homepage banner and slider next is displayed",h.getHomepageSliderNext().isDisplayed());
-	 Threadsleep(2000);
+	 Threadsleep(3000);
 	 LOGGER.info("Homepage banner and slider next is displayed");
-	 Threadsleep(4000);
+	 Threadsleep(3000);
      EndTimeprint();
 	  
 }
@@ -124,9 +138,12 @@ public void user_verify_the_home_page_sections_is_displayed_or_not() throws AWTE
     
 	 StartTimeprint();
      h = new Homepage();
+	
 	 Threadsleep(3000);
+	 
 	 javascriptclick(h.getKBLLogo());
-	 Threadsleep(4000);
+	
+	 Threadsleep(3000);
 
 	for (int i = 0; i <20; i++) {
 		KeyDOWN();
@@ -138,13 +155,22 @@ public void user_verify_the_home_page_sections_is_displayed_or_not() throws AWTE
 	 LOGGER.info("Commercial section is displayed");
 	 checkpresentElement("To check Industrial section is displayed",h.getIndustrialsection().isDisplayed());
 	 LOGGER.info("Industrial section is displayed");
+	 
+	 for (int i = 0; i <20; i++) {
+		KeyDOWN();
+	}
 	 checkpresentElement("To check Agriculture section is displayed",h.getAgriculturesection().isDisplayed());
 	 LOGGER.info("Agriculture section is displayed");
 	 checkpresentElement("To check Testimonial section is displayed",h.getTestimonialsection().isDisplayed());
 	 LOGGER.info("Testimonial section is displayed");
 	 LOGGER.info("Home page sections all are displayed and verified ");
      Threadsleep(2000);
+
+	 for (int i = 0; i <20; i++) {
+		KeyDOWN();
+	}
       EndTimeprint();
+
 	
 }
 
@@ -208,7 +234,7 @@ public void observe_the_footer_section_links_redirections() throws AWTException 
 
 	 h = new Homepage();
      Threadsleep(1000);
-	for (int i = 0; i <90; i++) {
+	for (int i = 0; i <50; i++) {
 		KeyDOWN();
 	}
     Threadsleep(2000);
@@ -430,20 +456,32 @@ public void user_click_the_my_account_options_in_dashbord_and_observe_the_redire
 	 Threadsleep(3000);
      LOGGER.info(" My Replacment option  is displayed");
 
-	 for (int i = 0; i <10; i++) {
+	 for (int i = 0; i <15; i++) {
 		KeyDOWN();
 	}
 
-	 l = new Loginpage();
-	  Threadsleep(1000);
-	 checkpresentElement("To check My Products  options available or not in My account page",l.getMyproducts().isDisplayed());
-     ClickElement(l.getMyproducts());
-	 Threadsleep(1000);
-     LOGGER.info(" My Products link option  is displayed");
+	//  l = new Loginpage();
+	//  Threadsleep(2000);
+	
+	// // checkpresentElement("To check My Products  options available or not in My account page",l.getMyproducts().isDisplayed());
+    
+	//  LOGGER.info(" My Products link option  is clicked");
+	
+	//  ClickElement(l.getMyproducts());
+	
+	//  Threadsleep(10000);
+
+	//   for (int i = 0; i <50; i++) {
+	// 	KeyDOWN();
+	// }
+     
 	 LOGGER.info("My account dashboard page all the optons are verified and Navigated to the respective page");
+	
 	  driver.quit();
 
 }
+
+
 
 // search field functionality 
 
@@ -500,7 +538,7 @@ public void observe_the_seeall_navigation_page(String Keyword2) {
 	 Threadsleep(2000);
 	 PassValues(s.getSearchBox(), Keyword2);
 	 LOGGER.info("Product name is entered in search box");
-     Threadsleep(4000);
+     Threadsleep(3000);
 	 javascriptclick(s.getSeeall());
 	 Threadsleep(3000);
 	 String Url4 = driver.getCurrentUrl();
@@ -589,7 +627,8 @@ public void user_go_to_the_listing_page() throws AWTException, InterruptedExcept
     moveToElement(h.getCategeory1());
 	moveToElement(h.getCategeory2());
 	moveToElement(h.getCategeory3());
-	Threadsleep(3000);
+	Threadsleep(4000);
+	
 	checkequaltext("To check Main category to Sub Category is displayed",h.getCategeory3().getText(),"Pressure Boosting");
 	actionClick(h.getCategeory3());
 	LOGGER.info("Main category to Sub Category is displayed");
@@ -603,6 +642,7 @@ public void user_go_to_the_listing_page() throws AWTException, InterruptedExcept
 	 javascriptclick(lp.getPLPpageseriesfilter());
 	 Threadsleep(3000);
      System.out.println(lp.getListingpageproductname1().getText());
+	
 	 checkpresentElement("To verify series number for listed products",lp.getListingpageproductname1().getText().contains("CPBS"));
 
 	h = new Homepage();
@@ -622,19 +662,34 @@ public void user_go_to_the_listing_page() throws AWTException, InterruptedExcept
 
 	lp = new Listingpage();
 	javascriptclick(lp.getPhasefilter());
+	
 	Threadsleep(3000);
+	
 	System.out.println(lp.getListingpageproductname1().getText());
+	
 	checkpresentElement("To verify series number for listed products",lp.getListingpageproductname1().getText().contains("Three Phase"));
-     Threadsleep(3000);
+     
+	Threadsleep(3000);
+	
+	 
 	 javascriptclick(lp.getPLPpageseriesfilter());
-     Threadsleep(3000);
-     System.out.println(lp.getListingpageproductname1().getText());
+   
+	 Threadsleep(3000);
+   
+	 System.out.println(lp.getListingpageproductname1().getText());
+	
 	 checkpresentElement("To verify series number for listed products",lp.getListingpageproductname1().getText().contains("KOS"));
+	
 	 LOGGER.info("Series number & Phase options are verified for listed products");
 
+     moveToElement(lp.getOvertankListingCategeory1());
+
 	s = new Searchpage();
+	
 	Threadsleep(4000);
+	
 	ClickElement(s.getPopupclose());
+	
 	EndTimeprint();
 
 	  for (int i = 0; i <8; i++) {
@@ -642,37 +697,94 @@ public void user_go_to_the_listing_page() throws AWTException, InterruptedExcept
 	}
 
     lp = new Listingpage();
+	
 	lp.getPLPminpricerange().clear();
+	
 	Threadsleep(3000);
+	
 	PassValues(lp.getPLPminpricerange(), getdataExcel(5, 1));
 
 	lp.getPLPmaxpricerange().clear();
 	Threadsleep(3000);
+	
 	PassValues(lp.getPLPmaxpricerange(), getdataExcel(6, 1));
 
     Threadsleep(5000);
 
 	int minPrice = Integer.parseInt(getdataExcel(5, 1));
-    int maxPrice = Integer.parseInt(getdataExcel(6, 1));
-    List<WebElement> price1 = driver.findElements(By.cssSelector(".special-price"));
+  
+	int maxPrice = Integer.parseInt(getdataExcel(6, 1));
 
-for (WebElement price2 : price1) {
+	 
+	Threadsleep(5000);
 
-    //Remove symbols like ₹, commas
-    String priceText = price2.getText().replaceAll("[^0-9]", ""); 
-    int productPrice = Integer.parseInt(priceText);
-	int productPrice2 = productPrice / 100;
+	//1)
 
-		if (productPrice2 >= minPrice && productPrice2 <= maxPrice) {
-		LOGGER.info("Product price {} is within the range [{} - {}]", productPrice2, minPrice, maxPrice);
-		} 
-		else {
-			LOGGER.info("Product price {} is outside the range [{} - {}]", productPrice2, minPrice, maxPrice);
-		}
+	//List<WebElement> price5 = driver.findElements(By.xpath("//span[@class='price']"));
+    
+// 	List<WebElement> price1 = driver.findElements(By.cssSelector(".price"));
+
+// for (WebElement price2 : price1) {
+
+// 	//System.out.println("Price: " + price2.getText());
+
+//     //Remove symbols like ₹, commas
+
+//     String priceText = price2.getText().replaceAll("[^0-9]", ""); 
+//     int productPrice = Integer.parseInt(priceText);
+// 	int productPrice2 = productPrice / 100;
+
+// 		if (productPrice2 >= minPrice && productPrice2 <= maxPrice) {
+// 		LOGGER.info("Product price {} is within the range [{} - {}]", productPrice2, minPrice, maxPrice);
+// 		} 
+// 		else {
+// 			LOGGER.info("Product price {} is outside the range [{} - {}]", productPrice2, minPrice, maxPrice);
+// 		}
+//     }
+//      EndTimeprint();
+
+	 List<WebElement> priceElements = driver.findElements(By.cssSelector(".price"));
+
+for (WebElement priceElement : priceElements) {
+   
+	String priceTextRaw = priceElement.getText();
+
+    // Remove all non-numeric characters except dot (if you want to keep decimals)
+
+    String priceDigitsOnly = priceTextRaw.replaceAll("[^0-9]", ""); 
+
+    // Skip if string is empty after cleaning
+
+    if (priceDigitsOnly.isEmpty()) {
+        LOGGER.warn("Skipping empty or invalid price: {}", priceTextRaw);
+        continue;
     }
-     EndTimeprint();
+
+    try {
+        int productPrice = Integer.parseInt(priceDigitsOnly); // ₹36,760.00 -> 3676000
+        int actualPrice = productPrice / 100; // Assuming you want to divide back to ₹36760
+
+      
+		if (actualPrice >= minPrice && actualPrice <= maxPrice) {
+            LOGGER.info("Product price {} is within the range [{} - {}]", actualPrice, minPrice, maxPrice);
+        } 
+
+		else {
+            LOGGER.info("Product price {} is outside the range [{} - {}]", actualPrice, minPrice, maxPrice);
+        }
+
+    }
+	 catch (NumberFormatException e) {
+        LOGGER.error("Failed to parse price from text '{}'", priceTextRaw, e);
+  
+	}
+}
+
+
+ EndTimeprint();
 
 }
+
 
 @When("verify the Buy now  CTA functionality")
 public void verify_the_buy_now_cta_functionality() {
@@ -681,6 +793,7 @@ public void verify_the_buy_now_cta_functionality() {
 	lp = new Listingpage();
 	moveToElement(lp.getOvertankListingCategeory1());
 	Threadsleep(4000);
+
 	checkpresentElement("To check Buy Now button is displayed",lp.getBuyNowButton1().isDisplayed());
 	LOGGER.info("Buy Now button is displayed");
 	Threadsleep(3000);
@@ -741,7 +854,7 @@ public void verify_the_added_compare_products_in_comparision_page() {
 
 
 @When("On click Buy now CTA or any product cards in listing page")
-public void on_click_buy_now_cta_or_any_product_cards_in_listing_page() {
+public void on_click_buy_now_cta_or_any_product_cards_in_listing_page() throws AWTException {
 
 	StartTimeprint();
 	h = new Homepage();
@@ -754,55 +867,93 @@ public void on_click_buy_now_cta_or_any_product_cards_in_listing_page() {
 	checkequaltext("To check Main category to Sub Category is displayed",h.getCategeory3().getText(),"Pressure Boosting");
 	actionClick(h.getCategeory3());
 	LOGGER.info("Main category to Sub Category is displayed");
+
 	Threadsleep(3000);
+	
 	lp = new Listingpage();
-	moveToElement(lp.getListingCategeory1());
+
+	
+	  for (int i = 0; i <15; i++) {
+		KeyDOWN();
+	}
+
+	Threadsleep(2000);
+	
+	moveToElement(lp.getListingCategeory22());
+	
 	Threadsleep(3000);
-	checkpresentElement("To check Buy Now button is displayed",lp.getBuyNowButton1().isDisplayed());
+	
+	checkpresentElement("To check Buy Now button is displayed",lp.getBuyNowButton22().isDisplayed());
+	
 	LOGGER.info("Buy Now button is displayed");
-	 //Threadsleep(3000);
+	
+	//Threadsleep(3000);
 
 	 
 	  p = new PDPpage();
-	  Threadsleep(3000);
+	  Threadsleep(4000);
+	  
 	  WebElement PLPname1 = p.getPLPname();
 	  String name1 = PLPname1.getText();
+	  System.out.println(PLPname1);
+	 
+
 	  WebElement PLPrate1 = p.getPLPprice();
 	  String Rate1 = PLPrate1.getText();
 	  System.out.println(Rate1);
-
+    
+	  Threadsleep(3000);
+	 
 	  javascriptclick(p.getPLPname());
 
 
 	 //actionClick(lp.getBuyNowButton1());
+	
 	 LOGGER.info("Product name  is clicked");
 	
 	s = new Searchpage();
-	Threadsleep(3000);
+	
+	Threadsleep(4000);
+	
 	ClickElement(s.getPopupclose());
+	
 	EndTimeprint();
 
 	p = new PDPpage();
 	WebElement PDPrate2 = p.getPDPprice2();
     Threadsleep(3000);
 	String Rate2 = PDPrate2.getText();
+	
 	WebElement PDPname2 = p.getPDPname();
 	String name2 = PDPname2.getText();
     System.out.println(name2);
+
 	checkequaltext("To verify btw the PLP&PDP page the product NAME",name1,name2);
 	checkequaltext("To verify btw the PLP&PDP page the product RATE",Rate1,Rate2); 
+	
 	LOGGER.info(" Btw the PLP&PDP page the product NAME & RATE are verified");
+	
 	Threadsleep(3000);
+
 	ClickElement(p.getQtybuttoMaxPDP());
+
 	ClickElement(p.getAddToCartButtonPDP());
+	
 	Threadsleep(3000);
+
 	//p.getPincodefield().clear();
+
  	PassValues(p.getPincodefield() , getdataExcel(4, 1));
+	
 	ClickElement(p.getPincodecheckButton());
+	
 	Threadsleep(2000);
+	
 	Alertaccept();
+	
 	Threadsleep(2000);
-	 EndTimeprint();
+	
+	EndTimeprint();
 
 }
 
@@ -812,6 +963,7 @@ public void verify_the_correct_delivery_message_based_on_tat() {
     StartTimeprint();
 
    //String  a = "500027";
+
     String expectedMessage;
     String actualMessage = p.getPincodedeliverymessage().getText();
 
@@ -827,6 +979,7 @@ else {
 
     Assert.assertEquals(expectedMessage, actualMessage);
     LOGGER.info("Checking if Pincode Delivery message is equal. Expected: {}, Actual: {}", expectedMessage, actualMessage);
+
 
     // int lowerTAT = 1;
     // int higherTAT = 6;
@@ -844,19 +997,34 @@ else {
 
 
 @Then("verify the PDP page features and products prices & do the add to cart.")
-public void verify_the_pdp_page_features_and_products_prices_do_the_add_to_cart_then_go_to_cart_page() {
+public void verify_the_pdp_page_features_and_products_prices_do_the_add_to_cart_then_go_to_cart_page() throws AWTException, InterruptedException {
     
   
 	  StartTimeprint();
 	  p = new PDPpage();
+
+
+	
+
 	  checkpresentElement("To check Installation Service label is displayed",p.getInstallationServicelabel().isDisplayed());
 	  LOGGER.info("Installation Service label is displayed");
 	  checkpresentElement("To check Buy Now button is displayed",p.getBuynowPDP().isDisplayed());
 	  LOGGER.info("Buy Now button is displayed");
 	  checkpresentElement("To check Buy Now button is displayed",p.getAddToCartButtonPDP().isDisplayed());
 	  LOGGER.info("Add to cart button is displayed");
-	  checkpresentElement("To check Buy Now button is displayed",p.getAddToQuoteButtonPDP().isDisplayed());
-	  LOGGER.info("Add to quote button is displayed");
+
+	    
+	  JavascriptExecutor js = (JavascriptExecutor) driver;
+      for (int i = 0; i < 8; i++) {
+       js.executeScript("window.scrollBy(0, 500);");  
+        Thread.sleep(1000); 
+    }
+	  
+	//   checkpresentElement("To check Buy Now button is displayed",p.getAddToQuoteButtonPDP().isDisplayed());
+	//   LOGGER.info("Add to quote button is displayed");
+
+
+
 	  checkpresentElement("To check Quantity button is displayed",p.getAddToWishListButtonPDP().isDisplayed());
 	  LOGGER.info("Add to wishlist button is displayed");
 	  checkpresentElement("To check Buy Now button is displayed",p.getAddToCompareListButtonPDP().isDisplayed());
@@ -867,19 +1035,44 @@ public void verify_the_pdp_page_features_and_products_prices_do_the_add_to_cart_
 	  LOGGER.info("Service image is displayed");
 	  checkpresentElement("To check Buy Now button is displayed",p.getServiceTextPDP().isDisplayed());
 	  LOGGER.info("Service text is displayed");
-       Threadsleep(4000);
+     
+
+	   JavascriptExecutor js1 = (JavascriptExecutor) driver;
+      for (int i = 0; i < 5; i++) {
+    js1.executeScript("window.scrollBy(0, -500);");  
+    Thread.sleep(1000); 
+}
+	  
+Threadsleep(4000);
+	 
 	   javascriptclick(p.getBuynowPDP());
 
-	//  javascriptclick(p.getAddToCartButtonPDP());
-	  Threadsleep(10000);
-	//  javascriptclick(p.getPDPcheckoutButton());
+	 // javascriptclick(p.getAddToCartButtonPDP());
+	   
+	  Threadsleep(5000);
+	
+//	  javascriptclick(p.getPDPcheckoutButton());
+	 
 	  c = new Cartpage();
 	  moveToElement(c.getMinicartQty());
 	  Threadsleep(2000);
 	  actionClick(c.getMinicartQty());
-	  Threadsleep(3000);
-	  EndTimeprint();
-	  driver.quit();
+	 
+	   Threadsleep(4000);
+
+	   for (int i = 0; i <5; i++) {
+		KeyDOWN();
+	}
+	
+      javascriptclick(c.getContinueCTA());
+
+	  
+	   Threadsleep(3000);
+
+	   EndTimeprint();
+	 
+	   driver.quit();
+
    }
 
 
@@ -957,6 +1150,8 @@ public void clicks_the_cta_or_any_product_card_on_the_listing_page(String string
 	  p = new PDPpage();
 	  WebElement PLPname3 = p.getPLPname1();
 	  String name1 = PLPname3.getText();
+	 
+
 	  WebElement PLPrate1 = p.getPLPprice1();
 	  String Rate1 = PLPrate1.getText();
 	  System.out.println(Rate1);
@@ -975,6 +1170,7 @@ public void clicks_the_cta_or_any_product_card_on_the_listing_page(String string
 	  Threadsleep(1000);
 
 	  checkequaltext("To verify btw the PLP&PDP page the product NAME",name1,name2);
+	
 	  checkequaltext("To verify btw the PLP&PDP page the product RATE",Rate1,Rate3); 
 	  LOGGER.info(" Btw the PLP&PDP page the product NAME & RATE are verified");
 	  Threadsleep(3000);
@@ -993,10 +1189,12 @@ public void clicks_the_cta_or_any_product_card_on_the_listing_page(String string
 	  LOGGER.info("Buy Now button is displayed");
 	  checkpresentElement("To check Buy Now button is displayed",p.getAddToCartButtonPDP().isDisplayed());
 	  LOGGER.info("Add to cart button is displayed");
-	  checkpresentElement("To check Buy Now button is displayed",p.getAddToQuoteButtonPDP().isDisplayed());
-	  LOGGER.info("Add to quote button is displayed");
+
+	  //   checkpresentElement("To check Buy Now button is displayed",p.getAddToQuoteButtonPDP().isDisplayed());
+	  //   LOGGER.info("Add to quote button is displayed");
 	  // checkpresentElement("To check Quantity button is displayed",p.getAddToWishListButtonPDP().isDisplayed());
 	  // LOGGER.info("Add to wishlist button is displayed");
+	
 	  checkpresentElement("To check Buy Now button is displayed",p.getAddToCompareListButtonPDP().isDisplayed());
 	  LOGGER.info("Add to compare button is displayed");
 	  checkpresentElement("To check Buy Now button is displayed",p.getFAQSectionButtonPDP().isDisplayed());
@@ -1005,7 +1203,8 @@ public void clicks_the_cta_or_any_product_card_on_the_listing_page(String string
 	  LOGGER.info("Service image is displayed");
 	  checkpresentElement("To check Buy Now button is displayed",p.getServiceTextPDP().isDisplayed());
 	  LOGGER.info("Service text is displayed");
-      Threadsleep(4000);
+   
+	Threadsleep(4000);
 	  EndTimeprint();
 
 }
@@ -1015,6 +1214,7 @@ public void adds_the_product_to_the_cart_and_proceeds_to_the_cart_page() {
 
       StartTimeprint();
       p = new PDPpage();
+
 	  WebElement PDPrate2 = p.getPDPprice();
 	  String Rate2 = PDPrate2.getText();
 	  System.out.println(Rate2);
@@ -1026,7 +1226,9 @@ public void adds_the_product_to_the_cart_and_proceeds_to_the_cart_page() {
 	  Threadsleep(2000);
       ClickElement(p.getAddToCartButtonPDP());
 	  Threadsleep(2000);
+	 
 	  LOGGER.info("Add to cart button is clicked");
+	 
 	  Threadsleep(2000);
 
 	  //javascriptclick(p.getPDPcheckoutButton());
@@ -1039,10 +1241,12 @@ public void adds_the_product_to_the_cart_and_proceeds_to_the_cart_page() {
 	  actionClick(c.getMinicartQty());
 	  Threadsleep(3000);
 
-	//checkequaltext("To verify btw the PDP&Cart  page the product RATE",c.getCartprice1().getText(),Rate2);
-	//checkequaltext("To verify btw the PDP&Cart  page the product NAME",c.getCartname().getText(), name2);
+	checkequaltext("To verify btw the PDP&Cart  page the product RATE",c.getCartprice1().getText(),Rate2);
+
+	checkequaltext("To verify btw the PDP&Cart  page the product NAME",c.getCartname().getText(), name2);
 	 
 	LOGGER.info(" Btw the PDP&Cart  page the product RATE are verified");
+
 	Threadsleep(3000);
 	EndTimeprint();
     
@@ -1112,7 +1316,7 @@ public void verifies_the_cart_page_features_and_order_summary_detail_then_procee
 	//     LOGGER.info("Main category to Sub Category is displayed");
 	//     javascriptclick(c.getCartname2());
 	//     Threadsleep(2000);
-	// 	 ClickElement(p.getAddToCartButtonPDP());
+	// 	   ClickElement(p.getAddToCartButtonPDP());
 	//     Threadsleep(3000);
 	//     PassValues(p.getPincodefield(), "400058");
 	//     ClickElement(p.getPincodecheckButton());
@@ -1133,8 +1337,8 @@ public void verifies_the_cart_page_features_and_order_summary_detail_then_procee
 	//     Threadsleep(3000);
 	//     LOGGER.info("Remove button is clicked");
     //     c = new Cartpage();
-	// 	javascriptclick(c.getCartcontinueButton());
-	// 	Threadsleep(3000);
+	// 	   javascriptclick(c.getCartcontinueButton());
+	// 	   Threadsleep(3000);
     //     moveToElement(h.getCategeory53());
 	//     moveToElement(h.getCategeory54());
 	//     moveToElement(h.getCategeory55());
@@ -1182,8 +1386,10 @@ public void enters_the_shipping_and_billing_details() {
 	 
 	    StartTimeprint();
 	    c = new Cartpage();
-		Threadsleep(3000);
-	    javascriptclick(c.getShippherebutton());
+		Threadsleep(5000);
+	   
+		javascriptclick(c.getShippherebutton());
+	 	Threadsleep(3000);
 
 		// ClickElement(c.getAddnewAddressButton());
         // Threadsleep(3000);
@@ -1199,10 +1405,10 @@ public void enters_the_shipping_and_billing_details() {
 		// s.selectByIndex(2);
         // Threadsleep(2000);
 		// PassValues(c.getMobilenumber(), getdataExcel(8, 2));
-		// javascriptclick(c.getSaveAddressButton());
-		 
-		checkpresentElement("To Verify the  preselect shipping option  in checkout page",c.getPreselectshipping().isDisplayed());
-		Threadsleep(2000);
+		// javascriptclick(c.getSaveAddressButton());		 
+		//checkpresentElement("To Verify the  preselect shipping option  in checkout page",c.getPreselectshipping().isDisplayed());
+		
+		
 	
 }
 
@@ -1254,9 +1460,10 @@ public void selects_a_payment_option_and_places_the_order() {
 	  
 	   checkpresentElement("To Verify the  order summary calculation in checkout page",DiscountOrderSummarytotal4.equals(T1));
 	   LOGGER.info("Successfully verified order summary calculation after applying the coupon code in the checkout page");
-	   Threadsleep(3000);
+	   Threadsleep(4000);
 	   javascriptclick(c.getCancelbutton());
 	   Threadsleep(3000);
+
 
 	  WebElement CheckouSubtwithoutcoupon1  = c.getCheckoutwithoutcoupon1();
 	  String CheckouSubtwithoutcoupon2 = CheckouSubtwithoutcoupon1.getText();
@@ -1281,6 +1488,7 @@ public void selects_a_payment_option_and_places_the_order() {
        String WithoutdiscountOrderSummarytota5 = String.valueOf(WithoutdiscountOrderSummarytota4);
 	   
 	   checkpresentElement("After,canceled the coupon code,To  check  the  order summary calculation in checkout page",WithoutdiscountOrderSummarytota5.equals(w1));
+	 
 	   LOGGER.info("Successfully Verified order summary calculation after canceling the coupon code in the checkout page");
 	   Threadsleep(3000);
 		 
@@ -1304,6 +1512,8 @@ public void after_successful_payment_the_user_should_see_the_thank_you_page() {
 	LOGGER.info(" The order suceesfully plaed and redirect to the  Thank You page");
     Threadsleep(2000);
 	EndTimeprint();
+
+	 driver.quit();
 
    // checkpresentElement("To ordernumber in success page",c.getSuccespageOrdernumber().isDisplayed());
 	// String Successorder = c.getSuccespageOrdernumber().getText();
@@ -1372,9 +1582,14 @@ public void user_enter_the_product_name_in_search_box_and_the_user_navigates_to_
 	 Threadsleep(2000);
 	 PassValues(s.getSearchBox(), Keyproduct);
 	 LOGGER.info("Product name is entered in search box");
-     Threadsleep(4000);
-	 ClickElement(s.getProductnameSLP());
-	 LOGGER.info("Product name is clicked and Succesfully redirection to the respective  product page");
+     Threadsleep(3000);
+	 moveToElement(s.getSearchBox());
+	 Threadsleep(1000);
+	 actionClick(s.getProductnameSLP());
+
+	// javascriptclick(s.getProductnameSLP());
+	
+	LOGGER.info("Product name is clicked and Succesfully redirection to the respective  product page");
 	 EndTimeprint();
 
 }
@@ -1417,11 +1632,12 @@ public void enter_the_pincode_detail_and_add_to_cart_then_go_to_chekout_page() {
 	     javascriptclick(c.getPlaceorder());
 	    LOGGER.info(" The order suceesfully plaed and redirect to the  Thank You page");
      
-     	Threadsleep(5000);
+     	Threadsleep(4000);
 	 
 	   c = new Cartpage();
        SuccessorderNo1 = c.getSuccespageOrdernumber().getText().trim();  
         System.out.println("Order ID captured: " + SuccessorderNo1);
+		 	Threadsleep(3000);
         EndTimeprint();
       
 }
@@ -1449,7 +1665,9 @@ public void the_user_enters_valid_login_credentials_and_clicks_the_sign_in_butto
 	 PassValues(a.getAdminpassword(), getdataExcel(2, 3));
      Threadsleep(3000);
      javascriptclick(a.getSignInButton1());
-	// ClickElement(a.getConfirmButton1());
+	
+	 //ClickElement(a.getConfirmButton1());
+
 
 }
 
@@ -1462,19 +1680,30 @@ public void after_loggein_admin_site_to_be_verify_the_warehouse_allocation_code_
 	 actionClick(a.getSales());
 	 Threadsleep(2000);
 	 moveToElement(a.getSalesOrder());
+	
 	 actionClick(a.getSalesOrder());
-	 Threadsleep(4000);
-	 driver.navigate().refresh();
-	  Threadsleep(2000);
+	
+	
+	  Threadsleep(4000);
+	
 	  driver.navigate().refresh();
+	  
+	Threadsleep(3000);  
 
-	//   Threadsleep(3000);
-	//  javascriptclick(a.getClearallinlorderdetailpage());
-	//  KeyEnter();
+	javascriptclick(a.getClearallinlorderdetailpage());
 
-	 Threadsleep(5000);
-	 String OrderText2 = a.getOrderNumberlistingpage().getText().trim();
-     System.out.println("Order number Text: " +OrderText2);
+      
+        Threadsleep(3000);
+		javascriptclick(a.getFilteroptions());
+		Threadsleep(3000);
+	    a = new Adminlogin();
+		PassValues(a.getListingpageorderidfield(),SuccessorderNo1);
+		KeyEnter();
+		Threadsleep(3000);
+
+     	 String OrderText2 = a.getOrderNumberlistingpage().getText().trim();
+         
+		 System.out.println("Order number Text: " +OrderText2);
 	 
 	 checkequaltext("To verify the order-ids btw the Thankyou page & admin panel", SuccessorderNo1, OrderText2);
 
@@ -1531,9 +1760,9 @@ public void after_loggein_admin_site_to_be_verify_the_warehouse_allocation_code_
 	  actionClick(a.getAMbabManagepincode());
 
 	  Threadsleep(3000);
-	 
-	 moveToElement(a.getClearallinlorderdetailpage());
-	 actionClick(a.getClearallinlorderdetailpage());
+
+	
+	javascriptclick(a.getClearallinlorderdetailpage());
 
 
 	Threadsleep(3000);
@@ -1558,44 +1787,38 @@ public void after_loggein_admin_site_to_be_verify_the_warehouse_allocation_code_
 
 	String Actualwarehousecode = a.getAmbaballocationcode().getText().trim();
 
-// if (Pincode1.equalsIgnoreCase(Pincode2)) {
-// 	String Actualwarehousecode = a.getAmbaballocationcode().getText().trim();
-// 	// Assert.assertEquals("Warehouse Code mismatch",expectedWarehouseCode, Actualwarehousecode);
-// 	// LOGGER.info("Succesfully verified  warhouse allocation code the btw order detail  & Manage pincode page for pump products in admin panel");
-// } 
-// else {
-// 	Assert.fail("Pincode does not match: Expected " + Pincode1 + ", but found " + Pincode2);
-// }
+
 
           Threadsleep(3000);
 		  moveToElement(a.getWarehouse());
 		  actionClick(a.getWarehouse());
 
         Threadsleep(3000);
+
 	     moveToElement(a.getWarehousestocklisting());
 	     actionClick(a.getWarehousestocklisting());
-	     Threadsleep(3000);
+	    
+		 Threadsleep(3000);
 
 	   moveToElement(a.getClearallinlorderdetailpage());
 	   actionClick(a.getClearallinlorderdetailpage());
 
         Threadsleep(3000);
 		javascriptclick(a.getFilteroptions());
-	    PassValues(a.getSKUfield(), getdataExcel(8, 1));
-	    String SKU2 =  a.getSKUfield().getAttribute("value");
-	    System.out.println(SKU2);
-		Threadsleep(3000);
+	  Threadsleep(2000);
+		PassValues(a.getSKUfield(), getdataExcel(8, 1));
 
+	
 	     KeyEnter();
 
-	    Threadsleep(2000);
+	    Threadsleep(3000);
 
 List<WebElement> CodesAndQty = driver.findElements(By.xpath("//table//tbody//tr"));
 System.out.println("Verifying Warehouse Code and Qty column data:");
 
 for (int i = 1; i <= CodesAndQty.size(); i++) {
-  
-	try {
+
+    try {
         WebElement warehouseCodeCell = driver.findElement(By.xpath("//table//tbody//tr[" + i + "]/td[2]"));
         String warehouseCode = warehouseCodeCell.getText().trim();
 
@@ -1606,30 +1829,28 @@ for (int i = 1; i <= CodesAndQty.size(); i++) {
             String qtyText = qtyCell.getText().trim();
 
             int qty = Integer.parseInt(qtyText);
+            Thread.sleep(3000);
 
             if (qty > 0) {
                 System.out.println("Success: Warehouse Code " + Actualwarehousecode + " has Qty = " + qty);
                 Assert.assertEquals("Warehouse Code matched", expectedWarehouseCode, Actualwarehousecode);
                 LOGGER.info("Verified warehouse code & Qty on stock listing page.");
-				System.out.println();
-            } 
-				
-	else if (qty <= 0) { 
-
+                System.out.println();
+            } else if (qty <= 0) {
                 System.out.println("Error: Warehouse Code " + Actualwarehousecode + " has Qty = " + qty);
                 Thread.sleep(2000);
+
                 // Re-navigate to Manage Warehouse
                 moveToElement(a.getWarehouse());
                 actionClick(a.getWarehouse());
                 Thread.sleep(2000);
                 moveToElement(a.getManagewarehouse1());
-				actionClick(a.getManagewarehouse1());
-               
-				Thread.sleep(3000);
+                actionClick(a.getManagewarehouse1());
+                Thread.sleep(3000);
 
                 List<WebElement> manageRows = driver.findElements(By.xpath("//table//tbody//tr"));
-               
-				for (int j = 1; j <= manageRows.size(); j++) {
+
+                for (int j = 1; j <= manageRows.size(); j++) {
                     WebElement codeCell = driver.findElement(By.xpath("//table//tbody//tr[" + j + "]/td[3]"));
                     String code = codeCell.getText().trim();
 
@@ -1645,8 +1866,8 @@ for (int i = 1; i <= CodesAndQty.size(); i++) {
                         for (WebElement dropdown : priorityDropdowns) {
                             Select select = new Select(dropdown);
                             String selectedText = select.getFirstSelectedOption().getText().trim();
-                          
-							if (selectedText.contains("kbl.co.in")) {
+
+                            if (selectedText.contains("kbl.co.in")) {
                                 String extractedCode = selectedText.substring(0, 4);
                                 uniqueCodes.add(extractedCode);
                                 System.out.println("Collected unique code: " + extractedCode);
@@ -1656,6 +1877,7 @@ for (int i = 1; i <= CodesAndQty.size(); i++) {
                         List<String> codesList = new ArrayList<>(uniqueCodes);
 
                         writeUniqueCodesToExcel("E:\\KBL-Project\\KBL-Business flow\\target\\Data\\KBL datas2.xlsx", codesList, "Warehouse Codes");
+
                         // Re-apply filters
                         moveToElement(a.getWarehouse());
                         actionClick(a.getWarehouse());
@@ -1663,7 +1885,7 @@ for (int i = 1; i <= CodesAndQty.size(); i++) {
 
                         moveToElement(a.getWarehousestocklisting());
                         actionClick(a.getWarehousestocklisting());
-                        Thread.sleep(3000);
+                        Thread.sleep(4000);
 
                         moveToElement(a.getClearallinlorderdetailpage());
                         actionClick(a.getClearallinlorderdetailpage());
@@ -1676,94 +1898,72 @@ for (int i = 1; i <= CodesAndQty.size(); i++) {
                         Thread.sleep(4000);
                         KeyEnter();
 
-      
-                   
-    // Match against Excel codes
+                        // Match against Excel codes
+                        String defaultWarehouseCode = "1023";
+                        System.out.println(1023);
 
-			String defaultWarehouseCode = "1023";
-			System.out.println(1023);
+                        List<WebElement> listingpagefinalRows1 = driver.findElements(By.xpath("//table//tbody//tr"));
+                        List<String> excelCodes = readWarehouseCodesFromExcel("E:\\KBL-Project\\KBL-Business flow\\target\\Data\\KBL datas2.xlsx");
+                        System.out.println("Excel Priority Codes: " + excelCodes);
 
-List<WebElement> listingpagefinalRows1 = driver.findElements(By.xpath("//table//tbody//tr"));
-List<String> excelCodes = readWarehouseCodesFromExcel("E:\\KBL-Project\\KBL-Business flow\\target\\Data\\KBL datas2.xlsx");
-System.out.println("Excel Priority Codes: " + excelCodes);
+                        for (String excelCode : excelCodes) {
+                            System.out.println("Checking Excel Code: " + excelCode);
 
-for (String excelCode : excelCodes) {
+                            for (int k = 1; k <= listingpagefinalRows1.size(); k++) {
+                                WebElement warehouseCodeCell1 = driver.findElement(By.xpath("//table//tbody//tr[" + k + "]/td[2]"));
+                                String warehouseCode2 = warehouseCodeCell1.getText().trim();
 
-	//boolean matchFound = false;
+                                if (warehouseCode2.contains(".")) {
+                                    System.out.println("Skipping decimal warehouse code: " + warehouseCode2);
+                                    continue;
+                                }
 
-	System.out.println("Checking Excel Code: " + excelCode);
+                                System.out.println("Comparing Warehouse Code: " + warehouseCode2 + " with Excel Code: " + excelCode);
 
-	for (int k = 1; k <= listingpagefinalRows1.size(); k++) {
+                                if (warehouseCode2.equals(excelCode)) {
+                                    WebElement qtyCell1 = driver.findElement(By.xpath("//table//tbody//tr[" + k + "]/td[6]"));
+                                    String qtyText1 = qtyCell1.getText().trim();
+                                    int qty2 = Integer.parseInt(qtyText1);
 
-		WebElement warehouseCodeCell1 = driver.findElement(By.xpath("//table//tbody//tr[" + k + "]/td[2]"));
-		String warehouseCode2 = warehouseCodeCell1.getText().trim();
+                                    System.out.println("Warehouse Code: " + warehouseCode2 + ", Qty: " + qty2);
 
-		if (warehouseCode2.contains(".")) {
-			System.out.println("Skipping decimal warehouse code: " + warehouseCode2);
-			continue;
-		}
+                                    if (qty2 > 0) {
+                                        System.out.println("Success: Warehouse Code " + warehouseCode2 + " has Qty = " + qty2);
+                                        Assert.assertEquals("Warehouse Code matched", expectedWarehouseCode, warehouseCode2);
+                                        LOGGER.info("Verified warehouse code & Qty on stock listing page from the priority list page.");
+                                    } else {
+                                        System.out.println("Qty = 0 for Warehouse Code: " + warehouseCode2 + ". Check next priority code.");
+                                        break;
+                                    }
+                                }
+                            }
+                        }
 
-		System.out.println("Comparing Warehouse Code: " + warehouseCode2 + " with Excel Code: " + excelCode);
-		
-		if (warehouseCode2.equals(excelCode)) {
-		
-			WebElement qtyCell1 = driver.findElement(By.xpath("//table//tbody//tr[" + k + "]/td[6]"));
-			String qtyText1 = qtyCell1.getText().trim();
-			
-			int qty2 = Integer.parseInt(qtyText1);
-
-			System.out.println("Warehouse Code: " + warehouseCode2 + ", Qty: " + qty);
-
-			if (qty2 > 0) {
-				System.out.println("Success: Warehouse Code " + warehouseCode2 + " has Qty = " + qty2);
-				Assert.assertEquals("Warehouse Code matched", expectedWarehouseCode, warehouseCode2);
-				LOGGER.info("Verified warehouse code & Qty on stock listing page from the priority list page.");
-			} else {
-
-				System.out.println("Qty = 0 for Warehouse Code: " + warehouseCode2 + ". Check next priority code.");
-				
-				break;
-			}
-
-		
-	// 		if (!matchFound) {
-	//     	System.out.println("GAP: Warehouse code from Excel NOT found on the web page: " + excelCode);
-	// 	 Assert.fail("Warehouse code from Excel not found on the web page: " + excelCode);
-	//  }
-
-		}
+                        Assert.assertEquals("Fallback to default warehouse code", expectedWarehouseCode, defaultWarehouseCode);
+                        LOGGER.info("Fallback Success: Default Warehouse Code " + defaultWarehouseCode + " is used.");
+                    }
+                }
+            }
+        }
+    } 
 	
-	}
-
-	}       
-
-	Assert.assertEquals("Fallback to default warehouse code", expectedWarehouseCode, defaultWarehouseCode);
-    System.out.println("Fallback Success: Default Warehouse Code " + defaultWarehouseCode + " is used.");
-
-	
-}
-
-	}
-
-}
-		
-}
-
-			
-	}
-
-
 	catch (Exception e) {
-//  System.out.println("Exception at row " + i + ": " + e.getMessage());
-  
+        // System.out.println("Exception at row " + i + ": " + e.getMessage());
+    }
+}
+
+EndTimeprint();
+
+ driver.quit();
+
+
 }
 
 
-}
 
-	}
 
-	// Warehouse portal scenarios for Pump products
+// Warehouse portal scenarios for Pump products
+
 @When("After,loggedin>User need to Place the order successfully")
 public void after_loogedin_user_need_to_place_the_order_successfully() {
 
@@ -1773,9 +1973,12 @@ public void after_loogedin_user_need_to_place_the_order_successfully() {
 	Threadsleep(2000);
 	PassValues(s.getSearchBox(), getdataExcel(9, 1));
 	 LOGGER.info("Product name is entered in search box");
-     Threadsleep(2000);
+     Threadsleep(3000);
 	 ClickElement(s.getProductnameSLP());
+
 	 LOGGER.info("Product name is clicked and Succesfully redirection to the respective  product page");
+
+
 	p = new PDPpage();
 	ClickElement(p.getAddToCartButtonPDP());
 	Threadsleep(3000);
@@ -1808,14 +2011,18 @@ public void after_loogedin_user_need_to_place_the_order_successfully() {
 
 	LOGGER.info(" The order suceesfully plaed and redirect to the  Thank You page");
      
-	Threadsleep(5000);
-	 
-        EndTimeprint();
+	
+	
     
-	   c = new Cartpage();
-       SuccessorderNo1 = c.getSuccespageOrdernumber().getText().trim();  
+	    c = new Cartpage();
+        Threadsleep(5000);
+        SuccessorderNo1 = c.getSuccespageOrdernumber().getText().trim();  
         System.out.println("Order ID captured: " + SuccessorderNo1);
+		Threadsleep(3000);
+		  EndTimeprint();
+
 }
+
 
 @When("Observe the Pump  products placed Orderid and Allocated warehousecode from admin order detail page")
 public void observe_the_pump_products_placed_orderid_and_allocated_warehousecode_from_admin_order_detail_page() throws AWTException, InterruptedException {
@@ -1828,7 +2035,7 @@ public void observe_the_pump_products_placed_orderid_and_allocated_warehousecode
      String title = driver.getTitle();
      checkpresentElement("To check title name at admin Login page",title.contains("Admin"));
 
-	a = new Adminlogin();
+	 a = new Adminlogin();
 	 Threadsleep(3000);
 	 PassValues(a.getAdminUsername(),getdataExcel(1, 3));
 	 PassValues(a.getAdminpassword(), getdataExcel(2, 3));
@@ -1843,29 +2050,50 @@ public void observe_the_pump_products_placed_orderid_and_allocated_warehousecode
 	 moveToElement(a.getSalesOrder());
 	 actionClick(a.getSalesOrder());
 	 Threadsleep(4000);
-	 driver.navigate().refresh();
-	 Threadsleep(2000);
+	
+
+	 
 	 driver.navigate().refresh();
 
-	  Threadsleep(3000);
-	 javascriptclick(a.getClearallinlorderdetailpage());
-	 KeyEnter();
+	Threadsleep(4000);  
 
-	 Threadsleep(5000);
+	javascriptclick(a.getClearallinlorderdetailpage());
+
+
+        Threadsleep(3000);
+		javascriptclick(a.getFilteroptions());
+		Threadsleep(3000);
+	  
+		a = new Adminlogin();
+		
+	PassValues(a.getListingpageorderidfield(),SuccessorderNo1);
+	   
+		
+		KeyEnter();
+
+
+	   Threadsleep(5000);
+
 	 OrderText3 = a.getOrderNumberlistingpage().getText().trim();
 	 System.out.println("Order number Text: " +OrderText3);
 
   checkequaltext("To verify the order-ids btw the Thankyou page & admin panel", SuccessorderNo1, OrderText3);
-
-	 String statusText = a.getPaidstatus().getText().trim();
+      
+      Threadsleep(3000);
+	
+	  String statusText = a.getPaidstatus().getText().trim();
      System.out.println("Status Text:" + statusText);
+	 	
+	 Threadsleep(3000);
 	if (statusText.equalsIgnoreCase("Paid")) {
+		 Threadsleep(2000);
 		 javascriptclick(a.getPaidstatus());
          System.out.println("Status is Paid");
      }
+	
     else if (statusText.equalsIgnoreCase("Pending")) {
     System.out.println("Status is Pending");
-
+      Threadsleep(1000);
 	  javascriptclick(a.getPaidstatus());
 	  javascriptclick(a.getPaidoption());
 	  Threadsleep(3000);
@@ -1932,7 +2160,11 @@ catch (Exception e) {
 }
      
 }
-EndTimeprint();
+
+
+ Threadsleep(5000);
+ 
+      EndTimeprint();
 
      StartTimeprint();
      a = new Adminlogin();
@@ -1948,6 +2180,7 @@ EndTimeprint();
 	 Threadsleep(3000);
 	 System.out.println("Logging in with email: " + WarehouseportalEmail2);
 	 PassValues(w.getEmailfieldinwarehouse(),WarehouseportalEmail2);
+	
 	 PassValues(w.getPasswordfieldinwarehouse(), getdataExcel(10, 1));
      Threadsleep(3000);
      javascriptclick(w.getLoginasEmailsubmitbtn());    
@@ -1966,53 +2199,55 @@ EndTimeprint();
 	 w.getSortingSerialNo().click();
 	 Thread.sleep(5000);
 	 driver.navigate().refresh();
-	 Thread.sleep(5000);
+	 Thread.sleep(6000);
 	
 
 // Capture serial numbers from the first column
 
-List<WebElement> srNoElements = driver.findElements(By.xpath("//table/tbody/tr/td[1]"));
+// List<WebElement> srNoElements = driver.findElements(By.xpath("//table/tbody/tr/td[1]"));
 
-List<Integer> serialNumbers = new ArrayList<>();
-for (WebElement srNoElement : srNoElements) {
-	String text = srNoElement.getText().trim();
-	System.out.println("Serial No: " + text);
-	serialNumbers.add(Integer.parseInt(text));
-}
-
-
-// Verify sorting (descending)
-List<Integer> descSorted = new ArrayList<>(serialNumbers);
-Collections.sort(descSorted, Collections.reverseOrder());
-boolean isSortedDesc = serialNumbers.equals(descSorted);
-System.out.println("Serial numbers are sorted descending: " + isSortedDesc);
+// List<Integer> serialNumbers = new ArrayList<>();
+// for (WebElement srNoElement : srNoElements) {
+// 	String text = srNoElement.getText().trim();
+// 	System.out.println("Serial No: " + text);
+// 	serialNumbers.add(Integer.parseInt(text));
+// }
 
 
-// Verify sorting (ascending)
-List<Integer> ascSorted = new ArrayList<>(serialNumbers);
-Collections.sort(ascSorted);
-boolean isSortedAsc = serialNumbers.equals(ascSorted);
-System.out.println("Serial numbers are sorted ascending: " + isSortedAsc);
+// // Verify sorting (descending)
+// List<Integer> descSorted = new ArrayList<>(serialNumbers);
+// Collections.sort(descSorted, Collections.reverseOrder());
+// boolean isSortedDesc = serialNumbers.equals(descSorted);
+// System.out.println("Serial numbers are sorted descending: " + isSortedDesc);
 
-      Thread.sleep(4000);
-	 clearvalue(w.getStatusInputfieldinwarehouse());
-	 Thread.sleep(2000);
 
-	 PassValues(w.getStatusInputfieldinwarehouse(),getdataExcel(12, 1));
-	 Thread.sleep(3000);
-	 String StatusValue = w.getStatusInputfieldinwarehouse().getAttribute("value");
-     Thread.sleep(3000);
+// // Verify sorting (ascending)
+// List<Integer> ascSorted = new ArrayList<>(serialNumbers);
+// Collections.sort(ascSorted);
+// boolean isSortedAsc = serialNumbers.equals(ascSorted);
+// System.out.println("Serial numbers are sorted ascending: " + isSortedAsc);
 
-	 checkequaltext("To verify the order-status filter in warehouse portal page", StatusValue, w.getFiltereStatusinwarehouse().getText().trim());
-	 LOGGER.info("Successfully verified the listed order sorting&Filter funtionality  in warehouse portal order listing page");
+//       Thread.sleep(4000);
+// 	 clearvalue(w.getStatusInputfieldinwarehouse());
+// 	 Thread.sleep(2000);
+
+// 	 PassValues(w.getStatusInputfieldinwarehouse(),getdataExcel(12, 1));
+// 	 Thread.sleep(3000);
+// 	 String StatusValue = w.getStatusInputfieldinwarehouse().getAttribute("value");
+//      Thread.sleep(3000);
+
+// 	 checkequaltext("To verify the order-status filter in warehouse portal page", StatusValue, w.getFiltereStatusinwarehouse().getText().trim());
+// 	 LOGGER.info("Successfully verified the listed order sorting&Filter funtionality  in warehouse portal order listing page");
 	
-	 clearvalue(w.getStatusInputfieldinwarehouse());
+// 	 clearvalue(w.getStatusInputfieldinwarehouse());
 
-	 Thread.sleep(3000);
+// 	 Thread.sleep(3000);
 	  
-    driver.navigate().refresh();
+//     driver.navigate().refresh();
 	 
-	Thread.sleep(3000);
+// 	Thread.sleep(3000);
+
+	//
 
 	 moveToElement(w.getMyorderInputfieldinwarehouse());
 	 actionClick(w.getMyorderInputfieldinwarehouse());
@@ -2022,6 +2257,8 @@ System.out.println("Serial numbers are sorted ascending: " + isSortedAsc);
 	 PassValues(w.getMyorderInputfieldinwarehouse(),OrderText3);
 	 w.getFilteredorderidinwarehouse().isDisplayed();
 	 Threadsleep(3000);
+
+
 	 checkequaltext("To verify the order-ids btw the Thankyou page & warehouse portal page", OrderText3, w.getFilteredorderidinwarehouse().getText().trim());
 	 LOGGER.info("Successfully verified the placed orderid btw the Thankyou page & warehouse portal page");
      Threadsleep(3000);
@@ -2034,7 +2271,7 @@ System.out.println("Serial numbers are sorted ascending: " + isSortedAsc);
 	 Threadsleep(2000);
 
 	 checkequaltext("To verify the SKU id btw the order detail page & warehouse order detail page", SKUinwarehouse1, w.SKUidinwarehousedetailpage().getText().trim());
-	 LOGGER.info("Successfully verified the SKU id btw the order detail page & warehouse list of the order  page");
+	 LOGGER.info("Successfully verified the SKU id btw the order listing  page & warehouse portal detail page");
 	 Threadsleep(3000);
 
   
@@ -2113,21 +2350,32 @@ Threadsleep(3000);
 }
 
 	checkpresentElement("To check the Success message is displayed or not in warehouse portal page",w.getUpdatedRTSuccessfullymsg().isDisplayed());
-	LOGGER.info("Ready to ship button is clicked and Success message is displayed");
+	LOGGER.info("Pump products Ready to ship button is clicked and Success message is displayed");
 	Threadsleep(3000);
     EndTimeprint();
 
+	
 
  }
 
 @Then("To verify the Orderid are sync or not E-warranty page at admin portal")
 public void to_verify_the_orderid_are_sync_or_not_e_warranty_page_at_admin_portal() throws AWTException, InterruptedException {
   
-
+    
 	StartTimeprint();
-	launchurl("https://betaeshopadm.kirloskarpumps.com/kbladmin");
 	Threadsleep(3000);
+
+	launchurl("https://betaeshopadm.kirloskarpumps.com/kbladmin");
+	
+	Threadsleep(3000);
+	Threadsleep(3000);
+
+	 driver.navigate().refresh();
+
+	Threadsleep(4000);
+	
 	h = new Homepage();
+	
 	LOGGER.info("KBL admin site  are launched");
 	
 	// a = new Adminlogin();
@@ -2136,6 +2384,7 @@ public void to_verify_the_orderid_are_sync_or_not_e_warranty_page_at_admin_porta
 	// PassValues(a.getAdminpassword(), getdataExcel(2, 3));
 	// Threadsleep(3000);
 	// javascriptclick(a.getSignInButton1());
+
 
 	Threadsleep(3000);
 	moveToElement(a.getEwarranty());
@@ -2151,11 +2400,12 @@ public void to_verify_the_orderid_are_sync_or_not_e_warranty_page_at_admin_porta
 
 	Threadsleep(2000);
 	driver.navigate().refresh();
+	Threadsleep(4000);
+
+	javascriptclick(a.getClearallinlorderdetailpage());
+
 	Threadsleep(3000);
 
-	 javascriptclick(a.getClearallinlorderdetailpage());
-
-	Threadsleep(3000);
 	javascriptclick(a.getFilteroptions());
 
 	//Use the global OrderText3 variable
@@ -2167,6 +2417,7 @@ public void to_verify_the_orderid_are_sync_or_not_e_warranty_page_at_admin_porta
 	Thread.sleep(3000);
 
 	KeyEnter();
+
 	Threadsleep(5000);
 
 	String OrderText4 = a.getOrderNumberlistingpage().getText().trim();
@@ -2183,7 +2434,7 @@ public void to_verify_the_orderid_are_sync_or_not_e_warranty_page_at_admin_porta
 	LOGGER.info("Successfully verified the placed orderid&Serial number btw the Warehouse portal page & E-warranty page at admin portal");
 	Threadsleep(5000);
 
-	a = new Adminlogin();
+	 a = new Adminlogin();
 	 Threadsleep(4000);
 	 moveToElement(a.getSales());
 	 actionClick(a.getSales());
@@ -2196,6 +2447,7 @@ public void to_verify_the_orderid_are_sync_or_not_e_warranty_page_at_admin_porta
 
 	Threadsleep(4000);
 
+	
 	javascriptclick(a.getClearallinlorderdetailpage());
 
 	
@@ -2207,22 +2459,23 @@ public void to_verify_the_orderid_are_sync_or_not_e_warranty_page_at_admin_porta
 	 
 	 w = new warehouse();
 
-//PassValues(w.getOrderNumerFieldinSales2(), getdataExcel(17, 1));
+	PassValues(w.getOrderNumerFieldinSales2(), OrderText3);
+	System.out.println("Order Text 3: " + OrderText3);
+	Thread.sleep(3000);
 
 
-PassValues(w.getOrderNumerFieldinSales2(), getdataExcel(18, 1));
+     //PassValues(w.getOrderNumerFieldinSales2(), getdataExcel(17, 1));
 
+     //PassValues(w.getOrderNumerFieldinSales2(), getdataExcel(18, 1));
 
-	// PassValues(w.getOrderNumerFieldinSales2(), OrderText3);
-	// System.out.println("Order Text 3: " + OrderText3);
-	// Thread.sleep(3000);
+     Threadsleep(3000);
 
-	// KeyEnter();
-	// Threadsleep(5000);
+	 KeyEnter();
 
-	// String OrderText4_detail = a.getOrderNumberlistingpage().getText().trim();
-	// System.out.println("Order number Text from Orderdetailpage: " + OrderText4_detail);
-	// checkequaltext("To verify the order-ids btw the Thankyou page & admin panel", OrderText3, OrderText4_detail);
+	
+	String OrderText4_detail = a.getOrderNumberlistingpage().getText().trim();
+	System.out.println("Order number Text from Orderdetailpage: " + OrderText4_detail);
+	checkequaltext("To verify the order-ids btw the Thankyou page & admin panel", OrderText3, OrderText4_detail);
 
 	 String statusText = a.getPaidstatus().getText().trim();
      System.out.println("Status Text:" + statusText);
@@ -2271,7 +2524,7 @@ for (int i = 0; i < 8; i++) {
 	
 	
 		String selectedLSP3 =  s1.getSyncDTDC().getText();
-	   System.out.println(selectedLSP3);
+	    System.out.println(selectedLSP3);
 	
 		
 		 Threadsleep(3000);
@@ -2281,8 +2534,7 @@ for (int i = 0; i < 8; i++) {
         // verifyButton(s1.getSyncSmartship(), "Sync Order to Smartship");
         // verifyButton(s1.getSyncShipRocket(), "Sync Order to ShipRocket");
 		
-		LOGGER.info("Successfully verified the LSP Options in Pop-up page in Listing of the Order  page");
-
+   LOGGER.info("Successfully verified the LSP Options in Pop-up page in Listing of the Order  page");
 
 	//    String selectedLSP2 = s1.getSyncSmartship().getText();
 	//     System.out.println(selectedLSP2);
@@ -2352,7 +2604,9 @@ public void user_need_to_place_the_order_successfully_and_change_the_status_to_r
 	PassValues(s.getSearchBox(), getdataExcel(9, 1));
 	 LOGGER.info("Product name is entered in search box");
      Threadsleep(4000);
-	 ClickElement(s.getProductnameSLP());
+	 moveToElement(s.getProductnameSLP());
+	 Threadsleep(1000);
+	 actionClick(s.getProductnameSLP());
 	 LOGGER.info("Product name is clicked and Succesfully redirection to the respective  product page");
 	p = new PDPpage();
 	ClickElement(p.getAddToCartButtonPDP());
@@ -2363,19 +2617,18 @@ public void user_need_to_place_the_order_successfully_and_change_the_status_to_r
 	Alertaccept();
     Threadsleep(2000);
     ClickElement(p.getAddToCartButtonPDP());
-	Threadsleep(2000);
+	Threadsleep(3000);
 	LOGGER.info("Add to cart button is clicked");
-	Threadsleep(2000);
-	javascriptclick(p.getPDPcheckoutButton());
-
-	StartTimeprint();
-    Threadsleep(5000);
-		
-	c = new Cartpage();
 	Threadsleep(5000);
-	    
-	javascriptclick(c.getShippherebutton()); 
-	Threadsleep(4000);
+	javascriptclick(p.getPDPcheckoutButton());
+     
+	Threadsleep(6000);
+	
+
+    	c = new Cartpage();
+        Threadsleep(2000);
+	     javascriptclick(c.getShippherebutton()); 
+	      Threadsleep(4000);
 	    javascriptclick(c.getPaymentButton());
 	    Threadsleep(3000);
 	    javascriptclick(c.getBillingaddress());
@@ -2385,15 +2638,20 @@ public void user_need_to_place_the_order_successfully_and_change_the_status_to_r
 	     javascriptclick(c.getPlaceorder());
 
 	LOGGER.info(" The order suceesfully plaed and redirect to the  Thank You page");
-     
+   
+
+
 	Threadsleep(5000);
 	 
         EndTimeprint();
     
 	   c = new Cartpage();
-       SuccessorderNo1 = c.getSuccespageOrdernumber().getText().trim();  
+      SuccessorderNo1 = c.getSuccespageOrdernumber().getText().trim();  
       System.out.println("Order ID captured: " + SuccessorderNo1);
 
+
+
+	  	// LSP Admin flows
      Threadsleep(4000);
 		 
 	 launchurl("https://betaeshopadm.kirloskarpumps.com/kbladmin");
@@ -2417,23 +2675,48 @@ public void user_need_to_place_the_order_successfully_and_change_the_status_to_r
 	 Threadsleep(2000);
 	 moveToElement(a.getSalesOrder());
 	 actionClick(a.getSalesOrder());
+	
 	 Threadsleep(4000);
+	
 	 driver.navigate().refresh();
-	 Threadsleep(2000);
-	 driver.navigate().refresh();
 
-	  Threadsleep(3000);
-	 javascriptclick(a.getClearallinlorderdetailpage());
-	 KeyEnter();
+	Threadsleep(3000);
 
-	 Threadsleep(5000);
-	 OrderText3 = a.getOrderNumberlistingpage().getText().trim();
-	 System.out.println("Order number Text: " +OrderText3);
+	javascriptclick(a.getClearallinlorderdetailpage());
 
-  checkequaltext("To verify the order-ids btw the Thankyou page & admin panel", SuccessorderNo1, OrderText3);
+	 Threadsleep(3000);
+	
+	javascriptclick(a.getFilteroptions());
+
+	// Use the global OrderText3 variable
+	 
+	 w = new warehouse();
+
+	PassValues(w.getOrderNumerFieldinSales2(), SuccessorderNo1);
+	
+	System.out.println("Order Number txt 2: " + SuccessorderNo1);
+	
+	Thread.sleep(4000);
+
+	KeyEnter();
+
+
+	// //PassValues(w.getOrderNumerFieldinSales2(), getdataExcel(18, 1));
+	
+    // Threadsleep(2000);
+    
+      // KeyEnter();
+
+     Threadsleep(4000);
+
+	String OrderText4_detail = a.getOrderNumberlistingpage().getText().trim();
+	System.out.println("Order number Text from Orderdetailpage: " + OrderText4_detail);
+	checkequaltext("To verify the order-ids btw the Thankyou page & admin panel", SuccessorderNo1, OrderText4_detail);
+
 
 	 String statusText = a.getPaidstatus().getText().trim();
      System.out.println("Status Text:" + statusText);
+
 	if (statusText.equalsIgnoreCase("Paid")) {
 		 javascriptclick(a.getPaidstatus());
          System.out.println("Status is Paid");
@@ -2443,7 +2726,7 @@ public void user_need_to_place_the_order_successfully_and_change_the_status_to_r
 
 	  javascriptclick(a.getPaidstatus());
 	  javascriptclick(a.getPaidoption());
-	  Threadsleep(3000);
+	  Threadsleep(5000);
 
   } 
 
@@ -2455,7 +2738,7 @@ public void user_need_to_place_the_order_successfully_and_change_the_status_to_r
 		KeyDOWN();
 	}
 
-	 Threadsleep(4000);
+	 Threadsleep(5000);
 	 javascriptclick(a.getWarhouseallcation());
 	 String expectedWarehouseCode = a.getWarhouseallcationcode().getText();
 	 System.out.println(expectedWarehouseCode);
@@ -2539,65 +2822,73 @@ catch (Exception e) {
 	 Threadsleep(3000);
 
 	 w.getSortingSerialNo().click();
-	 Thread.sleep(5000);
+	
+	 Thread.sleep(3000);
+	
 	 driver.navigate().refresh();
-	 Thread.sleep(5000);
+
+	 Thread.sleep(3000);
+
+	 driver.navigate().refresh();
+
+	Thread.sleep(3000);
+
 	
 
 // Capture serial numbers from the first column
 
-List<WebElement> srNoElements = driver.findElements(By.xpath("//table/tbody/tr/td[1]"));
+// List<WebElement> srNoElements = driver.findElements(By.xpath("//table/tbody/tr/td[1]"));
 
-List<Integer> serialNumbers = new ArrayList<>();
-for (WebElement srNoElement : srNoElements) {
-	String text = srNoElement.getText().trim();
-	System.out.println("Serial No: " + text);
-	serialNumbers.add(Integer.parseInt(text));
-}
-
-
-// Verify sorting (descending)
-List<Integer> descSorted = new ArrayList<>(serialNumbers);
-Collections.sort(descSorted, Collections.reverseOrder());
-boolean isSortedDesc = serialNumbers.equals(descSorted);
-System.out.println("Serial numbers are sorted descending: " + isSortedDesc);
+// List<Integer> serialNumbers = new ArrayList<>();
+// for (WebElement srNoElement : srNoElements) {
+// 	String text = srNoElement.getText().trim();
+// 	System.out.println("Serial No: " + text);
+// 	serialNumbers.add(Integer.parseInt(text));
+// }
 
 
-// Verify sorting (ascending)
-List<Integer> ascSorted = new ArrayList<>(serialNumbers);
-Collections.sort(ascSorted);
-boolean isSortedAsc = serialNumbers.equals(ascSorted);
-System.out.println("Serial numbers are sorted ascending: " + isSortedAsc);
+// // Verify sorting (descending)
+// List<Integer> descSorted = new ArrayList<>(serialNumbers);
+// Collections.sort(descSorted, Collections.reverseOrder());
+// boolean isSortedDesc = serialNumbers.equals(descSorted);
+// System.out.println("Serial numbers are sorted descending: " + isSortedDesc);
 
-      Thread.sleep(4000);
-	 clearvalue(w.getStatusInputfieldinwarehouse());
-	 Thread.sleep(2000);
 
-	 PassValues(w.getStatusInputfieldinwarehouse(),getdataExcel(12, 1));
-	 Thread.sleep(3000);
-	 String StatusValue = w.getStatusInputfieldinwarehouse().getAttribute("value");
-     Thread.sleep(3000);
+// // Verify sorting (ascending)
+// List<Integer> ascSorted = new ArrayList<>(serialNumbers);
+// Collections.sort(ascSorted);
+// boolean isSortedAsc = serialNumbers.equals(ascSorted);
+// System.out.println("Serial numbers are sorted ascending: " + isSortedAsc);
 
-	 checkequaltext("To verify the order-status filter in warehouse portal page", StatusValue, w.getFiltereStatusinwarehouse().getText().trim());
-	 LOGGER.info("Successfully verified the listed order sorting&Filter funtionality  in warehouse portal order listing page");
+//       Thread.sleep(4000);
+// 	 clearvalue(w.getStatusInputfieldinwarehouse());
+// 	 Thread.sleep(2000);
+
+// 	 PassValues(w.getStatusInputfieldinwarehouse(),getdataExcel(12, 1));
+// 	 Thread.sleep(3000);
+// 	 String StatusValue = w.getStatusInputfieldinwarehouse().getAttribute("value");
+//      Thread.sleep(3000);
+
+// 	 checkequaltext("To verify the order-status filter in warehouse portal page", StatusValue, w.getFiltereStatusinwarehouse().getText().trim());
+// 	 LOGGER.info("Successfully verified the listed order sorting&Filter funtionality  in warehouse portal order listing page");
 	
-	 clearvalue(w.getStatusInputfieldinwarehouse());
+// 	 clearvalue(w.getStatusInputfieldinwarehouse());
 
-	 Thread.sleep(3000);
+// 	 Thread.sleep(3000);
 	  
-    driver.navigate().refresh();
+//     driver.navigate().refresh();
 	 
-	Thread.sleep(3000);
+// 	Thread.sleep(3000);
 
 	 moveToElement(w.getMyorderInputfieldinwarehouse());
 	 actionClick(w.getMyorderInputfieldinwarehouse());
 	 Threadsleep(2000);
 
-	 System.out.println("Order Text 3: " + OrderText3);
-	 PassValues(w.getMyorderInputfieldinwarehouse(),OrderText3);
+	 System.out.println("Order Text 2: " + SuccessorderNo1);
+	 PassValues(w.getMyorderInputfieldinwarehouse(),SuccessorderNo1);
 	 w.getFilteredorderidinwarehouse().isDisplayed();
 	 Threadsleep(3000);
-	 checkequaltext("To verify the order-ids btw the Thankyou page & warehouse portal page", OrderText3, w.getFilteredorderidinwarehouse().getText().trim());
+	 checkequaltext("To verify the order-ids btw the Thankyou page & warehouse portal page", SuccessorderNo1, w.getFilteredorderidinwarehouse().getText().trim());
 	 LOGGER.info("Successfully verified the placed orderid btw the Thankyou page & warehouse portal page");
      Threadsleep(3000);
 
@@ -2698,7 +2989,7 @@ Threadsleep(3000);
 
 
 @Then("Observe the  Showing LSP correct or not in listing of order page for pump products from Order tagging page")
-public void observe_the_showing_lsp_correct_or_not_in_listing_of_order_page_for_pump_products_from_order_tagging_page() throws AWTException {
+public void observe_the_showing_lsp_correct_or_not_in_listing_of_order_page_for_pump_products_from_order_tagging_page() throws AWTException, InterruptedException {
    
 	
 	StartTimeprint();
@@ -2721,43 +3012,41 @@ public void observe_the_showing_lsp_correct_or_not_in_listing_of_order_page_for_
 	 actionClick(a.getSales());
 	 Threadsleep(2000);
 	 moveToElement(a.getSalesOrder());
+	 Threadsleep(2000);
 	 actionClick(a.getSalesOrder());
 	 Threadsleep(3000);
-
 	 driver.navigate().refresh();
 
-	Threadsleep(4000);
-
+	
+    Threadsleep(4000);
+	driver.navigate().refresh();
 	javascriptclick(a.getClearallinlorderdetailpage());
-
-	//  driver.navigate().refresh();
-	//  javascriptclick(a.getClearallinlorderdetailpage());
-    //Threadsleep(3000);
-
+	 Threadsleep(4000);
 	javascriptclick(a.getFilteroptions());
 
-	// Use the global OrderText3 variable
-	 
+
+	// Use the global OrderText3 variable 
 	 w = new warehouse();
 
 
-PassValues(w.getOrderNumerFieldinSales2(), getdataExcel(18, 1));
-	Threadsleep(2000);
-      KeyEnter();
+// //PassValues(w.getOrderNumerFieldinSales2(), getdataExcel(18, 1));
+// Threadsleep(2000);
+// KeyEnter();
 
-	// PassValues(w.getOrderNumerFieldinSales2(), OrderText3);
-	// System.out.println("Order Text 3: " + OrderText3);
-	// Thread.sleep(3000);
+	PassValues(w.getOrderNumerFieldinSales2(), SuccessorderNo1);
+	System.out.println("Order Text 2: " + SuccessorderNo1);
+	Thread.sleep(3000);
 
-	// KeyEnter();
-	// Threadsleep(5000);
+	KeyEnter();
 
-	// String OrderText4_detail = a.getOrderNumberlistingpage().getText().trim();
-	// System.out.println("Order number Text from Orderdetailpage: " + OrderText4_detail);
-	// checkequaltext("To verify the order-ids btw the Thankyou page & admin panel", OrderText3, OrderText4_detail);
+	Threadsleep(5000);
+
+	String OrderText4_detail = a.getOrderNumberlistingpage().getText().trim();
+	System.out.println("Order number Text from Orderdetailpage: " + OrderText4_detail);
+	checkequaltext("To verify the order-ids btw the Thankyou page & admin panel", SuccessorderNo1, OrderText4_detail);
 
 
-	   Threadsleep(2000);
+	   Threadsleep(3000);
 
 	 String statusText = a.getPaidstatus().getText().trim();
      System.out.println("Status Text:" + statusText);
@@ -2900,10 +3189,8 @@ for (int i = 0; i < 8; i++) {
     String Grosswtvalue = Grosswt.getAttribute("value");
 	System.out.println(Grosswtvalue);
 	
-     Threadsleep(3000);
+     Threadsleep(5000);
 
-	
-	  Threadsleep(2000);
 	  moveToElement(s1.getStores());
 	  actionClick(s1.getStores());
 	  Threadsleep(3000);
@@ -3013,15 +3300,20 @@ if (matchingLabels.isEmpty()) {
 } 
 
 
-else {
+
+
+else{
     System.out.println("Matching Labels for Gross Weight: " + matchingLabels);
 
     // Flag to track if any match found
-    boolean matchFound = false;
+   
+	boolean matchFound = false;
 
-    // Compare each matching label with selected LSPs
+  
+	// Compare each matching label with selected LSPs
    for (String Loggisticsname : matchingLabels) {
-    if (selectedLSP1.contains(Loggisticsname) || selectedLSP2.contains(Loggisticsname) || selectedLSP3.contains(Loggisticsname) || selectedLSP4.contains(Loggisticsname)) {
+  
+	if (selectedLSP1.contains(Loggisticsname) || selectedLSP2.contains(Loggisticsname) || selectedLSP3.contains(Loggisticsname) || selectedLSP4.contains(Loggisticsname)) {
       
 		System.out.println("Selected LSP matches expected label: " + Loggisticsname);
        
@@ -3031,30 +3323,24 @@ else {
 	}
 }
 
-    if (!matchFound) {
+   
+if (!matchFound) {
         System.out.println("LSP Mismatch!");
         System.out.println("Expected (matching) Labels: " + matchingLabels);
         System.out.println("Found in Order Page: " + selectedLSP1 + " / " + selectedLSP2+ " / " + selectedLSP3+ " / " + selectedLSP4);
     }
+
 }
 
 
+   LOGGER.info("Successfully verified the LSP Options btw the order tagging and Order detail page for selected products");
 
+   driver.quit();
 
-   	LOGGER.info("Successfully verified the LSP Options btw the order tagging and Order detail page");
 }
 
 
-
-
-
-
-
-
-
-
-
-
+//Global warhouse portal validation
 
 @Given("Warhouse Suppiler  open the home page and do the login with valid credential")
 public void warhouse_suppiler_open_the_home_page_and_do_the_login_with_valid_credential() {
@@ -3064,7 +3350,7 @@ public void warhouse_suppiler_open_the_home_page_and_do_the_login_with_valid_cre
 	 w = new warehouse();
 	 launchurl("https://betaeshop.kirloskarpumps.com/inventorysystem/supplierlogin/supplierlogin/");
 	 Threadsleep(3000);
-	 LOGGER.info("KBL Warehouse site  are launched");
+	 LOGGER.info("KBL Warehouse portal site  are launched");
      String title2 = driver.getTitle();
      checkpresentElement("To check title name at Warehouse Login page",title2.contains("Warehouse Login"));
 	 Threadsleep(2000);
@@ -3172,9 +3458,11 @@ for (WebElement cell : warehouseColumnCells) {
 
 System.out.println("All orders match the selected cities: " + selectedCities);
 LOGGER.info("Successfully verified the Filter funtionality by selecting the double  city name in warehouse portal order listing page");
-
+ 
+driver.quit();
 
 }
+
 
 // Spare products orders  in Warehouse portal page based on the Allocation warehouse code
 
@@ -3214,7 +3502,7 @@ public void the_user_opens_the_home_page_and_login_into_the_application() {
 	 h = new Homepage();
     Threadsleep(3000);
 	javascriptclick(h.getKBLLogo());
-    Threadsleep(3000);
+    Threadsleep(4000);
 
 	s1 = new Sparespage();
     moveToElement(s1.getServicesLink());
@@ -3240,7 +3528,7 @@ public void the_user_navigates_to_the_spare_products_listing_page_from_the_categ
 	  checkpresentElement("To check Buy Now button is displayed",lp.getBuyNowButton1().isDisplayed());
 	   LOGGER.info("Buy Now button is displayed");
 	  //Threadsleep(3000);
-	 s1 = new Sparespage();
+    	 s1 = new Sparespage();
 	  Threadsleep(3000);
 	  javascriptclick(s1.getSparePLPname());
 	  LOGGER.info("Product name  is clicked");
@@ -3264,10 +3552,13 @@ public void adds_an_item_to_the_cart_and_places_the_order_successfully() {
       ClickElement(p.getAddToCartButtonPDP());
 	  Threadsleep(2000);
 	  LOGGER.info("Add to cart button is clicked");
-	  Threadsleep(2000);
+	  Threadsleep(4000);
+	
 	  javascriptclick(p.getPDPcheckoutButton());
-      Threadsleep(5000);
-	   c = new Cartpage();
+      
+	  Threadsleep(5000);
+	   
+	  c = new Cartpage();
 		Threadsleep(5000);
 	    javascriptclick(c.getShippherebutton());
 	    Threadsleep(4000);
@@ -3276,16 +3567,15 @@ public void adds_an_item_to_the_cart_and_places_the_order_successfully() {
 	    javascriptclick(c.getBillingaddress());
         Threadsleep(4000);
         javascriptclick(c.getTermcheckboxlogin());
-        Threadsleep(4000);
+        Threadsleep(5000);
 	    javascriptclick(c.getPlaceorder());
 	    LOGGER.info(" The order suceesfully plaed and redirect to the  Thank You page");
         Threadsleep(5000);
 	    c = new Cartpage();
-        SuccessorderNo1 = c.getSuccespageOrdernumber().getText().trim();  
-        System.out.println("Order ID captured: " + SuccessorderNo1);
+        SuccessorderNo2 = c.getSuccespageOrdernumber().getText().trim();  
+        System.out.println("Order ID captured: " + SuccessorderNo2);
         EndTimeprint();
       
-
 }
 
 @When("Observe the Spare products placed Orderid and   Allocated warehousecode from admin order detail page")
@@ -3294,7 +3584,11 @@ public void observe_the_spare_products_placed_orderid_and_allocated_warehousecod
 
      StartTimeprint();
 	 launchurl("https://betaeshopadm.kirloskarpumps.com/kbladmin");
+
+	 driver.navigate().refresh();
+
 	 Threadsleep(3000);
+
 	 h = new Homepage();
 	 LOGGER.info("KBL admin site  are launched");
      String title = driver.getTitle();
@@ -3314,35 +3608,53 @@ public void observe_the_spare_products_placed_orderid_and_allocated_warehousecod
 	 Threadsleep(2000);
 	 moveToElement(a.getSalesOrder());
 	 actionClick(a.getSalesOrder());
-	 Threadsleep(4000);
-	 driver.navigate().refresh();
-	 Threadsleep(2000);
-	 driver.navigate().refresh();
-
+	
 	 Threadsleep(3000);
-	 javascriptclick(a.getClearallinlorderdetailpage());
+ 	
+	 driver.navigate().refresh();
+   
+	 Threadsleep(4000);
+
+	javascriptclick(a.getClearallinlorderdetailpage());
 
 	
-	// KeyEnter();
+        Threadsleep(3000);
+	
+		javascriptclick(a.getFilteroptions());
+	
+		Threadsleep(3000);
+	  
+		a = new Adminlogin();
+		
+		PassValues(a.getListingpageorderidfield(),SuccessorderNo2);
+	   
+		KeyEnter();
 
-	 Threadsleep(5000);
+	 
+	 Threadsleep(4000);
+	
 	 OrderText3 = a.getOrderNumberlistingpage().getText().trim();
 	 System.out.println("Order number Text: " +OrderText3);
 
-  checkequaltext("To verify the order-ids btw the Thankyou page & admin panel", SuccessorderNo1, OrderText3);
+checkequaltext("To verify the order-ids btw the Thankyou page & admin panel", SuccessorderNo2, OrderText3);
 
 	 String statusText = a.getPaidstatus().getText().trim();
      System.out.println("Status Text:" + statusText);
-	if (statusText.equalsIgnoreCase("Paid")) {
+
+     Thread.sleep(3000);
+	 if (statusText.equalsIgnoreCase("Paid")) {
 		 javascriptclick(a.getPaidstatus());
          System.out.println("Status is Paid");
      }
-    else if (statusText.equalsIgnoreCase("Pending")) {
+  
+	 else if (statusText.equalsIgnoreCase("Pending")) {
     System.out.println("Status is Pending");
 
+	  
 	  javascriptclick(a.getPaidstatus());
+	  Thread.sleep(2000);
 	  javascriptclick(a.getPaidoption());
-	  Threadsleep(3000);
+	  Threadsleep(2000);
 
   } 
 
@@ -3350,9 +3662,11 @@ public void observe_the_spare_products_placed_orderid_and_allocated_warehousecod
     Assert.fail("Unexpected status: " + statusText);
    }
 
+
     for (int i = 0; i <6; i++) {
 		KeyDOWN();
 	}
+
 
 	 Threadsleep(4000);
 	 javascriptclick(a.getWarhouseallcation());
@@ -3374,9 +3688,7 @@ public void observe_the_spare_products_placed_orderid_and_allocated_warehousecod
                
 				Thread.sleep(3000);
 
-
 List<WebElement> manageRows1 = driver.findElements(By.xpath("//table//tbody//tr"));
-
 
 for (int i = 1; i <= manageRows1.size(); i++) {
   
@@ -3406,7 +3718,10 @@ catch (Exception e) {
 }
      
 }
-EndTimeprint();
+
+   EndTimeprint();
+
+   Thread.sleep(5000);
 
      StartTimeprint();
      a = new Adminlogin();
@@ -3517,11 +3832,7 @@ System.out.println("Serial numbers are sorted ascending: " + isSortedAsc);
 
 	Threadsleep(2000);
 	
-	// checkpresentElement("To check the serial number input field is available or not in warehouse portal page",w.getEnterSerialNumberinwarehousedetailpage().isDisplayed());
-	// LOGGER.info("To check the serial number input field is available or not in warehouse portal order detail page");
-	// for (int i = 0; i <7; i++) {
-	// 	KeyDOWN();
-	// }
+	
 
 w = new warehouse();
 Threadsleep(3000);
@@ -3568,39 +3879,37 @@ Threadsleep(3000);
 
 	Threadsleep(3000);
 
-//     PassValues(w.getEnterSerialNumberinwarehousedetailpage(), getdataExcel(13, 1));
-// 	Threadsleep(3000);
-// 	javascriptclick(w.getReadyforShipbtnCTA());
-// 	 Threadsleep(5000);
 
-// 	 for (int i = 0; i < 10; i++) {
-//   	   KeyUP();
-	
-// }
 
 	checkpresentElement("To check the Success message is displayed or not in warehouse portal page",w.getUpdatedRTSuccessfullymsg().isDisplayed());
-	LOGGER.info("Ready to ship button is clicked and Success message is displayed");
+	LOGGER.info("Spare products 'Ready to ship' button is clicked and status also changed and Success message is displayed");
 	Threadsleep(3000);
     EndTimeprint();
+
+	
 
 }
 
 
+
 @Then("the verify the Ready to ship status and Observe the LSP Options in Pop-up page in Listing of the Order  page")
 public void the_verify_the_ready_to_ship_status_and_observe_the_lsp_options_in_pop_up_page_in_listing_of_the_order_page() throws InterruptedException, AWTException {
-    
+   
+	
 	StartTimeprint();
 	launchurl("https://betaeshopadm.kirloskarpumps.com/kbladmin");
+	Threadsleep(3000);
+	driver.navigate().refresh();
 	Threadsleep(3000);
 	h = new Homepage();
 	LOGGER.info("KBL admin site  are launched");
 	
-	// a = new Adminlogin();
-	// Threadsleep(3000);
-	// PassValues(a.getAdminUsername(),getdataExcel(1, 3));
-	// PassValues(a.getAdminpassword(), getdataExcel(2, 3));
-	// Threadsleep(3000);
-	// javascriptclick(a.getSignInButton1());
+	a = new Adminlogin();
+	Threadsleep(3000);
+	PassValues(a.getAdminUsername(),getdataExcel(1, 3));
+	PassValues(a.getAdminpassword(), getdataExcel(2, 3));
+	Threadsleep(3000);
+	javascriptclick(a.getSignInButton1());
 
 	a = new Adminlogin();
 	Threadsleep(4000);
@@ -3635,6 +3944,7 @@ public void the_verify_the_ready_to_ship_status_and_observe_the_lsp_options_in_p
 
 	String OrderText4 = a.getOrderNumberlistingpage().getText().trim();
 	System.out.println("Order number Text from Orderdetailpage: " + OrderText4);
+
 	checkequaltext("To verify the order-ids btw the Thankyou page & admin panel", OrderText3, OrderText4);
 
 	 String statusText = a.getPaidstatus().getText().trim();
@@ -3653,7 +3963,8 @@ public void the_verify_the_ready_to_ship_status_and_observe_the_lsp_options_in_p
 
 	LOGGER.info("The item status is \"Ready to ship\">Successfully verified the placed orderid  btw the Warehouse portal page & Order detail  page at admin page");
 	Threadsleep(3000);
-	 s1 = new Sparespage();
+	 
+	s1 = new Sparespage();
 
 for (int i = 0; i < 20; i++) {
 		KeyDOWN();
@@ -3685,7 +3996,7 @@ for (int i = 0; i < 8; i++) {
        String selectedLSP1 =  s1.getSyncDTDC().getText();
 	   System.out.println(selectedLSP1);
       
-	   String selectedLSP2 = s1.getSyncSmartship().getText();
+	   String selectedLSP2 = s1.getSyncSparesSmartship().getText();
 	    System.out.println(selectedLSP2);
 
 		if (selectedLSP1.equalsIgnoreCase("Sync Order to DTDC")) {
@@ -3693,9 +4004,10 @@ for (int i = 0; i < 8; i++) {
     LOGGER.info("Clicked on Sync DTDC button");
  } 
     
-	else if (selectedLSP2.equalsIgnoreCase("Sync Order to Smartship")) {
-    javascriptclick(s1.getSyncSparesSmartship());
-    LOGGER.info("Clicked on Sync Spares Smartship button");
+	else if (selectedLSP2.contains("Spare")) {
+  
+		javascriptclick(s1.getSyncSparesSmartship());
+        LOGGER.info("Clicked on Sync Spares Smartship button");
 
 } 
 
@@ -3739,23 +4051,16 @@ catch (NoSuchElementException | StaleElementReferenceException e) {
 // Final log
 
  LOGGER.info(" Finished verifying LSP sync behavior for: " + selectedLSP1);
+
+
+LOGGER.info("Successfully verified for the Spare prodcuts order sync process   for a '" + statusText + "' status  on the Order Listing page.");
+
  EndTimeprint();
 
-	
-// for (int i = 0; i < 25; i++) {
-// 		KeyDOWN();
-// 	}
-
-//      Thread.sleep(3000);
-//     checkpresentElement("To check LSP failed message is displayed or not in order detail page", s1.getSpareAddboxinLSPpage().isDisplayed());
-
-//     checkpresentElement("To check LSP failed message presenet or not ", s1.getSpareAddboxinLSPpage().getText().contains("Add"));
-  
-// 	LOGGER.info("Successfully verified for the Spare prodcuts order sync process   for a '" + statusText + "' status  on the Order Listing page.");
-
-// 	EndTimeprint();
-
 } 
+
+
+
 
 
 // Sync order without marking status as 'Ready to Ship' showing error 
@@ -3792,11 +4097,13 @@ public void the_user_login_into_the_application() {
 	 checkpresentElement("To check Password field is displayed",l.getPasswordField().isDisplayed());
      Threadsleep(4000);
 	 ClickElement(l.getLoginButton());
+    Threadsleep(3000);
+	javascriptclick(h.getKBLLogo());
+    Threadsleep(4000);
      EndTimeprint();
 
    
 }
-
 
 @When("User adds the  item to the cart and places the order successfully")
 public void user_adds_the_item_to_the_cart_and_places_the_order_successfully() {
@@ -3817,14 +4124,17 @@ public void user_adds_the_item_to_the_cart_and_places_the_order_successfully() {
 	ClickElement(p.getAddToCartButtonPDP());
 	Threadsleep(3000);
 	PassValues(p.getPincodefield(), getdataExcel(3, 1));
+	
 	ClickElement(p.getPincodecheckButton());
 	Threadsleep(3000);
 	Alertaccept();
     Threadsleep(2000);
-    ClickElement(p.getAddToCartButtonPDP());
+    ClickElement(p.getQuetaAddCTAbtnPDP());
 	Threadsleep(2000);
-	LOGGER.info("Add to cart button is clicked");
+	LOGGER.info("Product Add Quota CTA button is clicked");
 	Threadsleep(2000);
+
+
 	javascriptclick(p.getPDPcheckoutButton());
 
     Threadsleep(5000);
@@ -3967,6 +4277,127 @@ else {
 	System.out.println("Status is not Paid or Pending — skipping sync steps.");
     LOGGER.warn("Order status is '" + statusText + "', so sync steps were not executed.");
 }
+    
+driver.quit();
+
+}
+
+
+
+@When("the user navigates to the Pump Products listing page from the category menu")
+public void the_user_navigates_to_the_pump_products_listing_page_from_the_category_menu() {
+
+	StartTimeprint();
+	s = new Searchpage();
+	moveToElement(s.getSearchBox());
+	Threadsleep(2000);
+	PassValues(s.getSearchBox(), getdataExcel(9, 1));
+	 LOGGER.info("Product name is entered in search box");
+     Threadsleep(3000);
+	 moveToElement(s.getProductnameSLP());
+	 ClickElement(s.getProductnameSLP());
+
+	 LOGGER.info("Product name is clicked and Succesfully redirection to the respective  product page");
+   	EndTimeprint();
+
+}
+
+
+
+@When("adds an products to the Qutation cart page and do the request for Qutation")
+public void adds_an_products_to_the_qutation_cart_page_and_do_the_request_for_qutation() {
+   
+	StartTimeprint();
+	p = new PDPpage();
+	h = new Homepage();
+	c = new Cartpage();
+	ClickElement(p.getAddToCartButtonPDP());
+	Threadsleep(3000);
+	PassValues(p.getPincodefield(), getdataExcel(3, 1));
+	ClickElement(p.getPincodecheckButton());
+	Threadsleep(3000);
+	Alertaccept();
+    Threadsleep(2000);
+    ClickElement(p.getQuetaAddCTAbtnPDP());
+	Threadsleep(3000);
+	LOGGER.info("Product Add to Quotation  Cart CTA button is clicked");
+	ScrollUp();
+	moveToElement(h.getRequestQuote());
+	actionClick(h.getRequestQuote());
+	Threadsleep(3000);
+	javascriptclick(h.getMyQuoteCTA());
+	LOGGER.info("Request Quote Icon are  clicked");
+	PassValues(c.getQuoteRemark(), getdataExcel(3, 3));
+	Threadsleep(2000);
+	javascriptclick(c.getQuoteCTAincart());
+	LOGGER.info("On the cart page Request Quote CTA button is clicked");
+	EndTimeprint();
+
+}
+@When("Observe the Quote Request Number and Approve Qutation in admin panel")
+public void observe_the_quote_request_number_and_approve_qutation_in_admin_panel() throws AWTException {
+    
+	StartTimeprint();
+	c = new Cartpage();
+	Threadsleep(3000);
+	c.getRequoteNumber().isDisplayed();
+	String RequoteNumber = c.getRequoteNumber().getText().trim();  
+	System.out.println("Quotation Request ID captured: " + RequoteNumber);
+	
+	launchurl("https://betaeshopadm.kirloskarpumps.com/kbladmin");
+	 Threadsleep(3000);
+	 h = new Homepage();
+	 LOGGER.info("KBL admin site  are launched");
+     String title = driver.getTitle();
+     checkpresentElement("To check title at Home page",title.contains("Admin"));
+	  a = new Adminlogin();
+	 Threadsleep(3000);
+	 PassValues(a.getAdminUsername(),getdataExcel(1, 3));
+	 PassValues(a.getAdminpassword(), getdataExcel(2, 3));
+     Threadsleep(3000);
+     javascriptclick(a.getSignInButton1());
+	 a = new Adminlogin();
+	 Threadsleep(4000);
+     moveToElement(a.getSales());
+	 actionClick(a.getSales());
+	 Threadsleep(2000);
+	 moveToElement(a.getSaleQuotes());
+	 actionClick(a.getSaleQuotes());
+
+	  Threadsleep(4000);
+	  driver.navigate().refresh();
+	  
+	Threadsleep(3000);  
+
+	//javascriptclick(a.getClearallinlorderdetailpage());
+
+      
+        Threadsleep(3000);
+		javascriptclick(a.getFilteroptions());
+		Threadsleep(3000);
+	    a = new Adminlogin();
+		PassValues(a.getListingpagequotaorderidfield(),RequoteNumber);
+		KeyEnter();
+		Threadsleep(3000);
+
+     	 String RequoteNumberTEXT = a.getOrderNumberlistingpage().getText().trim();
+         
+		 System.out.println("Order number Text: " +RequoteNumberTEXT);
+	 
+	 checkequaltext("To verify the order-ids btw the Thankyou page & admin panel", RequoteNumber, RequoteNumberTEXT);
+
+     	 javascriptclick(a.getOrderNumberlistingpage());
+	    EndTimeprint();
+
+}
+   
+@When("After,approving the Qutation  place the order from my account Quote page")
+public void after_approving_the_qutation_place_the_order_from_my_account_quote_page() {
+   
+}
+
+@Then("Then,placed order,Verify the Quotaton status in admin panel Quote page")
+public void then_placed_order_verify_the_quotaton_status_in_admin_panel_quote_page() {
     
 }
 

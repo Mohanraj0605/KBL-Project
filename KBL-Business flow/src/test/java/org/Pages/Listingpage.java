@@ -98,6 +98,15 @@ public class Listingpage extends Ultilityclass {
     public WebElement getOvertankListingCategeory1() {
         return OvertankListingCategeory1;
     }
+    
+     @FindBy(xpath="(//div[@class='product-item-info'])[4]")
+     private WebElement ListingCategeory22; 
+
+
+
+    public WebElement getListingCategeory22() {
+        return ListingCategeory22;
+    }
 
 
 
@@ -114,10 +123,21 @@ public class Listingpage extends Ultilityclass {
 
     @FindBy(xpath="(//span[text()='Buy Now'])[1]")
     private WebElement BuyNowButton1;
+
+      @FindBy(xpath="(//span[text()='Buy Now'])[4]")
+    private WebElement BuyNowButton22;
     
+    
+    public WebElement getBuyNowButton22() {
+        return BuyNowButton22;
+    }
+
+
     public WebElement getBuyNowButton1() {
         return BuyNowButton1;
     }
+
+
     public WebElement getListingCategeory1() {
         return ListingCategeory1;
     }

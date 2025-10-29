@@ -128,6 +128,7 @@ public class Ultilityclass {
 	
 	}
 	
+    // |D41XB00502041033| 
 
     /*
 	 * @author:MOHANRAJ K
@@ -758,6 +759,29 @@ public static void waitUntilClickable(WebElement categoryLink) {
 
       }
 
+
+      
+public static void Scrolldown () {
+
+     JavascriptExecutor js = (JavascriptExecutor) driver;    
+	for (int i = 0; i < 1; i++) 
+    js.executeScript("window.scrollBy(0, 500);");  
+	Threadsleep(1000);
+    
+}
+
+
+
+public static void ScrollUp () {
+
+     JavascriptExecutor js = (JavascriptExecutor) driver;    
+	for (int i = 0; i < 2; i++) 
+    js.executeScript("window.scrollBy(0, -500);");  
+	Threadsleep(1000);
+    
+}
+
+
      /*
       * @ Purpose:  To read the Excel
       */
@@ -994,7 +1018,9 @@ public List<String> readWarehouseCodesFromExcel(String filePath) {
             }
         }
 
-    } catch (Exception e) {
+    } 
+    
+    catch (Exception e) {
         e.printStackTrace();
     }
 
